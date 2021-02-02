@@ -46,11 +46,7 @@ p {
 }
 a {
   color: black;
-  text-decoration: none;
-  transition: .6s all cubic-bezier(.165, .84, .44, 1)
-}
-a:hover {
-  opacity: .6
+  text-decoration: none
 }
 
 /* Tailwinds */

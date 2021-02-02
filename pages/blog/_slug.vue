@@ -17,6 +17,19 @@
   top: 50%;
   transform: rotate(-90deg)
 }
+.back_home:after {
+  content: '';
+  position: relative;
+  display: flex;
+  height: .6rem;
+  width: 0%;
+  background-color: #8B000040;
+  transform: translateY(-.6rem);
+  transition: .4s all cubic-bezier(.165, .84, .44, 1)
+}
+.back_home:hover:after {
+  width: 100%
+}
 
 /* Content */
 

@@ -44,8 +44,22 @@
   flex-direction: column;
   justify-content: center
 }
-.article_text a {
-  margin-top: 1rem
+.blog_link {
+  margin-top: 1rem;
+  width: fit-content
+}
+.blog_link:after {
+  content: '';
+  position: relative;
+  display: flex;
+  height: .6rem;
+  width: 0%;
+  background-color: #8B000040;
+  transform: translateY(-.6rem);
+  transition: .4s all cubic-bezier(.165, .84, .44, 1)
+}
+.blog_link:hover:after {
+  width: 100%
 }
 
 @media (max-width: 992px) {
@@ -99,8 +113,8 @@
             <p class="text--small no_margin">{{ article.title }}</p>
             <p class="text--small grey no_margin">{{ article.description }}</p>
             <p class="grey letter_spacing">{{ article.created }}</p>
-            <nuxt-link :to="`/blog/${article.slug}`">
-              Continue reading
+            <nuxt-link :to="`/blog/${article.slug}`" class="blog_link letter_spacing">
+              Read
             </nuxt-link>
           </div>
         </div>
