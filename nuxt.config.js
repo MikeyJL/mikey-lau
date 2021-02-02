@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mikey-lau',
+    title: 'Mikey Lau',
     htmlAttrs: {
       lang: 'en'
     },
