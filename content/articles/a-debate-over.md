@@ -5,7 +5,7 @@ img: profile.jpg
 alt: Debate
 id: 3
 created: 01 03 20
-show: true
+show: false
 
 ---
 # Debate over ...
