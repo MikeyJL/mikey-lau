@@ -1,6 +1,6 @@
 ---
-title: My journey as a fitness professional
-description: Find out what it's like to have me as your personal trainer.
+title: Working with a client over lockdown
+description: Find out what it's like to have me as your personal trainer
 img: about-me.jpg
 alt: About me
 id: "1"
@@ -8,8 +8,20 @@ created: 01 02 2020
 show: true
 
 ---
-# My journey as a fitness professional
+# Working with a client over lockdown
 
-My personal training career and undergraduate course have provided me with the enjoyable opportunity of supporting my clients with a multitude of goals, whether that is to lose weight, improve physical performance, rehabilitate, or just to feel good. Rehabilitation involved the development of various exercise programmes for clients with musculoskeletal injuries or chronic health problems. For example, I worked alongside a patient who underwent reconstruction surgery on both feet and hence, struggled to walk unassisted. Following my 12-week intervention, she was able to walk for longer unaided, regaining her independence. She reported that she felt stronger and more self-confident. The success was partly due to my ability to apply the latest research which enabled me to prescribe a programme that was bespoke and effective.
+## Introduction
 
-Establishing trustworthy and professional client relationships are skills that I have refined whilst working as a personal trainer. During the screening of movements on my treatment table, I communicate clearly, explaining what was evaluated, and how we can tailor upcoming exercises to their needs. Being an active listener is a skill that I have realised is key to successful client rapport. This skill enables me to completely focus on the speaker; therefore, truly understand their goals and be able to respond empathetically. To further maintain a professional working environment, all client personal information is kept confidential under the General Data Protection Regulation. Not only have I improved my one-to-one relationships with clients but also with the rest of my health and fitness colleagues. Being part of a team enabled me to seek advice from others to improve exercise strategies and work creatively together when leading fitness classes.
+Throughout my journey as a personal trainer, I have had the enjoyable opportunity to work with clients of all ages, sex, and abilities. Some were athletes looking to optimise performance whilst others suffered from chronic health problems wanting to improve their quality of life. Through my experience and expertise, I have helped all my clients put their best foot forward and change their lives for the better. Today, I will share an experience that I have had with a more recent client. He has trained occasionally before working with me, but he is relatively new to a structured bespoke training regime. Due to the COVID-19 lockdown, he has felt the importance of looking after his physical and mental health. Here is a concise breakdown of the plan and what we achieved.
+
+## Barriers and goals
+
+The most immediate obstacle we faced was the lack of equipment and the closure of fitness facilities. Since the first lockdown in March 2020, the client developed bad lifestyle and eating habits. He felt ‘sluggish’ most days and was de-motivated to exercise which is relatable to how most people felt during these times. Adding to the complications, he has arthritis in the hips and worked a busy schedule.
+
+Fortunately, the client owns a turbo trainer (indoor cycling equipment) and lives near a national park. This worked really well with his primary goal of improving his cardiovascular fitness and breaking the bad habits. After identifying his reasons for change, we have decided on some key SMART goals to move in the right direction. These included: drinking a pint of water when awake, building a yoga routine, staying consistent with the training, and being able to walk up flights of stairs without feeling breathless.
+
+## Programming to overcome the obstacles
+
+Starting with a lifestyle remedy, the client was actively encouraged to follow the weekly SMART goals to gradually progress into the plan. These goals were initially achievable within a few days; for instance, infusing fruits with water to help increase micronutrient and water intake consistently over 5 days. Achieving these goals are a great stepping stone to challenge the client in upcoming weeks. It promotes a sense of success and possibility which feels — amazing!
+
+Working towards the longer term goal, the client was given high-intensity interval training on his cycle turbo trainer. He has mentioned previously that he found steady-state to be mundane. For this reason, Fartlek training was chosen not only for its cardiovascular benefits, but for its variability. Each session would be different with a specific focus and varying durations. The client really enjoyed this type of training and was adhering to it.
