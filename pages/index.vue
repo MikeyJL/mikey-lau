@@ -85,14 +85,14 @@
       <img class="profile_img fade_in" src="../assets/profile.jpg">
     </div>
     <div class="body_padding">
-      <p class="text--large no_margin text_center fade_in delay_1">
+      <p class="text--large no_margin text_center fade_in">
         Mikey Lau
       </p>
-      <p class="text--small grey no_margin text_center fade_in delay_2">
+      <p class="text--small grey no_margin text_center fade_in">
         Personal trainer
       </p>
       <div class="spacer--large" />
-      <p class="text--small text_center fade_in delay_2">
+      <p class="text--small text_center fade_in">
         #personaltraining<br>#onlinecoaching<br>#strengthandconditioning<br>#functionaltraining<br>#movementfocused<br>#therapybased
       </p>
       <div class="spacer--large" />

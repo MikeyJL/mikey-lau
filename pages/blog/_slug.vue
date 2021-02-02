@@ -11,6 +11,9 @@
 
 /* Back */
 
+.back_home_wrapper {
+  width: fit-content
+}
 .back_home {
   position: fixed;
   left: 0;
@@ -48,10 +51,10 @@ img {
 @media (max-width: 567px) {
   .back_home {
     position: relative;
-    left: 10%
+    left: 0
   }
   #article {
-    padding: 0 6%
+    padding: 0
   }
 }
 </style>
@@ -59,7 +62,11 @@ img {
 <template>
   <div id="blog_post">
     <div class="spacer--large" />
-    <nuxt-link to="/#blog" class="back_home letter_spacing">Back to home</nuxt-link>
+    <div class="back_home_wrapper">
+      <nuxt-link to="/#blog" class="back_home letter_spacing">
+        Back to home
+      </nuxt-link>
+    </div>
     <div class="spacer--small" />
     <img :src="require(`../../assets/${article.img}`)" :alt="article.alt">
     <div class="spacer--small" />
