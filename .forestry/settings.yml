@@ -3,9 +3,14 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
-upload_dir: uploads
-public_path: "/uploads"
+sections:
+- type: directory
+  path: content/articles
+  label: Articles
+  create: documents
+  match: "**/*"
+upload_dir: assets
+public_path: "/assets"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
