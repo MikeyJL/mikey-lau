@@ -23,3 +23,5 @@ fields:
 - type: boolean
   name: show
   label: show
+pages:
+- content/articles/a-debate-over.md
