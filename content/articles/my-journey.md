@@ -1,6 +1,6 @@
 ---
 title: My journey as a fitness professional
-description: A bit about myself
+description: Find out what it's like to have me as your personal trainer.
 img: about-me.jpg
 alt: About me
 id: "1"
