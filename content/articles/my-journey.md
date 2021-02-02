@@ -4,7 +4,7 @@ description: Find out what it's like to have me as your personal trainer
 img: about-me.jpg
 alt: About me
 id: "1"
-created: 01 02 2020
+created: 05 02 2020
 show: true
 
 ---
