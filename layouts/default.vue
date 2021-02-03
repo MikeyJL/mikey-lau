@@ -33,13 +33,16 @@ footer {
 
 /* Text */
 
-.text--large {
+.text--large, h1 {
   font-size: 2.6rem;
   letter-spacing: .2rem
 }
-.text--small {
+.text--small, h2 {
   font-size: 1.6rem;
   letter-spacing: .2rem
+}
+h1, h2 {
+  margin: 2rem 0
 }
 p {
   margin: 1rem 0
