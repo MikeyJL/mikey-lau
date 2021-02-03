@@ -85,11 +85,11 @@ a {
 }
 
 @media (max-width: 576px) {
-  .text--large {
+  .text--large, h1 {
     font-size: 2.2rem;
     letter-spacing: .2rem
   }
-  .text--small {
+  .text--small, h2 {
     font-size: 1.2rem;
     letter-spacing: .2rem
   }
