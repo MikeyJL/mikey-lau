@@ -102,3 +102,30 @@ a {
     <footer></footer>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      metaHelper: {
+        title: 'Mikey Lau',
+        description: '',
+        url: 'https://mikeylau.uk'
+      }
+    }
+  },
+  head () {
+    return {
+      title: this.metaHelper.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.metaHelper.description },
+        { hid: 'og:title', name: 'og:title', content: this.metaHelper.title },
+        { hid: 'og:description', name: 'og:description', content: this.metaHelper.description },
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: this.metaHelper.url }
+      ]
+    }
+  }
+}
+</script>

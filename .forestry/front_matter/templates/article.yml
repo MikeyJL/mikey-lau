@@ -22,5 +22,8 @@ fields:
 - type: text
   name: created
   label: created
+- type: toggle
+  name: show
+  label: show
 pages:
 - content/articles/a-debate-over.md
