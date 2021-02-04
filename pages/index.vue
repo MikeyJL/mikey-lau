@@ -107,7 +107,7 @@
         </a>
       </div>
       <div class="contact_details">
-        <a href="www.linkedin.com/in/mikey-lau" target="_blank">
+        <a href="https://www.linkedin.com/in/mikey-lau" target="_blank">
           LinkedIn
         </a>
       </div>
