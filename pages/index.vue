@@ -19,6 +19,13 @@
   filter: grayscale(0%)
 }
 
+/* Content */
+
+.contact_details {
+  display: flex;
+  justify-content: center
+}
+
 /* Blog */
 
 .article_container {
@@ -44,11 +51,10 @@
   flex-direction: column;
   justify-content: center
 }
-.blog_link {
-  margin-top: 1rem;
+.blog_link, .contact_details a {
   width: fit-content
 }
-.blog_link:after {
+.blog_link:after, .contact_details a:after {
   content: '';
   position: relative;
   display: flex;
@@ -58,8 +64,11 @@
   transform: translateY(-.6rem);
   transition: .4s all cubic-bezier(.165, .84, .44, 1)
 }
-.blog_link:hover:after {
+.blog_link:hover:after, .contact_details a:hover:after {
   width: 100%
+}
+.date {
+  margin-bottom: 2rem
 }
 
 @media (max-width: 992px) {
@@ -91,6 +100,17 @@
       <p class="text--small grey no_margin text_center fade_in">
         Personal trainer
       </p>
+      <div class="spacer--small" />
+      <div class="contact_details">
+        <a href="javascript:void(0)" @click="send_email()">
+          ml-fitness@outlook.com
+        </a>
+      </div>
+      <div class="contact_details">
+        <a href="www.linkedin.com/in/mikey-lau" target="_blank">
+          LinkedIn
+        </a>
+      </div>
       <div class="spacer--large" />
       <p class="text--small text_center fade_in">
         #personaltraining<br>#onlinecoaching<br>#strengthandconditioning<br>#functionaltraining<br>#movementfocused<br>#therapybased
@@ -112,7 +132,7 @@
           <div class="article_text">
             <p class="text--small no_margin">{{ article.title }}</p>
             <p class="text--small grey no_margin">{{ article.description }}</p>
-            <p class="grey letter_spacing">{{ article.created }}</p>
+            <p class="date grey letter_spacing">{{ article.created }}</p>
             <nuxt-link :to="`/blog/${article.slug}`" class="blog_link letter_spacing">
               Read
             </nuxt-link>
@@ -133,6 +153,9 @@
       return { articles }
     },
     methods: {
+      send_email () {
+        window.open('mailto:ml-fitness@outlook.com?subject=Reaching out&body=Hi Mikey,')
+      },
       format_date(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('en', options)
