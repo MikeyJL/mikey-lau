@@ -97,8 +97,13 @@
       <p class="text--large no_margin text_center fade_in">
         Mikey Lau
       </p>
-      <p class="text--small grey no_margin text_center fade_in">
-        Personal trainer
+      <p class="text_center fade_in">
+        Level 4 Advanced Personal Training<br>
+        Level 3 Strength and Conditioning<br>
+        Level 3 Sports Massage (pending)<br>
+        Level 3 Exercise Referral<br>
+        Level 3 Personal Trainer<br>
+        Level 2 Gym Instructor<br>
       </p>
       <div class="spacer--small" />
       <div class="contact_details">
@@ -131,8 +136,8 @@
           <img :src="require(`../assets/${article.img}`)" :alt="article.alt">
           <div class="article_text">
             <p class="text--small no_margin">{{ article.title }}</p>
-            <p class="text--small grey no_margin">{{ article.description }}</p>
-            <p class="date grey letter_spacing">{{ article.created }}</p>
+            <p>{{ article.description }}</p>
+            <p class="date letter_spacing">{{ article.created }}</p>
             <nuxt-link :to="`/blog/${article.slug}`" class="blog_link letter_spacing">
               Read
             </nuxt-link>

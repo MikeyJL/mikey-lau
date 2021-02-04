@@ -67,7 +67,7 @@ a {
   text-align: center
 }
 .letter_spacing {
-  letter-spacing: .2rem
+  letter-spacing: .1rem
 }
 
 /* Anim */
