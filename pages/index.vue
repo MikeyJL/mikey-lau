@@ -126,7 +126,7 @@
           class="article"
           v-for="(article, index) in articles"
           :key="`article_${index}`"
-          v-show="article.show"
+          v-show="get_raw_date(article.created) >= today"
         >
           <img :src="require(`../assets/${article.img}`)" :alt="article.alt">
           <div class="article_text">
@@ -145,21 +145,32 @@
 
 <script>
   export default {
+    data () {
+      return {
+        today: null
+      }
+    },
     async asyncData({ $content }) {
       const articles = await $content('articles').fetch()
       articles.sort((b, a) => {
-        return new Date(b.id) - new Date(a.id)
+        return b.id - a.id
       })
       return { articles }
     },
+    created () {
+      this.today = new Date()
+    },
     methods: {
+      get_raw_date (date) {
+        return new Date(date)
+      },
       send_email () {
         window.open('mailto:ml-fitness@outlook.com?subject=Reaching out&body=Hi Mikey,')
       },
       format_date(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('en', options)
-      }
+      },
     }
   }
 </script>

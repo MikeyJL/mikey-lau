@@ -3,10 +3,8 @@ title: Working with a client over lockdown
 description: Find out what it's like to have me as your personal trainer
 img: about-me.jpg
 alt: About me
-id: "1"
+id: 1
 created: 05 02 2020
-show: true
-
 ---
 # Working with a client over lockdown
 
