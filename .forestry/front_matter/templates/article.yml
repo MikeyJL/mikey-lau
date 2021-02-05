@@ -25,5 +25,3 @@ fields:
 - name: show
   type: boolean
   label: show
-pages:
-- content/articles/a-debate-over.md
