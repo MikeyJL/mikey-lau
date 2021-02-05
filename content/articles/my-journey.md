@@ -3,15 +3,16 @@ title: Working with a client over lockdown
 description: Find out what it's like to have me as your personal trainer
 img: about-me.png
 alt: About me
-id: 1
+id: "1"
 created: 05 02 2020
 show: true
+
 ---
 # Working with a client over lockdown
 
 ## Introduction
 
-Throughout my journey as a personal trainer, I've had the enjoyable opportunity to work with clients of all ages, sex, and abilities. Some were athletes looking to optimise performance whilst others suffered from chronic health problems wanting to improve their quality of life. I’ve helped all my clients put their best foot forward and change their lives for the better. Today, I’ll share an experience that I’ve had with a more recent client. Here’s a concise breakdown of the plan and what we’ve achieved.
+Throughout my journey as a personal trainer, I've had the enjoyable opportunity to work with clients of all ages, genders, and abilities. Some were athletes looking to optimise performance whilst others suffered from chronic health problems wanting to improve their quality of life. I’ve helped all my clients put their best foot forward and change their lives for the better. Today, I’ll share an experience that I’ve had with a more recent client. Here’s a concise breakdown of the plan and what we’ve achieved.
 
 ## Barriers and goals
 
