@@ -84,6 +84,9 @@
   .article {
     grid-template-columns: 1fr
   }
+  .article img {
+    filter: grayscale(0%)
+  }
 }
 </style>
 
@@ -91,7 +94,7 @@
   <div id="home">
     <div class="top_bar">
       <div class="backdrop" />
-      <img class="profile_img fade_in" src="../assets/profile.jpg">
+      <img id="profile" class="profile_img fade_in" src="../assets/profile.jpg">
     </div>
     <div class="body_padding">
       <p class="text--large no_margin text_center fade_in">
@@ -150,6 +153,11 @@
 
 <script>
   export default {
+    data () {
+      return {
+        checkpoint: 100
+      }
+    },
     async asyncData({ $content }) {
       const articles = await $content('articles').fetch()
       articles.sort((b, a) => {
@@ -160,9 +168,20 @@
     beforeCreate () {
       this.$parent.$parent.metaHelper.title = 'Mikey Lau'
       this.$parent.$parent.metaHelper.description = ''
-      this.$parent.$parent.metaHelper.url = 'https://mikeylau.uk/'
+      this.$parent.$parent.metaHelper.url = 'https://mikeylau.uk'
+    },
+    mounted () {
+      window.addEventListener('scroll', this.process_scroll)
     },
     methods: {
+      process_scroll () {
+        const currentScroll = window.pageYOffset
+        if (currentScroll < this.checkpoint) {
+          document.getElementById('profile').style.filter = 'grayscale(0%)'
+        } else {
+          document.getElementById('profile').style.filter = 'grayscale(100%)'
+        }
+      },
       send_email () {
         window.open('mailto:ml-fitness@outlook.com?subject=Reaching out&body=Hi Mikey,')
       }

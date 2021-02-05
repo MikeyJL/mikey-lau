@@ -1,7 +1,7 @@
 ---
 title: Working with a client over lockdown
 description: Find out what it's like to have me as your personal trainer
-img: about-me.jpg
+img: about-me.png
 alt: About me
 id: 1
 created: 05 02 2020
