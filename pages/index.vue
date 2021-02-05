@@ -7,16 +7,12 @@
   background-color: #F2F2F2
 }
 .profile_img {
-  filter: grayscale(100%);
   width: 15%;
   border-radius: 50%;
   display: flex;
   margin: auto;
   transform: translateY(-5rem);
   transition: 1s all cubic-bezier(.165, .84, .44, 1)
-}
-.profile_img:hover {
-  filter: grayscale(0%)
 }
 
 /* Content */
@@ -172,6 +168,9 @@
     },
     mounted () {
       window.addEventListener('scroll', this.process_scroll)
+    },
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.process_scroll)
     },
     methods: {
       process_scroll () {
