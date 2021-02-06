@@ -13,7 +13,7 @@ show: true
 
 ## Introduction
 
-Throughout my journey as a personal trainer, I've had the enjoyable opportunity to work with clients of all ages, genders, and abilities. Some were athletes looking to optimise performance whilst others suffered from chronic health problems wanting to improve their quality of life. I’ve helped all my clients put their best foot forward and change their lives for the better. Today, I’ll share an experience that I’ve had with a more recent client. Here’s a concise breakdown of the plan and what we’ve achieved.
+Throughout my journey as a personal trainer, I've had the enjoyable opportunity to work with clients of all ages, genders, and abilities. Some were athletes looking to optimise performance whilst others suffered from chronic health problems wanting to improve their quality of life. I’ve helped all my clients put their best foot forward to change their lives for the better. Today, I’ll share an experience that I’ve had with a more recent client. Here’s a concise breakdown of the plan and what we’ve achieved.
 
 ## Barriers and goals
 
