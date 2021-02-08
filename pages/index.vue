@@ -107,7 +107,7 @@
       <div class="spacer--small" />
       <div class="contact_details">
         <a href="javascript:void(0)" @click="send_email()">
-          ml-fitness@outlook.com
+          Reach out for a consultation
         </a>
       </div>
       <div class="contact_details">
@@ -117,7 +117,7 @@
       </div>
       <div class="spacer--large" />
       <p class="text--small text_center fade_in">
-        #personaltraining<br>#onlinecoaching<br>#strengthandconditioning<br>#functionaltraining<br>#movementfocused<br>#therapybased
+        #keepingitsimple<br>#movementfocused<br>#therapybased<br>#betterposture<br>#functional
       </p>
       <div class="spacer--large" />
       <a id="blog" />
