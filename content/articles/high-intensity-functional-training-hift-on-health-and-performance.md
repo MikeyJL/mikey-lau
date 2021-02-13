@@ -13,7 +13,7 @@ show: true
 
 ## The rise of HIFT
 
-This mode of training has existed since the latter part of the 20th century but has grown in popularity from brands such as CrossFit. Functional fitness training ranked 14th on the ACSM’s top 20 worldwide fitness trends for 20218. HIFT combines aspects of high-intensity interval training with functional multi-joint movements that challenges aerobic fitness and maximal strength1. An example workout would be ‘Nancy’ from the CrossFit community. This includes 5 rounds of a 400-m run and 15 barbell snatches. It’s completed without rests between rounds and it’s typically timed9. Today, I’ll give you an insight into whether if HIFT is suitable for your goals, its risks, and potential rewards.
+This mode of training has existed since the latter part of the 20th century but has grown in popularity from brands such as CrossFit. Functional fitness training ranked 14th on the ACSM’s top 20 worldwide fitness trends for 2021<sup>8</sup>. HIFT combines aspects of high-intensity interval training with functional multi-joint movements that challenges aerobic fitness and maximal strength1. An example workout would be ‘Nancy’ from the CrossFit community. This includes 5 rounds of a 400-m run and 15 barbell snatches. It’s completed without rests between rounds and it’s typically timed9. Today, I’ll give you an insight into whether if HIFT is suitable for your goals, its risks, and potential rewards.
 
 ## Its effects on health and fitness
 
