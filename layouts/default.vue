@@ -5,7 +5,7 @@
 html {
   font-family: Helvetica, sans-serif, Arial;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.5;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
