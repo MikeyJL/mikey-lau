@@ -25,3 +25,5 @@ fields:
 - name: show
   type: boolean
   label: show
+pages:
+- content/articles/high-intensity-functional-training-hift-on-health-and-performance.md
