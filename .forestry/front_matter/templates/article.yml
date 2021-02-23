@@ -25,5 +25,3 @@ fields:
 - name: show
   type: boolean
   label: show
-pages:
-- content/articles/squatting-below-parallel-should-we-do-it.md

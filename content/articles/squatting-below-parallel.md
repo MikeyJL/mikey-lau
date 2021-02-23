@@ -4,18 +4,18 @@ description: How deep should we squat? This is a common topic of debate amongst 
   professionals. Here's my take on the matter.
 img: squat-depth.png
 alt: Squatting below parallel
-id: 3
+id: "3"
 created: 2020 03 01
 show: true
 
 ---
 # Squatting below parallel: should we do it?
 
-### Why is there a debate?
+## Why is there a debate?
 
 Throughout your fitness journey, if you’ve encountered the back squat exercise, then you may be aware of the on-going debate over squat depth. Most commonly, whether you should squat below parallel where your hips are lower than the knees (90° knee flexion). In this post, we will discuss both sides of the argument and conclude how this might transfer into your own training programme.
 
-### What’s actually better?
+## What’s actually better?
 
 The answer is not so straight-forward. The most common response to these type of questions is that ‘it depends’ — and it’s rightfully so. Nonetheless, starting with concerns about injuries, many advocate that it’s dangerous to perform deep squats with heavy loads. However, the contrary is supported by research in joint-loading and its effects on the lower-limbs. Though deep squats are more technically demanding, it may not increase injury risk if the technique was learned under expert supervision with progressive training<sup>1</sup>. Instead, it may be more damaging to perform the quarter or parallel squat. Typically, shallower squats can tolerate more load which increases the shear and compressive forces in the vertebral column<sup>2,3</sup>.
 
@@ -23,11 +23,11 @@ If it’s possibly more dangerous to squat parallel and above, why do avid gym m
 
 Nevertheless, the transferability of squat training to large dynamic movements can differ with squat depth. As discussed, partial squats may be suitable for maximal strength and power training whilst targeting hip extensors and ankle plantar flexors using heavier loads. In other literature, it was implied that a 10-week programme consisting of full-range front and back squats showed significant improvements in jump height compared to partial squats<sup>6</sup>. If the goal is to improve sporting movements like jumping, it may be beneficial to devote a portion of resistance training to full-range squats. Alternatively, another piece of the literature suggested that including both deep and partial squats could be optimal in supporting the growth of maximal strength<sup>7</sup>.
 
-### Key points to take away
+## Key points to take away
 
 In summary, there are benefits to using squats below or above parallel. Generally, a shallower squat depth can tolerate more load and elicit more muscle activity. Deep squats can have greater transferability to larger movements but can be more technically demanding. With regards to training, if possible and suitable for your goals, a combination of either squat depth may be optimal for maximal strength development.
 
-### References
+## References
 
 \[1\] Hartmann, H., Wirth, K., and Klusemann, M. (2013). Analysis of the Load on the Knee Joint and Vertebral Column with Changes in Squatting Depth and Weight Load. _Sports Medicine_, 43(10), pp. 993–1008.
 
