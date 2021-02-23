@@ -4,7 +4,7 @@ description: What does the research suggest about CrossFit or military-style tra
   and how it can benefit you?
 img: hift.png
 alt: High-intensity functional training
-id: "2"
+id: 2
 created: 15 02 2021
 show: true
 
