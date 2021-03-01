@@ -29,16 +29,16 @@ In summary, there are benefits to using squats below or above parallel. Generall
 
 ## References
 
-\[1\] Hartmann, H., Wirth, K., and Klusemann, M. (2013). Analysis of the Load on the Knee Joint and Vertebral Column with Changes in Squatting Depth and Weight Load. _Sports Medicine_, 43(10), pp. 993–1008.
+\[1\] Hartmann H, Wirth K, Klusemann M. Analysis of the Load on the Knee Joint and Vertebral Column with Changes in Squatting Depth and Weight Load. _Sports Medicine_. 2013; 43(10): 993–1008. Available from: doi:10.1007/s40279-013-0073-6
 
-\[2\] Hartmann, H., Wirth, K., Mickel, C., Keiner, M., Sander, A., and Yaghobi, D. (2016). Stress for Vertebral Bodies and Intervertebral Discs with Respect to Squatting Depth. _Journal of Functional Morphology and Kinesiology_, 1(2), pp. 254–268.
+\[2\] Hartmann H, Wirth K, Mickel C, Keiner M, Sander A, Yaghobi D. Stress for Vertebral Bodies and Intervertebral Discs with Respect to Squatting Depth. _Journal of Functional Morphology and Kinesiology_. 2016; 1(2): 254–268. Available from: doi:10.3390/jfmk1020254
 
-\[3\] Pallarés, J. G., Cava, A. M., Courel-Ibáñez, J., González-Badillo, J. J., and Morán-Navarro, R. (2019). Full squat produces greater neuromuscular and functional adaptations and lower pain than partial squats after prolonged resistance training. _European Journal of Sport Science_, pp. 1–10.
+\[3\] Pallarés JG, Cava AM, Courel-Ibáñez J, González-Badillo JJ, Morán-Navarro R. Full squat produces greater neuromuscular and functional adaptations and lower pain than partial squats after prolonged resistance training. _European Journal of Sport Science_. 2019: 1–10. Available from: doi:10.1080/17461391.2019.1612952
 
-\[4\] Bryanton, M. A., Kennedy, M. D., Carey, J. P., and Chiu, L. Z. F. (2012). Effect of Squat Depth and Barbell Load on Relative Muscular Effort in Squatting. _Journal of Strength and Conditioning Research_, 26(10), pp. 2820–2828.
+\[4\] Bryanton MA, Kennedy MD, Carey JP, Chiu LZF. Effect of Squat Depth and Barbell Load on Relative Muscular Effort in Squatting. _Journal of Strength and Conditioning Research_. 2012; 26(10): 2820–2828. Available from: doi:10.1519/jsc.0b013e31826791a7
 
-\[5\] Drinkwater, E. J., Moore, N. R., and Bird, S. P. (2012). Effects of Changing from Full Range of Motion to Partial Range of Motion on Squat Kinetics. _Journal of Strength and Conditioning Research_, 26(4), 890–896.
+\[5\] Drinkwater EJ, Moore NR, Bird SP. Effects of Changing from Full Range of Motion to Partial Range of Motion on Squat Kinetics. _Journal of Strength and Conditioning Research_. 2012; 26(4): 890–896. Available from: doi:10.1519/jsc.0b013e318248ad2e
 
-\[6\] Hartmann, H., Wirth, K., Klusemann, M., Dalic, J., Matuschek, C., and Schmidtbleicher, D. (2012). Influence of Squatting Depth on Jumping Performance. _Journal of Strength and Conditioning Research_, 26(12), pp. 3243–3261.
+\[6\] Hartmann H, Wirth K, Klusemann M, Dalic J, Matuschek C, Schmidtbleicher D. Influence of Squatting Depth on Jumping Performance. _Journal of Strength and Conditioning Research_. 2012; 26(12): 3243–3261. Available from: doi:10.1519/jsc.0b013e31824ede62
 
-\[7\] Bazyler, C. D., Sato, K., Wassinger, C. A., Lamont, H. S., and Stone, M. H. (2014). The Efficacy of Incorporating Partial Squats in Maximal Strength Training. _Journal of Strength and Conditioning Research_, 28(11), pp. 3024–3032.
+\[7\] Bazyler CD, Sato K, Wassinger CA, Lamont HS, Stone MH. The Efficacy of Incorporating Partial Squats in Maximal Strength Training. _Journal of Strength and Conditioning Research_. 2014; 28(11): 3024–3032. Available from: doi:10.1519/jsc.0000000000000465
