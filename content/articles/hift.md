@@ -31,20 +31,20 @@ In short, if you are thinking about CrossFit or adding HIFT to your programme, y
 
 ## References
 
-\[1\] Thompson, W. R. (2021). Worldwide survey of fitness trends for 2020. _ACSMʼs Health & Fitness Journal_, 25(1), pp. 10–19.
+\[1\] Thompson WR. Worldwide survey of fitness trends for 2020. _ACSMʼs Health & Fitness Journal_. 2021; 25(1): 10–19. Available from: doi:10.1249/FIT.0000000000000526.
 
-\[2\] Feito, Y., Heinrich, K., Butcher, S., and Poston, W. (2018). High-Intensity Functional Training (HIFT): Definition and Research Implications for Improved Fitness. _Sports_, 6(3), pp. 76.
+\[2\] Feito Y, Heinrich K, Butcher S, Poston W. High-Intensity Functional Training (HIFT): Definition and Research Implications for Improved Fitness. _Sports_. 2018; 6(3): 76. Available from: doi:10.3390/sports6030076.
 
 \[3\] WODwell, (2016). _Nancy_. \[online\] Available at: [https://wodwell.com/wod/nancy/](https://wodwell.com/wod/nancy/ "https://wodwell.com/wod/nancy/") \[Accessed 7 Feb. 2021\].
 
-\[4\] Haddock, C. K., Poston, W. S. C., Heinrich, K. M., Jahnke, S. A., and Jitnarin, N. (2016). The Benefits of High-Intensity Functional Training Fitness Programs for Military Personnel. _Military Medicine_, 181(11), e1508–e1514.
+\[4\] Haddock CK., Poston WSC, Heinrich KM, Jahnke SA, Jitnarin N. The Benefits of High-Intensity Functional Training Fitness Programs for Military Personnel. _Military Medicine_. 2016; 181(11): e1508–e1514. Available from: doi:10.7205/milmed-d-15-00503.
 
-\[5\] McWeeny, D. K., Boule, N. G., Neto, J. H. F., and Kennedy, M. D. (2020). Effect of high intensity functional training and traditional resistance training on aerobic, anaerobic, and musculoskeletal fitness improvement. _Journal of Physical Education and Sport,_ 20(4), pp. 1791-1802.
+\[5\] McWeeny DK, Boule NG, Neto JHF, Kennedy MD. Effect of high intensity functional training and traditional resistance training on aerobic, anaerobic, and musculoskeletal fitness improvement. _Journal of Physical Education and Sport._ 2020; 20(4): 1791–1802. Available from: doi:10.7752/jpes.2020.04243.
 
-\[6\] Sobrero, G., Arnett, S., Schafer, M., Stone, W., Tolbert, T. A., Salyer-Funk, A., Crandall, J., Farley, L. B., Brown, J., Lyons, S., Esslinger, T., Esslinger, K., and Maples, J., (2017). A Comparison of High Intensity Functional Training and Circuit Training on Health and Performance Variables in Women: A Pilot Study. _Women in sport & physical activity journal,_ 25(1), pp. 1-10.
+\[6\] Sobrero G, Arnett S, Schafer M, Stone W, Tolbert TA, Salyer-Funk A, Crandall J, Farley LB, Brown J, Lyons S, Esslinger T, Esslinger K, Maples J. A Comparison of High Intensity Functional Training and Circuit Training on Health and Performance Variables in Women: A Pilot Study. _Women in sport & physical activity journal._ 2017; 25(1): 1–10. Available from: doi:10.1123/wspaj.2015-0035.
 
-\[7\] Heinrich, K. M., Patel, P. M., O’Neal, J. L., and Heinrich, B. S. (2014). High-intensity compared to moderate-intensity training for exercise initiation, enjoyment, adherence, and intentions: an intervention study. _BMC Public Health_, 14(1), pp. 789.
+\[7\] Heinrich KM, Patel PM, O’Neal JL, Heinrich BS. High-intensity compared to moderate-intensity training for exercise initiation, enjoyment, adherence, and intentions: an intervention study. _BMC Public Health_. 2014; 14(1): 789. Available from: doi:10.1186/1471-2458-14-789.
 
-\[8\] Hak, P. T., Hodzovic, E., and Hickey, B. (2013). The nature and prevalence of injury during CrossFit training. _Journal of Strength and Conditioning Research_.
+\[8\] Hak PT, Hodzovic E, Hickey B. The nature and prevalence of injury during CrossFit training. _Journal of Strength and Conditioning Research_. 2013. Available from: doi:10.1519/jsc.0000000000000318.
 
-\[9\] Teixeira, R. V., Dantas, M., Motas, D. G. d., Gantois, P., Aidar, F. J., Dantas, P. M. S., Queiros, V. S. d., Cesário, T. d. M., and Cabral, Breno Guilherme de Araújo Tinôco, (2020). Retrospective Study of Risk Factors and the Prevalence of Injuries in HIFT. _International journal of sports medicine,_ 41(3), pp. 168-174.
+\[9\] Teixeira R, Dantas M, Motas D, Gantois P, Aidar F, Dantas P, Queiros V, Cesário T, Cabral B. Retrospective Study of Risk Factors and the Prevalence of Injuries in HIFT. _International journal of sports medicine_. 2020; 41(3): 168–174. Available from: doi:10.1055/a-1062-6551.
