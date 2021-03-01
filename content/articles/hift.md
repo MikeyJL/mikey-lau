@@ -4,7 +4,7 @@ description: What does the research suggest about CrossFit or military-style tra
   and how it can benefit you?
 img: hift.png
 alt: High-intensity functional training
-id: 2
+id: "2"
 created: 15 02 2021
 show: true
 
@@ -13,17 +13,17 @@ show: true
 
 ## The rise of HIFT
 
-This mode of training has existed since the latter part of the 20th century but has grown in popularity from brands such as CrossFit. Functional fitness training ranked 14th on the ACSM’s top 20 worldwide fitness trends for 2021<sup>1</sup>. HIFT combines aspects of high-intensity interval training with functional multi-joint movements that challenges aerobic fitness and maximal strength<sup>2</sup>. An example workout would be ‘Nancy’ from the CrossFit community. This includes 5 rounds of a 400-m run and 15 barbell snatches. It’s completed without rests between rounds and it’s typically timed<sup>3</sup>. Today, I’ll give you an insight into whether if HIFT is suitable for your goals, its risks, and potential rewards.
+This mode of training has existed since the latter part of the 20th century but has grown in popularity from brands such as CrossFit. Functional fitness training ranked 14th on the ACSM’s top 20 worldwide fitness trends for 2021 (1). HIFT combines aspects of high-intensity interval training with functional multi-joint movements that challenges aerobic fitness and maximal strength (2). An example workout would be ‘Nancy’ from the CrossFit community. This includes 5 rounds of a 400-m run and 15 barbell snatches. It’s completed without rests between rounds and it’s typically timed (3). Today, I’ll give you an insight into whether if HIFT is suitable for your goals, its risks, and potential rewards.
 
 ## Its effects on health and fitness
 
-Through a combination of various types of training on a range of energy systems, HIFT can improve many aspects of health and fitness. Using the previous example workout ‘Nancy’, the 400-m run targeted the anaerobic/aerobic system whilst the 15 barbell snatches were focused on power and power-endurance. It’s no surprise that this mode of training is difficult and comparable to military-styled conditioning. In fact, when fully embraced, HIFT improves strength, cardiovascular endurance, body composition, and promotes general physical preparedness for unpredictable demands<sup>4</sup>. Additionally, compared to a traditional training model of using sets and reps, it has been suggested that HIFT substantially improves upper-body muscular endurance and aerobic power<sup>5</sup>.
+Through a combination of various types of training on a range of energy systems, HIFT can improve many aspects of health and fitness. Using the previous example workout ‘Nancy’, the 400-m run targeted the anaerobic/aerobic system whilst the 15 barbell snatches were focused on power and power-endurance. It’s no surprise that this mode of training is difficult and comparable to military-styled conditioning. In fact, when fully embraced, HIFT improves strength, cardiovascular endurance, body composition, and promotes general physical preparedness for unpredictable demands (4). Additionally, compared to a traditional training model of using sets and reps, it has been suggested that HIFT substantially improves upper-body muscular endurance and aerobic power (5).
 
-Contrastingly, some authors compared HIFT with traditional circuit training and have observed little significant improvements between the methods<sup>6</sup>. However, a common theme across most studies indicated that HIFT is extremely effective at improving body composition. This could result from the higher adherence of HIFT programmes due to shorter workout times, more variations, and enjoyment<sup>7</sup>.
+Contrastingly, some authors compared HIFT with traditional circuit training and have observed little significant improvements between the methods (6). However, a common theme across most studies indicated that HIFT is extremely effective at improving body composition. This could result from the higher adherence of HIFT programmes due to shorter workout times, more variations, and enjoyment (7).
 
 ## Injuries and dysfunctions
 
-One of the biggest disadvantages of HIFT is the injury rate and movement dysfunctions. For instance, CrossFit has received much criticism over its methodology. Of most partakers in this method, 73.5% sustained some form of injury with 7% requiring surgery<sup>8</sup>. In a more general context, a survey of 213 HIFT practitioners showed that 7.1 injuries occur every 1000 hours of participation. Moreover, competitive athletes and people with more experience with this type of training are 5.69 and 3.77 times more likely to sustain an injury — respectively<sup>9</sup>.
+One of the biggest disadvantages of HIFT is the injury rate and movement dysfunctions. For instance, CrossFit has received much criticism over its methodology. Of most partakers in this method, 73.5% sustained some form of injury with 7% requiring surgery (8). In a more general context, a survey of 213 HIFT practitioners showed that 7.1 injuries occur every 1000 hours of participation. Moreover, competitive athletes and people with more experience with this type of training are 5.69 and 3.77 times more likely to sustain an injury — respectively (9).
 
 ## Key points to take away
 
