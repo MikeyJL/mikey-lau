@@ -4,7 +4,7 @@ description: Find out what it's like to have me as your personal trainer and lea
   my top rules for staying motivated with a programme.
 img: about-me.png
 alt: About me
-id: 1
+id: "1"
 created: 05 02 2021
 show: true
 
@@ -23,7 +23,7 @@ Fortunately, the client owns a turbo trainer (indoor cycling equipment) and live
 
 ## Programming to overcome the obstacles
 
-Starting with a lifestyle remedy, the client was actively encouraged to follow the weekly SMART goals to gradually progress into the plan. These goals were achievable within a few days; for instance, infusing fruits with water to help increase micronutrient and water intake consistently over 5 days. Achieving these ‘mini’ goals are a great stepping stone to challenge the client in the upcoming weeks. It promotes a sense of success and possibility which feels — amazing!
+Starting with a lifestyle remedy, the client was actively encouraged to follow the weekly SMART goals to gradually progress into the plan. These goals were achievable within a few days; for instance, infusing fruits with water to help increase micronutrient and water intake consistently over 5 days. Achieving these ‘mini’ goals were great stepping stones to challenge the client in the upcoming weeks. It promotes a sense of success and possibility which feels — amazing!
 
 Working towards the longer term, the client was given high-intensity interval training on his cycle turbo trainer. He’s mentioned previously that he found steady-state to be mundane. For this reason, Fartlek training was chosen not only for its cardiovascular benefits but for its diversity. Each session was different with a specific focus and varying durations. Supporting both lifestyle and health aspects of this programme, the plan included a range of yoga flows and routines. It has improved flexibility, stability, isometric contraction, and reduced stress levels. From the feedback gathered, the client really enjoyed this type of training with the balanced lifestyle changes. He stated that _“it did not feel like training at all, but rather a way of life”_ — further adding that the yoga has helped the arthritis in his hips.
 
