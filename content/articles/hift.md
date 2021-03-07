@@ -27,7 +27,7 @@ One of the biggest disadvantages of HIFT is the injury rates and movement dysfun
 
 ## Key points to take away
 
-In short, if you are thinking about CrossFit or adding HIFT to your programme, you should have an injury prevention plan as part of the overall programme. This could include exercises that target movement dysfunction, such as addressing a lack of ankle mobility to improve squat depth and weight distribution — which could reduce the stress placed on the knees. Nevertheless, the benefits of HIFT are substantial when utilised effectively.
+In short, if you are thinking about CrossFit or adding HIFT to your plan, you should have an injury prevention plan as part of the overall programme. This could include exercises that target movement dysfunction, such as addressing a lack of ankle mobility to improve squat depth and weight distribution — which could reduce the stress placed on the knees. Nevertheless, the benefits of HIFT are substantial when utilised effectively.
 
 ## References
 
