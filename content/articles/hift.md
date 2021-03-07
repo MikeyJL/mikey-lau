@@ -23,7 +23,7 @@ Contrastingly, some authors compared HIFT with traditional circuit training and 
 
 ## Injuries and dysfunctions
 
-One of the biggest disadvantages of HIFT are the injury rates and movement dysfunctions. For instance, CrossFit has received much criticism over its methodology. Of most partakers in this method, 73.5% sustained some form of injury with 7% requiring surgery (9). In a more general context, a survey of 213 HIFT practitioners showed that 7.1 injuries occur every 1000 hours of participation. Moreover, competitive athletes and people with more experience with this type of training are 5.69 and 3.77 times more likely to sustain an injury — respectively (10).
+One of the biggest disadvantages of HIFT is injury rates and movement dysfunctions. For instance, CrossFit has received much criticism over its methodology. Of most partakers in this method, 73.5% sustained some form of injury with 7% requiring surgery (9). In a more general context, a survey of 213 HIFT practitioners showed that 7.1 injuries occur every 1000 hours of participation. Moreover, competitive athletes and people with more experience with this type of training are 5.69 and 3.77 times more likely to sustain an injury — respectively (10).
 
 ## Key points to take away
 
