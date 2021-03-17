@@ -5,7 +5,7 @@ description: How deep should we squat? This is a common topic of debate amongst 
 img: squat-depth.png
 alt: Squatting below parallel
 id: "3"
-created: 2020 03 01
+created: 01 03 2021
 show: true
 
 ---
