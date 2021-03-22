@@ -1,3 +1,9 @@
+<style>
+li {
+  margin: 1rem 0
+}
+</style>
+
 <style scoped>
 
 /* Containers */
