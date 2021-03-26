@@ -25,3 +25,5 @@ fields:
 - name: show
   type: boolean
   label: show
+pages:
+- content/articles/effectiveness-of-sports-massage-its-misconceptions-and-how-to-look-for-a-therapist.md
