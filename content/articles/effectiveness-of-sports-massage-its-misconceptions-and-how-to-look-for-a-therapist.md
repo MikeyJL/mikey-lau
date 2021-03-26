@@ -8,7 +8,7 @@ img: 4.png
 alt: Sports massage
 id: 4
 created: '2020-03-18'
-show: false
+show: true
 
 ---
 # **Effectiveness of sports massage, its misconceptions, and how to look for a therapist**
