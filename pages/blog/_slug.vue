@@ -2,6 +2,10 @@
 li {
   margin: 1rem 0
 }
+.nuxt-content-container li > a {
+  text-decoration: underline;
+  overflow-wrap: break-word
+}
 </style>
 
 <style scoped>
@@ -11,7 +15,7 @@ li {
 #blog_post {
   padding: 0 8%
 }
-#article {
+#article, #video {
   padding: 0 10%
 }
 
@@ -48,10 +52,18 @@ img {
   margin: auto;
   display: flex
 }
+#video iframe {
+  display: flex;
+  margin: 3rem auto 4rem auto;
+  border-radius: 10px;
+}
 
 @media (max-width: 772px) {
   .back_home {
     left: -1rem
+  }
+  #video iframe {
+    width: 100%
   }
 }
 @media (max-width: 567px) {
@@ -59,7 +71,7 @@ img {
     position: relative;
     left: 0
   }
-  #article {
+  #article, #video {
     padding: 0
   }
 }
@@ -76,7 +88,20 @@ img {
     <div class="spacer--small" />
     <img :src="require(`../../assets/${article.img}`)" :alt="article.alt">
     <div class="spacer--small" />
-    <article id="article">
+    <div id="video" v-if="article.video !== 'none'">
+      <h1>{{ article.title }}</h1>
+      <iframe
+        id="eb-yt"
+        width="560"
+        height="315"
+        :src="article.video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+      <nuxt-content :document="article" />
+    </div>
+    <article v-else id="article">
       <nuxt-content :document="article" />
     </article>
   </div>

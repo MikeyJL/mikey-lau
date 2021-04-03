@@ -3,6 +3,7 @@ title: High-intensity functional training (HIFT) on health and performance
 description: What does the research suggest about CrossFit or military-style training
   and how it can benefit you?
 img: hift.png
+video: none
 alt: High-intensity functional training
 id: "2"
 created: 15 02 2021
@@ -33,7 +34,7 @@ In short, if you are thinking about CrossFit or adding HIFT to your training, yo
 
  1. Thompson W. Worldwide survey of fitness trends for 2020. _ACSMʼs Health & Fitness Journal_. 2021; 25(1): 10–19. Available from: https://doi.org/10.1249/FIT.0000000000000526.
  2. Feito Y, Heinrich K, Butcher S, Poston W. High-Intensity Functional Training (HIFT): Definition and Research Implications for Improved Fitness. _Sports_. 2018; 6(3): 76. Available from: https://doi.org/10.3390/sports6030076.
- 3. WODwell, (2016). _Nancy_. \[online\] Available at: [https://wodwell.com/wod/nancy/](https://wodwell.com/wod/nancy/ "https://wodwell.com/wod/nancy/") \[Accessed 7 Feb. 2021\].
+ 3. WODwell, (2016). _Nancy_. \[online\] Available at: https://wodwell.com/wod/nancy/ \[Accessed 7 Feb. 2021\].
  4. Haddock C., Poston W, Heinrich K, Jahnke S, Jitnarin N. The Benefits of High-Intensity Functional Training Fitness Programs for Military Personnel. _Military Medicine_. 2016; 181(11): e1508–e1514. Available from: https://doi.org/10.7205/milmed-d-15-00503.
  5. McWeeny D, Boule N, Neto J, Kennedy M. Effect of high intensity functional training and traditional resistance training on aerobic, anaerobic, and musculoskeletal fitness improvement. _Journal of Physical Education and Sport._ 2020; 20(4): 1791–1802. Available from: https://doi.org/10.7752/jpes.2020.04243.
  6. Sobrero G, Arnett S, Schafer M, Stone W, Tolbert T, Salyer-Funk A, Crandall J, Farley L, Brown J, Lyons S, Esslinger T, Esslinger K, Maples J. A Comparison of High Intensity Functional Training and Circuit Training on Health and Performance Variables in Women: A Pilot Study. _Women in Sport & Physical Activity Journal._ 2017; 25(1): 1–10. Available from: https://doi.org/10.1123/wspaj.2015-0035.

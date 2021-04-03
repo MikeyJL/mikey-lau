@@ -3,6 +3,7 @@ title: Working with a client over lockdown
 description: Find out what it's like to have me as your personal trainer and learn
   my top rules for staying motivated with a programme.
 img: about-me.png
+video: none
 alt: About me
 id: "1"
 created: 05 02 2021

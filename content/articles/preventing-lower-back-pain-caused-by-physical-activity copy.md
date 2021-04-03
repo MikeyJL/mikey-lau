@@ -3,6 +3,7 @@ title: Preventing lower back pain caused by physical activity
 description: In this post, we’ll go through a few ways in which you can prevent the
   likelihood of sustaining a LBP injury from physical activity.
 img: 5.png
+video: none
 alt: Back pain
 id: 5
 created: 01 04 2021

@@ -10,9 +10,10 @@ fields:
   label: description
 - name: img
   type: text
-  config:
-    required: false
   label: img
+- name: video
+  type: text
+  label: video
 - type: text
   name: alt
   label: alt

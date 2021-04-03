@@ -35,11 +35,11 @@ footer {
 
 .text--large, h1 {
   font-size: 2.6rem;
-  letter-spacing: .2rem
+  letter-spacing: .1rem
 }
 .text--small, h2 {
   font-size: 1.6rem;
-  letter-spacing: .2rem
+  letter-spacing: .1rem
 }
 h1, h2 {
   margin: 2rem 0
@@ -88,11 +88,11 @@ a {
 @media (max-width: 576px) {
   .text--large, h1 {
     font-size: 2.2rem;
-    letter-spacing: .2rem
+    letter-spacing: .1rem
   }
   .text--small, h2 {
     font-size: 1.2rem;
-    letter-spacing: .2rem
+    letter-spacing: .1rem
   }
 }
 </style>

@@ -5,6 +5,7 @@ description: If you have taken part in sports or am an avid gym member, you may 
   familiar with the sports massage therapist. Here we will discuss what to look for
   and to expect from a treatment.
 img: 4.png
+video: none
 alt: Sports massage
 id: 4
 created: 18 03 2021
