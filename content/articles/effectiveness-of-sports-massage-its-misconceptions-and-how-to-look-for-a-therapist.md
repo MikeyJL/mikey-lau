@@ -18,7 +18,7 @@ show: true
 
 If you have taken part in sports or am an avid gym member, you may be familiar with the sports massage therapist. These are qualified professionals who can handle a range of clients ranging from athletes to the general population. They also have a diverse skill-set where treatments could take place within a clinical setting or right before a sporting event. Their responsibility is to administer massage to help recovery, assist in the correction of dysfunctional movements, and other musculoskeletal issues.
 
-However, it can be commonly mistaken that sports massage therapists are physiotherapists, this is not true. Though they share similar work environments, clienteles, and skills, physiotherapists are members of governing bodies like the _Charted Society of Physiotherapy_ and the _Health and Care Professional Council_ where they have to abide by certain standards and principles. Sports massage in the UK is not governed by an official organisation but rather through voluntary membership at a professional body.
+However, it can be commonly mistaken that sports massage therapists are physiotherapists, this is not true. Though they share similar work environments, clienteles, and skills, physiotherapists are members of governing bodies like the _Chartered Society of Physiotherapy_ and the _Health and Care Professional Council_ where they have to abide by certain standards and principles. Sports massage in the UK is not governed by an official organisation but rather through voluntary membership at a professional body.
 
 ## **Effectiveness of sports massage**
 
