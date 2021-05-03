@@ -88,6 +88,7 @@ img {
     <div class="spacer--small" />
     <img :src="require(`../../assets/${article.img}`)" :alt="article.alt">
     <div class="spacer--small" />
+    <p style="text-align: right">{{ article.created }}</p>
     <div id="video" v-if="article.video !== 'none'">
       <h1>{{ article.title }}</h1>
       <iframe
