@@ -1,11 +1,19 @@
 <style>
+:root {
+  --faded_element: #05050510;
+  --background: #F4F4F4;
+  --foreground: white;
+  --accent: #050505;
+  --side_padding: 8%
+}
 
-/* Wrapper */
+/* HTML Elements */
 
 html {
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  color: var(--accent);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -15,14 +23,60 @@ html {
   box-sizing: border-box
 }
 body {
-  margin: 0;
-  background-color: #F8F8F8
+  background-color: var(--background);
+  margin: 0
 }
 footer {
-  height: 8rem
+  display: flex;
+  justify-content: space-between;
+  margin: 8rem var(--side_padding) 0 var(--side_padding);
+  padding: 2rem 0;
+  border-top: 2px solid var(--accent);
 }
-.body_padding {
-  padding: 0 8%;
+h1, h2 {
+  font-size: 2.6rem;
+  letter-spacing: .2rem;
+}
+h3 {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+}
+p, a {
+  letter-spacing: 1px
+}
+a {
+  width: fit-content;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
+  transition: .6s all cubic-bezier(.165, .84, .44, 1)
+}
+a:after {
+  content: '';
+  position: relative;
+  display: flex;
+  height: .6rem;
+  width: 0%;
+  opacity: .2;
+  background-color: var(--accent);
+  transform: translateY(-.6rem);
+  transition: .4s all cubic-bezier(.165, .84, .44, 1)
+}
+a:hover {
+  opacity: .6
+}
+a:hover:after {
+  width: 100%
+}
+
+/* Text */
+.text--tiny {
+  font-size: .8rem
+}
+
+/* Spacers */
+.spacer--xlarge {
+  height: 12rem
 }
 .spacer--large {
   height: 8rem
@@ -31,81 +85,52 @@ footer {
   height: 4rem
 }
 
-/* Text */
-
-.text--large, h1 {
-  font-size: 2.6rem;
-  letter-spacing: .1rem
-}
-.text--small, h2 {
-  font-size: 1.6rem;
-  letter-spacing: .1rem
-}
-h1, h2 {
-  margin: 2rem 0
-}
-p {
-  margin: 1rem 0;
-  letter-spacing: .05rem
-}
-a {
-  color: black;
-  text-decoration: none
-}
-
-/* Tailwinds */
-
+/* Tailwind */
 .no_margin {
   margin: 0
 }
-.bold {
-  font-weight: bold
-}
-.grey {
-  color: grey
-}
-.text_center {
-  text-align: center
-}
-.letter_spacing {
-  letter-spacing: .05rem
-}
 
-/* Anim */
-
-.fade_in {
-  animation: 1s fadeIn cubic-bezier(.165, .84, .44, 1)
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem var(--side_padding)
 }
-@keyframes fadeIn {
-  from  {
-    opacity: 0
-  }
-  to {
-    opacity: 1
-  }
+#logo {
+  width: 100px
 }
-
-@media (max-width: 576px) {
-  .text--large, h1 {
-    font-size: 2.2rem;
-    letter-spacing: .1rem
-  }
-  .text--small, h2 {
-    font-size: 1.2rem;
-    letter-spacing: .1rem
-  }
+#logo :is(rect, path) {
+  fill: var(--accent);
 }
 </style>
 
 <template>
   <div>
+    <nav>
+      <inline-svg id="logo" :src="require('~/assets/svg/logo.svg')" />
+      <darkmode-toggle />
+    </nav>
     <Nuxt />
-    <footer></footer>
+    <footer>
+      <p>
+        <b>
+          Mikey Lau
+        </b>
+      </p>
+      <p>
+        <b>Southampton</b>, United Kingdom
+      </p>
+    </footer>
   </div>
 </template>
 
 <script>
+import DarkmodeToggle from '~/components/DarkmodeToggle'
+
 export default {
+  components: {
+    DarkmodeToggle
+  },
   data () {
     return {
       metaHelper: {
