@@ -1,145 +1,146 @@
 <style scoped>
-
-/* Header */
-
-.backdrop {
-  height: 20rem;
-  background-color: #F2F2F2
-}
-.profile_img {
-  width: 15%;
-  border-radius: 50%;
+/* Introduction */
+.introduction {
   display: flex;
-  margin: auto;
-  transform: translateY(-5rem);
-  transition: 1s all cubic-bezier(.165, .84, .44, 1)
+  justify-content: flex-end;
+  padding: 0 var(--side_padding)
+}
+.introduction:after {
+  content: '';
+  height: 10rem;
+  width: 40%;
+  background-color: var(--faded_element);
+  position: absolute;
+  transform: translate(3rem, 8rem);
+  z-index: -1
+}
+.introduction > img {
+  width: 250px;
+  margin-left: 4rem;
+  filter: grayscale(100%) contrast(1.1)
 }
 
-/* Content */
-
-.contact_details {
-  display: flex;
-  justify-content: center
-}
-
-/* Blog */
-
-.article_container {
+/* Skills */
+:is(.techstack, .frameworks, .projects) {
   display: grid;
-  grid-gap: 4rem
+  padding: 0 var(--side_padding);
 }
-.article {
+:is(.techstack, .frameworks) {
+  grid-template-columns: repeat(2, 1fr)
+}
+:is(.container--techstack, .container--frameworks) {
   display: grid;
-  grid-template-columns: .4fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: .8rem 0
+}
+
+/* Projects */
+.container--projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem
 }
-.article img {
+.project {
+  padding: 2rem;
+  border: 3px solid var(--accent)
+}
+.project__logo {
+  padding: 1rem;
   width: 100%;
-  filter: grayscale(100%);
-  border-radius: 5px;
-  transition: 1s all cubic-bezier(.165, .84, .44, 1)
+  max-height: 6rem
 }
-.article:hover img {
-  filter: grayscale(0%)
+.project__logo :is(rect, path) {
+  fill: var(--accent)
 }
-.article_text {
+.project__links {
   display: flex;
-  flex-direction: column;
-  justify-content: center
+  margin-top: 2rem
 }
-.blog_link, .contact_details a {
-  width: fit-content
-}
-.blog_link:after, .contact_details a:after {
-  content: '';
-  position: relative;
-  display: flex;
-  height: .6rem;
-  width: 0%;
-  background-color: #8B000040;
-  transform: translateY(-.6rem);
-  transition: .4s all cubic-bezier(.165, .84, .44, 1)
-}
-.blog_link:hover:after, .contact_details a:hover:after {
-  width: 100%
-}
-.date {
-  margin-bottom: 2rem
+.project__links > a:not(:last-child) {
+  margin-right: 1rem
 }
 
-@media (max-width: 992px) {
-  .profile_img {
-    width: 25%
-  }
-
-}
-@media (max-width: 576px) {
-  .profile_img {
-    width: 40%
-  }
-  .article {
-    grid-template-columns: 1fr
-  }
-  .article img {
-    filter: grayscale(0%)
+@media (max-width: 1440px) {
+  .container--projects {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem
   }
 }
 </style>
 
 <template>
-  <div id="home">
-    <div class="top_bar">
-      <div class="backdrop" />
-      <img id="profile" class="profile_img fade_in" src="../assets/profile.jpg">
+  <div>
+    <div class="spacer--small" />
+    <div class="introduction">
+      <h1>Meet Mikey</h1>
+      <img src="~/assets/me.jpg" alt="Mikey Lau">
     </div>
-    <div class="body_padding">
-      <p class="text--large no_margin text_center fade_in">
-        Mikey Lau
-      </p>
-      <p class="text_center fade_in letter_spacing">
-        Level 4 Advanced Personal Training<br>
-        Level 3 Strength and Conditioning<br>
-        Level 3 Sports Massage (pending)<br>
-        Level 3 Exercise Referral<br>
-        Level 3 Personal Trainer<br>
-        Level 2 Gym Instructor<br>
-      </p>
-      <div class="spacer--small" />
-      <div class="contact_details">
-        <a href="javascript:void(0)" @click="send_email()">
-          Reach out for a consultation
-        </a>
-      </div>
-      <div class="contact_details">
-        <a href="https://www.linkedin.com/in/mikey-lau" target="_blank">
-          LinkedIn
-        </a>
-      </div>
-      <div class="spacer--large" />
-      <p class="text--small text_center fade_in">
-        #keepingitsimple<br>#movementfocused<br>#therapybased<br>#betterposture<br>#functional
-      </p>
-      <div class="spacer--large" />
-      <a id="blog" />
-      <p class="text--large">
-        Blog
-      </p>
-      <div class="spacer--small" />
-      <div class="article_container">
+    <div class="spacer--xlarge" />
+    <div class="techstack">
+      <h3 class="no_margin">
+        Tech stack
+      </h3>
+      <div class="container--techstack">
         <div
-          class="article"
-          v-for="(article, index) in articles"
-          :key="`article_${index}`"
-          v-show="article.show"
+          v-for="(item, itemIndex) in techStack"
+          :key="`techstack_${itemIndex}`"
         >
-          <img :src="require(`../assets/${article.img}`)" :alt="article.alt">
-          <div class="article_text">
-            <p class="text--small no_margin">{{ article.title }}</p>
-            <p class="letter_spacing">{{ article.description }}</p>
-            <p class="date letter_spacing">{{ article.created }}</p>
-            <nuxt-link :to="`/blog/${article.slug}`" class="blog_link letter_spacing">
-              Read
-            </nuxt-link>
+          <p class="no_margin">
+            <b>
+              {{ item }}
+            </b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="spacer--small" />
+    <div class="frameworks">
+      <h3 class="no_margin">
+        Frameworks
+      </h3>
+      <div class="container--frameworks">
+        <div
+          v-for="(item, itemIndex) in frameworks"
+          :key="`framework_${itemIndex}`"
+        >
+          <p class="no_margin">
+            <b>
+              {{ item }}
+            </b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="spacer--large" />
+    <div class="projects">
+      <h2>
+        Projects
+      </h2>
+      <div class="container--projects">
+        <div
+          v-for="(project, projectIndex) in projects"
+          :key="`project_${projectIndex}`"
+          class="project"
+        >
+          <inline-svg
+            :src="require(`~/assets/svg/${project.svg}.svg`)"
+            class="project__logo"
+          />
+          <p>
+            {{ project.desc }}
+          </p>
+          <p class="text--tiny">
+            {{ project.skills }}
+          </p>
+          <div class="project__links">
+            <a
+              v-for="(link, linkIndex) in project.links"
+              :key="`link_${projectIndex}_${linkIndex}`"
+              :href="link.url"
+              target="_blank"
+            >
+              {{ link.site }}
+            </a>
           </div>
         </div>
       </div>
@@ -148,42 +149,31 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        checkpoint: 100
-      }
-    },
-    async asyncData({ $content }) {
-      const articles = await $content('articles').fetch()
-      articles.sort((b, a) => {
-        return b.id - a.id
-      })
-      return { articles }
-    },
-    beforeCreate () {
-      this.$parent.$parent.metaHelper.title = 'Mikey Lau'
-      this.$parent.$parent.metaHelper.description = ''
-      this.$parent.$parent.metaHelper.url = 'https://mikeylau.uk'
-    },
-    mounted () {
-      window.addEventListener('scroll', this.process_scroll)
-    },
-    beforeDestroy () {
-      window.removeEventListener('scroll', this.process_scroll)
-    },
-    methods: {
-      process_scroll () {
-        const currentScroll = window.pageYOffset
-        if (currentScroll < this.checkpoint) {
-          document.getElementById('profile').style.filter = 'grayscale(0%)'
-        } else {
-          document.getElementById('profile').style.filter = 'grayscale(100%)'
+export default {
+  data () {
+    return {
+      techStack: ['HTML', 'CSS', 'Javascript', 'R', 'Python', 'C#', 'C++', 'C', 'Swift' ],
+      frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Tensorflow/Keras'],
+      projects: [
+        {
+          svg: 'traininblocks',
+          desc: 'Using my background in the health and fitness industry, ...',
+          skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js',
+          links: [
+            { site: 'Landing site', url: 'https://traininblocks.com/' },
+            { site: 'App login', url: 'https://app.traininblocks.com/' }
+          ]
+        },
+        {
+          svg: 'jkpt',
+          desc: 'Just a website',
+          skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
+          links: [
+            { site: 'Landing site', url: 'https://jkpt.netlify.app/' }
+          ]
         }
-      },
-      send_email () {
-        window.open('mailto:ml-fitness@outlook.com?subject=Reaching out&body=Hi Mikey,')
-      }
+      ]
     }
   }
+}
 </script>
