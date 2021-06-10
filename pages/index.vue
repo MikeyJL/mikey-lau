@@ -66,24 +66,51 @@
     grid-gap: 4rem
   }
 }
+@media (max-width: 1024px) {
+  .container--projects {
+    grid-template-columns: 1fr
+  }
+}
+@media (max-width: 768px) {
+  .introduction {
+    display: grid
+  }
+  .introduction:after {
+    width: 80%;
+    transform: translate(2rem, 18rem)
+  }
+  .introduction,
+  .techstack,
+  .frameworks {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem
+  }
+}
 </style>
 
 <template>
   <div>
     <div class="spacer--small" />
-    <div class="introduction fade_on_view">
-      <h1>Meet Mikey</h1>
-      <img src="~/assets/me.jpg" alt="Mikey Lau">
+    <div class="introduction">
+      <h1 class="fade_on_view">
+        Meet Mikey
+      </h1>
+      <img
+        src="~/assets/me.jpg"
+        alt="Mikey Lau"
+        class="fade_on_view"
+      >
     </div>
     <div class="spacer--xlarge" />
-    <div class="techstack fade_on_view">
-      <h3 class="no_margin">
+    <div class="techstack">
+      <h3 class="no_margin fade_on_view">
         Tech stack
       </h3>
       <div class="container--techstack">
         <div
           v-for="(item, itemIndex) in techStack"
           :key="`techstack_${itemIndex}`"
+          class="fade_on_view"
         >
           <p class="no_margin">
             <b>
@@ -94,14 +121,15 @@
       </div>
     </div>
     <div class="spacer--small" />
-    <div class="frameworks fade_on_view">
-      <h3 class="no_margin">
+    <div class="frameworks">
+      <h3 class="no_margin fade_on_view">
         Frameworks
       </h3>
       <div class="container--frameworks">
         <div
           v-for="(item, itemIndex) in frameworks"
           :key="`framework_${itemIndex}`"
+          class="fade_on_view"
         >
           <p class="no_margin">
             <b>
@@ -112,15 +140,15 @@
       </div>
     </div>
     <div class="spacer--large" />
-    <div class="projects fade_on_view">
-      <h2>
+    <div class="projects">
+      <h2 class="fade_on_view">
         Projects
       </h2>
       <div class="container--projects">
         <div
           v-for="(project, projectIndex) in projects"
           :key="`project_${projectIndex}`"
-          class="project"
+          class="project fade_on_view"
         >
           <inline-svg
             :src="require(`~/assets/svg/${project.svg}.svg`)"

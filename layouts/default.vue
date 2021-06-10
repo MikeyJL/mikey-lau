@@ -66,13 +66,16 @@ a:not(.no_highlight):after {
   opacity: .2;
   background-color: var(--accent);
   transform: translateY(-.6rem);
-  transition: .4s all cubic-bezier(.165, .84, .44, 1)
+  transition: .6s opacity, .1s transform cubic-bezier(.165, .84, .44, 1)
 }
 a:hover {
   opacity: .6
 }
 a:not(.no_highlight):hover:after {
   width: 100%
+}
+a.no_highlight:active {
+  transform: scale(.9)
 }
 
 /* Text */
@@ -122,16 +125,18 @@ nav {
   <div>
     <page-view-bar />
     <nav>
-      <inline-svg
-        id="logo"
-        class="fade_on_view"
-        :src="require('~/assets/svg/logo.svg')"
-      />
+      <nuxt-link to="/" class="no_highlight">
+        <inline-svg
+          id="logo"
+          class="fade_on_view"
+          :src="require('~/assets/svg/logo.svg')"
+        />
+      </nuxt-link>
       <darkmode-toggle class="fade_on_view" />
     </nav>
     <Nuxt />
-    <footer class="fade_on_view">
-      <div class="social_links">
+    <footer>
+      <div class="social_links fade_on_view">
         <a
           v-for="(social, socialIndex) in socials"
           :key="`social${socialIndex}`"
@@ -142,7 +147,7 @@ nav {
           <inline-svg :src="require(`~/assets/svg/social/${social.svg}.svg`)" />
         </a>
       </div>
-      <p>
+      <p class="fade_on_view">
         <b>Southampton</b>, United Kingdom
       </p>
     </footer>
@@ -191,7 +196,7 @@ export default {
             entry.target.classList.add('active')
           }
         })
-      }, { threshold: 0.5 })
+      }, { threshold: .9 })
       document.querySelectorAll('.fade_on_view').forEach((svgItem) => {
         OBSERVER.observe(svgItem)
       })
