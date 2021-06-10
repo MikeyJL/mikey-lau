@@ -189,18 +189,23 @@ export default {
     }
   },
   mounted () {
-    setTimeout(() => {
-      const OBSERVER = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active')
-          }
+    this.initAnimate()
+  },
+  methods: {
+    initAnimate () {
+      setTimeout(() => {
+        const OBSERVER = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active')
+            }
+          })
+        }, { threshold: .9 })
+        document.querySelectorAll('.fade_on_view').forEach((svgItem) => {
+          OBSERVER.observe(svgItem)
         })
-      }, { threshold: .9 })
-      document.querySelectorAll('.fade_on_view').forEach((svgItem) => {
-        OBSERVER.observe(svgItem)
-      })
-    }, 1000)
+      }, 1000)
+    }
   }
 }
 </script>

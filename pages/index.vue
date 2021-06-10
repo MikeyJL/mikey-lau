@@ -202,6 +202,9 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    this.$parent.$parent.initAnimate()
   }
 }
 </script>

@@ -10,6 +10,9 @@ import EconomyProject from '~/components/EconomyProject'
 export default {
   components: {
     EconomyProject
-  }  
+  },
+  mounted () {
+    this.$parent.$parent.initAnimate()
+  }
 }
 </script>
