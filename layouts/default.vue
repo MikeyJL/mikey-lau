@@ -7,6 +7,15 @@
   --side_padding: 8%
 }
 
+/* Animate on view */
+.fade_on_view {
+  opacity: 0;
+  transition: 1s all cubic-bezier(.165, .84, .44, 1)
+}
+.fade_on_view.active {
+  opacity: 1
+}
+
 /* HTML Elements */
 html {
   font-family: Arial, Helvetica, sans-serif;
@@ -111,12 +120,17 @@ nav {
 
 <template>
   <div>
+    <page-view-bar />
     <nav>
-      <inline-svg id="logo" :src="require('~/assets/svg/logo.svg')" />
-      <darkmode-toggle />
+      <inline-svg
+        id="logo"
+        class="fade_on_view"
+        :src="require('~/assets/svg/logo.svg')"
+      />
+      <darkmode-toggle class="fade_on_view" />
     </nav>
     <Nuxt />
-    <footer>
+    <footer class="fade_on_view">
       <div class="social_links">
         <a
           v-for="(social, socialIndex) in socials"
@@ -137,10 +151,12 @@ nav {
 
 <script>
 import DarkmodeToggle from '~/components/DarkmodeToggle'
+import PageViewBar from '../components/PageViewBar.vue'
 
 export default {
   components: {
-    DarkmodeToggle
+    DarkmodeToggle,
+    PageViewBar
   },
   data () {
     return {
@@ -166,6 +182,20 @@ export default {
         { hid: 'canonical', rel: 'canonical', href: this.metaHelper.url }
       ]
     }
+  },
+  mounted () {
+    setTimeout(() => {
+      const OBSERVER = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active')
+          }
+        })
+      }, { threshold: 0.5 })
+      document.querySelectorAll('.fade_on_view').forEach((svgItem) => {
+        OBSERVER.observe(svgItem)
+      })
+    }, 1000)
   }
 }
 </script>

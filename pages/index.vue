@@ -71,12 +71,12 @@
 <template>
   <div>
     <div class="spacer--small" />
-    <div class="introduction">
+    <div class="introduction fade_on_view">
       <h1>Meet Mikey</h1>
       <img src="~/assets/me.jpg" alt="Mikey Lau">
     </div>
     <div class="spacer--xlarge" />
-    <div class="techstack">
+    <div class="techstack fade_on_view">
       <h3 class="no_margin">
         Tech stack
       </h3>
@@ -94,7 +94,7 @@
       </div>
     </div>
     <div class="spacer--small" />
-    <div class="frameworks">
+    <div class="frameworks fade_on_view">
       <h3 class="no_margin">
         Frameworks
       </h3>
@@ -112,7 +112,7 @@
       </div>
     </div>
     <div class="spacer--large" />
-    <div class="projects">
+    <div class="projects fade_on_view">
       <h2>
         Projects
       </h2>
