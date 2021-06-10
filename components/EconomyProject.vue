@@ -1,12 +1,24 @@
 <style scoped>
+.container--economy_project {
+  margin: 2rem var(--side_padding)
+}
 #economy {
   width: 100%
+}
+#location > circle {
+  fill: var(--accent)
+}
+table {
+  width: 100%;
+  text-align: left
 }
 </style>
 
 <template>
-  <div>
-    <p id="trans" />
+  <div class="container--economy_project">
+    <h1>
+      Basic economy
+    </h1>
     <svg
       viewBox="0 0 1000 1000"
       fill="none"
@@ -16,6 +28,46 @@
     <g id="locations" />
     <g id="transporters" />
     </svg>
+    <div class="spacer--large" />
+    <table>
+      <tr>
+        <th>
+          Location ID
+        </th>
+        <th>
+          Resource
+        </th>
+        <th>
+          Amount
+        </th>
+        <th>
+          Price per unit
+        </th>
+        <th>
+          Ordered
+        </th>
+      </tr>
+      <tr
+        v-for="(item, itemIndex) in resourceLedger"
+        :key="`info_${itemIndex}`"
+      >
+        <td>
+          {{ item.id }}
+        </td>
+        <td>
+          {{ item.resource }}
+        </td>
+        <td>
+          {{ item.amount }}
+        </td>
+        <td>
+          {{ item.unitPrice }}
+        </td>
+        <td>
+          {{ item.ordered }}
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -75,9 +127,6 @@ export default {
         constructor (id, ledger, resources) {
           this.id = id
           this.ledger = ledger
-          this.globalResources = resources
-          this.orders = []
-          this.activeTransporters = 0
 
           // Inits position
           const randPos = () => {
@@ -90,7 +139,7 @@ export default {
           CIRCLE.setAttributeNS(null, 'cx', this.position.x)
           CIRCLE.setAttributeNS(null, 'cy', this.position.y)
           CIRCLE.setAttributeNS(null, 'r', 5)
-          CIRCLE.setAttributeNS(null, 'style', 'fill: #050505' )
+          CIRCLE.setAttributeNS(null, 'style', 'fill: #050505')
           document.getElementById('locations').appendChild(CIRCLE)
 
           // Inits resources
@@ -101,9 +150,9 @@ export default {
               resource: RESOURCE.name,
               amount: STARTING_AMOUNT,
               position: this.position,
-              activeTransporters: this.activeTransporters
+              ordered: false
             })
-            resources.globalUnits += STARTING_AMOUNT
+            RESOURCE.globalUnits += STARTING_AMOUNT
           }
         }
 
@@ -113,24 +162,6 @@ export default {
             RETURN_DATA.push(array[Math.floor(Math.random() * array.length)])
           }
           return RETURN_DATA
-        }
-
-        createOrder () {
-          this.globalResources.forEach(resourceInstance => {
-            const LOCATIONS_WITH_RESOURCE = this.ledger.filter(ledgerInstance => ledgerInstance.resource === resourceInstance.name)
-            let bestLocation = LOCATIONS_WITH_RESOURCE[0]
-            LOCATIONS_WITH_RESOURCE.forEach(newBestLocation => {
-              if (newBestLocation.unitPrice < bestLocation.unitPrice) {
-                bestLocation = newBestLocation
-              }
-            })
-            this.orders.push({
-              targetLocation: this,
-              originLocation: bestLocation,
-              resourceToTransport: resourceInstance.name,
-              amount: 1
-            })
-          })
         }
       }
 
@@ -146,31 +177,32 @@ export default {
 
     step () {
       class Transporter {
-        constructor (order, parent) {
-          this.order = order
+        constructor (parent, targetLocation, originLocation) {
           this.parent = parent
+          this.targetLocation = targetLocation
+          this.originLocation = originLocation
           this.position = {
-            x: order.originLocation.position.x,
-            y: order.originLocation.position.y
+            x: originLocation.position.x,
+            y: originLocation.position.y
           }
           const CIRCLE = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
           CIRCLE.setAttributeNS(null, 'cx', this.position.x)
           CIRCLE.setAttributeNS(null, 'cy', this.position.y)
           CIRCLE.setAttributeNS(null, 'r', 3)
-          CIRCLE.setAttributeNS(null, 'style', 'fill: red' )
+          CIRCLE.setAttributeNS(null, 'style', 'fill: #050505; opacity: .4')
           document.getElementById('transporters').appendChild(CIRCLE)
           this.circleEl = CIRCLE
         }
 
         move () {
-          this.position.x += this.position.x < this.order.targetLocation.position.x ? 1 : (this.position.x === this.order.targetLocation.position.x ? 0 : -1)
-          this.position.y += this.position.y < this.order.targetLocation.position.y ? 1 : (this.position.y === this.order.targetLocation.position.y ? 0 : -1)
+          this.position.x += this.position.x < this.targetLocation.position.x ? 1 : (this.position.x === this.targetLocation.position.x ? 0 : -1)
+          this.position.y += this.position.y < this.targetLocation.position.y ? 1 : (this.position.y === this.targetLocation.position.y ? 0 : -1)
           this.circleEl.setAttributeNS(null, 'cx', this.position.x)
           this.circleEl.setAttributeNS(null, 'cy', this.position.y)
 
-          if (this.position.x === this.order.targetLocation.position.x && this.position.y === this.order.targetLocation.position.y) {
-            this.order.targetLocation.amount += this.order.amount
-            this.parent.locations.find(locationInstance => locationInstance.id === this.order.originLocation.id).activeTransporters -= 1
+          if (this.position.x === this.targetLocation.position.x && this.position.y === this.targetLocation.position.y) {
+            this.targetLocation.amount += 1
+            this.targetLocation.ordered = false
             this.circleEl.remove()
             this.parent.transporters.splice(this.parent.transporters.indexOf(this), 1)
             
@@ -181,18 +213,22 @@ export default {
       }
 
       // Creates the order and inits the transporters
-      let text = ''
-      this.locations.forEach(location => {
-        text = `${text} ${location.activeTransporters}`
-        if (location.activeTransporters < 8) {
-          location.createOrder()
-          this.transporters.push(new Transporter(location.orders[0], this))
-          location.activeTransporters += 1
-          location.orders[0].originLocation.amount -= location.orders[0].amount
-          location.orders.splice(0, 1)
-        }
+      this.resources.forEach(resource => {
+        const LOCATIONS_WITH_RESOURCE = this.resourceLedger.filter(ledgerInstance => ledgerInstance.resource === resource.name)
+        let bestLocation = LOCATIONS_WITH_RESOURCE[0]
+        LOCATIONS_WITH_RESOURCE.forEach(newBestLocation => {
+          if (newBestLocation.unitPrice < bestLocation.unitPrice) {
+            bestLocation = newBestLocation
+          }
+        })
+        LOCATIONS_WITH_RESOURCE.forEach(location => {
+          if (location.id !== bestLocation.id && !location.ordered) {
+            location.ordered = true
+            bestLocation.amount -= 1
+            this.transporters.push(new Transporter(this, location, bestLocation))
+          }
+        })
       })
-      document.getElementById('trans').innerText = text
 
       // Moves existing transporter by one step
       this.transporters.forEach(transporter => {
@@ -203,8 +239,9 @@ export default {
     // Calcuates price at each location
     calculatePrices () {
       const PRICE_MODIFIER = 10
-      this.resourceLedger.forEach(instance => {
-        instance.unitPrice = (this.resources.find(resourceInstance => resourceInstance.name === instance.resource).globalUnits / this.locationAmount) / instance.amount * PRICE_MODIFIER
+      this.resourceLedger.forEach(ledgerInstance => {
+        const LOCAL_PRICE = (this.resources.find(resourceInstance => resourceInstance.name === ledgerInstance.resource).globalUnits / this.locationAmount) / ledgerInstance.amount * PRICE_MODIFIER
+        ledgerInstance.unitPrice = LOCAL_PRICE.toFixed(2)
       })
     }
   }
