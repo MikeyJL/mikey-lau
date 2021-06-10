@@ -24,7 +24,7 @@ export default {
     return {
       resourceLedger: [],
       transporters: [],
-      resources = [
+      resources: [
         {
           name: 'metal',
           range: {
@@ -115,9 +115,6 @@ export default {
         
       })
       */
-    },
-    step () {
-
     }
   }
 }
