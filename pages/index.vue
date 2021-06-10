@@ -23,7 +23,7 @@
 /* Skills */
 :is(.techstack, .frameworks, .projects) {
   display: grid;
-  padding: 0 var(--side_padding);
+  padding: 0 var(--side_padding)
 }
 :is(.techstack, .frameworks) {
   grid-template-columns: repeat(2, 1fr)
@@ -152,8 +152,8 @@
 export default {
   data () {
     return {
-      techStack: ['HTML', 'CSS', 'Javascript', 'R', 'Python', 'C#', 'C++', 'C', 'Swift' ],
-      frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Tensorflow/Keras'],
+      techStack: ['HTML', 'CSS', 'Javascript', 'R', 'Python', 'C#', 'C++', 'C', 'Swift', 'Git'],
+      frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Tensorflow/Keras', 'Firebase'],
       projects: [
         {
           svg: 'traininblocks',

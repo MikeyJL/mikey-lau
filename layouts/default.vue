@@ -8,7 +8,6 @@
 }
 
 /* HTML Elements */
-
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -31,15 +30,13 @@ footer {
   justify-content: space-between;
   margin: 8rem var(--side_padding) 0 var(--side_padding);
   padding: 2rem 0;
-  border-top: 2px solid var(--accent);
+  border-top: 2px solid var(--accent)
 }
 h1, h2 {
-  font-size: 2.6rem;
-  letter-spacing: .2rem;
+  font-size: 2.6rem
 }
 h3 {
-  font-size: 1.6rem;
-  letter-spacing: .2rem;
+  font-size: 1.6rem
 }
 p, a {
   letter-spacing: 1px
@@ -51,7 +48,7 @@ a {
   font-weight: bold;
   transition: .6s all cubic-bezier(.165, .84, .44, 1)
 }
-a:after {
+a:not(.no_highlight):after {
   content: '';
   position: relative;
   display: flex;
@@ -65,7 +62,7 @@ a:after {
 a:hover {
   opacity: .6
 }
-a:hover:after {
+a:not(.no_highlight):hover:after {
   width: 100%
 }
 
@@ -100,7 +97,15 @@ nav {
   width: 100px
 }
 #logo :is(rect, path) {
-  fill: var(--accent);
+  fill: var(--accent)
+}
+
+/* Social links */
+.social_links {
+  display: flex
+}
+.social_links > a {
+  margin: auto
 }
 </style>
 
@@ -112,11 +117,17 @@ nav {
     </nav>
     <Nuxt />
     <footer>
-      <p>
-        <b>
-          Mikey Lau
-        </b>
-      </p>
+      <div class="social_links">
+        <a
+          v-for="(social, socialIndex) in socials"
+          :key="`social${socialIndex}`"
+          :href="social.link"
+          target="_blank"
+          class="no_highlight"
+        >
+          <inline-svg :src="require(`~/assets/svg/social/${social.svg}.svg`)" />
+        </a>
+      </div>
       <p>
         <b>Southampton</b>, United Kingdom
       </p>
@@ -137,7 +148,10 @@ export default {
         title: 'Mikey Lau',
         description: '',
         url: 'https://mikeylau.uk'
-      }
+      },
+      socials: [
+        { svg: 'github', link: 'https://github.com/MikeyJL' }
+      ]
     }
   },
   head () {

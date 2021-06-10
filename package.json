@@ -9,10 +9,21 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@nuxt/content": "^1.12.0",
+    "@nuxtjs/firebase": "^7.5.0",
     "core-js": "^3.8.3",
+    "firebase": "^8.6.5",
+    "g": "^2.0.1",
+    "npm": "^7.16.0",
     "nuxt": "^2.14.12",
     "vue-inline-svg": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-vue": "^7.10.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  }
 }

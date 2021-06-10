@@ -1,6 +1,5 @@
 export default {
   target: 'static',
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Mikey Lau',
     htmlAttrs: {
@@ -19,30 +18,35 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/main.css'
   ],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vue-inline-svg.js'
   ],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: "AIzaSyCBFUrQhoGsqW9n-D1nqI-HiDokKhzj2GQ",
+          authDomain: "mikey-lau.firebaseapp.com",
+          projectId: "mikey-lau",
+          storageBucket: "mikey-lau.appspot.com",
+          messagingSenderId: "981197468331",
+          appId: "1:981197468331:web:31a98499a60f9cf8a93dee"
+        },
+        services: {
+          auth: true,
+          firestore: true
+        }
+      }
+    ]
   ],
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
 }
