@@ -40,7 +40,7 @@ export default {
   },
   data () {
     return {
-      processedCode: this.code,
+      processedCode: null,
 
       // Regex
       javascriptRegexList: [
@@ -88,12 +88,21 @@ export default {
     }
   },
   created () {
-    switch (this.language) {
-      case 'javascript':
-        this.javascript()
+    this.processCode()
+  },
+  watch: {
+    code () {
+      this.processCode()
     }
   },
   methods: {
+    processCode () {
+      this.processedCode = this.code
+      switch (this.language) {
+        case 'javascript':
+          this.javascript()
+      }
+    },
     javascript () {
       let finder
       this.processedCode = this.processedCode.replace(/null/g, '<span class="blue">null</span>')

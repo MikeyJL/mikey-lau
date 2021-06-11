@@ -48,8 +48,7 @@ export default {
         {
           title: 'Creating the location',
           desc: 'Using a class, I passed in the index of each location in the root array, the ledger which contains all instances each location and resource, and the global resources to initiate the location.',
-          code: `
-class Location {
+          code: `class Location {
   // 'id' is from the parent 'for' loop
   // 'ledger' is from the parent Vue component
   // 'resources' is from the parent Vue component
@@ -57,14 +56,12 @@ class Location {
     this.id = id
     this.ledger = ledger
 
-    ...
-          `
+    ...`
         },
         {
           title: 'Initialising the position',
           desc: '',
-          code: `
-    ...
+          code: `...
 
     const randPos = () => {
       let value = Math.random() * 1000
@@ -80,14 +77,12 @@ class Location {
     CIRCLE.setAttributeNS(null, 'style', 'fill: var(--accent)')
     document.getElementById('locations').appendChild(CIRCLE)
 
-    ...
-          `
+    ...`
         },
         {
           title: 'Generating resources at each location',
           desc: '',
-          code: `
-    ...
+          code: `...
     
     for (const RESOURCE of resources) {
       const STARTING_AMOUNT = Math.floor(Math.random() * (RESOURCE.range.high - RESOURCE.range.low)) + RESOURCE.range.low
@@ -101,8 +96,7 @@ class Location {
       RESOURCE.globalUnits += STARTING_AMOUNT
     }
   }
-}
-          `
+}`
         }
       ]
     }

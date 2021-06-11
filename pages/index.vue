@@ -213,10 +213,19 @@ export default {
         {
           title: 'Basic Economy',
           desc: 'I\'ve converted one of my old python projects (available from my GitHub) into a simpler web version using Javascript and SVGs. This is a basic simulation of an economy where locations will dispatch transporters to trade between them based on global scarcity and local prices.',
-          skills: 'HTML, CSS, Javascript, Vue.js, Python',
+          skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js, Python',
           internalLink: true,
           links: [
             { site: 'Find out more', url: '/projects/basic-economy' }
+          ]
+        },
+        {
+          title: 'Code Syntaxer',
+          desc: 'I\'ve built a custom syntaxer for this website to help me explain the code behind my projects.',
+          skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
+          internalLink: true,
+          links: [
+            { site: 'Find out more', url: '/projects/syntaxer' }
           ]
         }
       ]
