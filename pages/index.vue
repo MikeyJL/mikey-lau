@@ -56,7 +56,7 @@
   display: flex;
   margin-top: 2rem
 }
-.project__links > a:not(:last-child) {
+.project__links > div:not(:last-child) {
   margin-right: 1rem
 }
 
@@ -150,10 +150,9 @@
           :key="`project_${projectIndex}`"
           class="project fade_on_view"
         >
-          <inline-svg
-            :src="require(`~/assets/svg/${project.svg}.svg`)"
-            class="project__logo"
-          />
+          <h3 class="no_margin">
+            {{ project.title }}
+          </h3>
           <p>
             {{ project.desc }}
           </p>
@@ -161,14 +160,24 @@
             {{ project.skills }}
           </p>
           <div class="project__links">
-            <a
+            <div
               v-for="(link, linkIndex) in project.links"
               :key="`link_${projectIndex}_${linkIndex}`"
-              :href="link.url"
-              target="_blank"
             >
-              {{ link.site }}
-            </a>
+              <a
+                v-if="!project.internalLink"
+                :href="link.url"
+                target="_blank"
+              >
+                {{ link.site }}
+              </a>
+              <nuxt-link
+                v-else
+                :to="link.url"
+              >
+                {{ link.site }}
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
@@ -184,26 +193,38 @@ export default {
       frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Tensorflow/Keras', 'Firebase'],
       projects: [
         {
-          svg: 'traininblocks',
-          desc: 'Using my background in the health and fitness industry, ...',
+          title: 'Train In Blocks',
+          desc: 'Using my background in the health and fitness industry, I\'ve started a web application to help personal trainers manage their clientele and programmes.',
           skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js',
+          internalLink: false,
           links: [
             { site: 'Landing site', url: 'https://traininblocks.com/' },
             { site: 'App login', url: 'https://app.traininblocks.com/' }
           ]
         },
         {
-          svg: 'jkpt',
-          desc: 'Just a website',
+          title: 'JKPT',
+          desc: 'A client wanted a website for this personal training business. I\'ve was responsible for the entire branding, design, and the implementation of his website.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
+          internalLink: false,
           links: [
             { site: 'Landing site', url: 'https://jkpt.netlify.app/' }
+          ]
+        },
+        {
+          title: 'Basic Economy',
+          desc: 'I\'ve converted one of my old python projects (available from my GitHub) into a simpler web version using Javascript and SVGs. This is a basic simulation of an economy where locations will dispatch transporters to trade between them based on global scarcity and local prices.',
+          skills: 'HTML, CSS, Javascript, Vue.js',
+          internalLink: true,
+          links: [
+            { site: 'Find out more', url: '/projects/basic-economy' }
           ]
         }
       ]
     }
   },
   mounted () {
+    window.clearInterval()
     this.$parent.$parent.initAnimate()
   }
 }

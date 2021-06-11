@@ -66,7 +66,7 @@ a:not(.no_highlight):after {
   opacity: .2;
   background-color: var(--accent);
   transform: translateY(-.6rem);
-  transition: .6s opacity, .1s transform cubic-bezier(.165, .84, .44, 1)
+  transition: .6s opacity, .6s width, .1s transform cubic-bezier(.165, .84, .44, 1)
 }
 a:hover {
   opacity: .6
@@ -200,7 +200,7 @@ export default {
               entry.target.classList.add('active')
             }
           })
-        }, { threshold: .9 })
+        }, { threshold: .8 })
         document.querySelectorAll('.fade_on_view').forEach((svgItem) => {
           OBSERVER.observe(svgItem)
         })

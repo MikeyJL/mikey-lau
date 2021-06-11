@@ -8,7 +8,8 @@
 .page_view_bar__thumb {
   background-color: var(--accent);
   height: .4rem;
-  width: 0
+  width: 100%;
+  transform: translateX(-100%)
 }
 </style>
 
@@ -22,7 +23,7 @@
 export default {
   mounted() {
     window.addEventListener('scroll', () => {
-      document.getElementById('page_view_bar').style.width = `${window.scrollY / (document.body.offsetHeight - window.innerHeight) * 100}%`
+      document.getElementById('page_view_bar').style.transform = `translateX(${(window.scrollY / (document.body.offsetHeight - window.innerHeight) - 1) * 100}%)`
     })
   }
 }
