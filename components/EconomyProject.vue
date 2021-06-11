@@ -5,10 +5,8 @@
 #economy {
   width: 100%
 }
-#location > circle {
-  fill: var(--accent)
-}
 table {
+  font-size: .8rem;
   width: 100%;
   text-align: left
 }
@@ -28,11 +26,10 @@ table {
     <g id="locations" />
     <g id="transporters" />
     </svg>
-    <div class="spacer--large" />
     <table>
       <tr>
         <th>
-          Location ID
+          Location
         </th>
         <th>
           Resource
@@ -41,10 +38,7 @@ table {
           Amount
         </th>
         <th>
-          Price per unit
-        </th>
-        <th>
-          Ordered
+          Price
         </th>
       </tr>
       <tr
@@ -63,9 +57,6 @@ table {
         <td>
           {{ item.unitPrice }}
         </td>
-        <td>
-          {{ item.ordered }}
-        </td>
       </tr>
     </table>
   </div>
@@ -81,7 +72,7 @@ export default {
       transporters: [],
       resources: [
         {
-          name: 'metal',
+          name: 'materials',
           range: {
             low: 500,
             high: 1000,
@@ -89,7 +80,7 @@ export default {
           globalUnits: 0
         },
         {
-          name: 'wood',
+          name: 'water',
           range: {
             low: 3000,
             high: 4000,
@@ -97,18 +88,10 @@ export default {
           globalUnits: 0
         },
         {
-          name: 'water',
+          name: 'food',
           range: {
             low: 7000,
             high: 8000,
-          },
-          globalUnits: 0
-        },
-        {
-          name: 'fabric',
-          range: {
-            low: 1500,
-            high: 2000,
           },
           globalUnits: 0
         }
@@ -139,7 +122,7 @@ export default {
           CIRCLE.setAttributeNS(null, 'cx', this.position.x)
           CIRCLE.setAttributeNS(null, 'cy', this.position.y)
           CIRCLE.setAttributeNS(null, 'r', 5)
-          CIRCLE.setAttributeNS(null, 'style', 'fill: #050505')
+          CIRCLE.setAttributeNS(null, 'style', 'fill: var(--accent)')
           document.getElementById('locations').appendChild(CIRCLE)
 
           // Inits resources
@@ -189,7 +172,7 @@ export default {
           CIRCLE.setAttributeNS(null, 'cx', this.position.x)
           CIRCLE.setAttributeNS(null, 'cy', this.position.y)
           CIRCLE.setAttributeNS(null, 'r', 3)
-          CIRCLE.setAttributeNS(null, 'style', 'fill: #050505; opacity: .4')
+          CIRCLE.setAttributeNS(null, 'style', 'fill: var(--accent); opacity: .4')
           document.getElementById('transporters').appendChild(CIRCLE)
           this.circleEl = CIRCLE
         }
