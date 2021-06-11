@@ -91,14 +91,13 @@
 <template>
   <div>
     <div class="spacer--small" />
-    <div class="introduction">
-      <h1 class="fade_on_view">
+    <div class="introduction fade_on_view">
+      <h1>
         Meet Mikey
       </h1>
       <img
         src="~/assets/me.jpg"
         alt="Mikey Lau"
-        class="fade_on_view"
       >
     </div>
     <div class="spacer--xlarge" />
@@ -194,7 +193,7 @@ export default {
       projects: [
         {
           title: 'Train In Blocks',
-          desc: 'Using my background in the health and fitness industry, I\'ve started a web application to help personal trainers manage their clientele and programmes.',
+          desc: 'Using my background in the health and fitness industry, I\'ve built a web application with my business partner to help personal trainers manage their clientele and programmes.',
           skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js',
           internalLink: false,
           links: [
@@ -204,7 +203,7 @@ export default {
         },
         {
           title: 'JKPT',
-          desc: 'A client wanted a website for this personal training business. I\'ve was responsible for the entire branding, design, and the implementation of his website.',
+          desc: 'A client wanted a website for his personal training business. I was responsible for the entire branding, design, and the implementation of the website.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
           internalLink: false,
           links: [
@@ -214,7 +213,7 @@ export default {
         {
           title: 'Basic Economy',
           desc: 'I\'ve converted one of my old python projects (available from my GitHub) into a simpler web version using Javascript and SVGs. This is a basic simulation of an economy where locations will dispatch transporters to trade between them based on global scarcity and local prices.',
-          skills: 'HTML, CSS, Javascript, Vue.js',
+          skills: 'HTML, CSS, Javascript, Vue.js, Python',
           internalLink: true,
           links: [
             { site: 'Find out more', url: '/projects/basic-economy' }

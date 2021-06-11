@@ -111,7 +111,6 @@ export default {
           this.id = id
           this.ledger = ledger
 
-          // Inits position
           const randPos = () => {
             let value = Math.random() * 1000
             value += value < 10 ? 10 : (value > 990 ? -10 : 0)
@@ -125,7 +124,6 @@ export default {
           CIRCLE.setAttributeNS(null, 'style', 'fill: var(--accent)')
           document.getElementById('locations').appendChild(CIRCLE)
 
-          // Inits resources
           for (const RESOURCE of resources) {
             const STARTING_AMOUNT = Math.floor(Math.random() * (RESOURCE.range.high - RESOURCE.range.low)) + RESOURCE.range.low
             this.ledger.push({
@@ -137,14 +135,6 @@ export default {
             })
             RESOURCE.globalUnits += STARTING_AMOUNT
           }
-        }
-
-        randomChoice (array, picks) {
-          const RETURN_DATA = []
-          for (let index = 0; index < picks; index++) {
-            RETURN_DATA.push(array[Math.floor(Math.random() * array.length)])
-          }
-          return RETURN_DATA
         }
       }
 

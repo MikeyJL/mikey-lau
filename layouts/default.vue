@@ -47,9 +47,6 @@ h1, h2 {
 h3 {
   font-size: 1.6rem
 }
-p, a {
-  letter-spacing: 1px
-}
 a {
   width: fit-content;
   text-decoration: none;
@@ -119,6 +116,29 @@ nav {
 .social_links > a {
   margin: auto
 }
+.social_links > a > svg > path {
+  fill: var(--accent)
+}
+
+/* Location */
+.location > .city {
+  font-weight: bold;
+  margin-right: .2rem
+}
+
+@media (max-width: 576px) {
+  .location {
+    text-align: right;
+    display: grid;
+    grid-gap: .2rem
+  }
+  .location > .city {
+    margin-right: 0
+  }
+  .social_links > a {
+    margin: 0
+  }
+}
 </style>
 
 <template>
@@ -147,9 +167,14 @@ nav {
           <inline-svg :src="require(`~/assets/svg/social/${social.svg}.svg`)" />
         </a>
       </div>
-      <p class="fade_on_view">
-        <b>Southampton</b>, United Kingdom
-      </p>
+      <div class="location fade_on_view">
+        <span class="city">
+          Southampton
+        </span>
+        <span class="country">
+          United Kingdom
+        </span>
+      </div>
     </footer>
   </div>
 </template>
