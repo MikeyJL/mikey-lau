@@ -14,9 +14,6 @@ table {
 
 <template>
   <div class="container--economy_project">
-    <h1>
-      Basic economy
-    </h1>
     <svg
       viewBox="0 0 1000 1000"
       fill="none"

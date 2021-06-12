@@ -1,6 +1,8 @@
 <style scoped>
+.project_example {
+  margin: 4rem 0
+}
 .container--explanation {
-  margin-top: 4rem;
   display: grid;
   grid-gap: 4rem
 }
@@ -10,11 +12,27 @@
   margin: 0 var(--side_padding);
   overflow-x: auto
 }
+
+@media (max-width: 425px) {
+  .explanation {
+    background-color: var(--foreground);
+    border: none;
+    padding: 2rem var(---side_padding)
+  }
+}
 </style>
 
 <template>
   <div>
-    <economy-project />
+    <div class="project_introduction">
+      <h1>
+        Basic economy
+      </h1>
+      <p>
+        This is a web adaptation of my previous Pyhton project where I designed a simulation of a trading economy. You can my Github repo <a href="https://github.com/MikeyJL/artificial-economy" target="_blank">here.</a>
+      </p>
+    </div>
+    <economy-project class="project_example" />
     <div class="container--explanation">
       <div
         v-for="(section, sectionIndex) in explanation"
@@ -60,9 +78,11 @@ export default {
         },
         {
           title: 'Initialising the position',
-          desc: '',
+          desc: `The position of each location is random using 'Math.random()'. This is saved to the class instance as 'this.position' where it can be accessed later. An SVG circle element was also created to represent the location on the viewbox.`,
           code: `...
 
+    // Generates a random postion value
+    // Re-usable for both x and y coords
     const randPos = () => {
       let value = Math.random() * 1000
       value += value < 10 ? 10 : (value > 990 ? -10 : 0)
@@ -70,6 +90,7 @@ export default {
     }
     this.position = { x: randPos() , y: randPos() }
 
+    // Creates the circle SVG elements
     const CIRCLE = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
     CIRCLE.setAttributeNS(null, 'cx', this.position.x)
     CIRCLE.setAttributeNS(null, 'cy', this.position.y)
@@ -81,11 +102,15 @@ export default {
         },
         {
           title: 'Generating resources at each location',
-          desc: '',
+          desc: `Each locatoin will have a random starting amount for all the resources using 'Math.random()'. Once created, a dictionary of id, resource (name), amount, position (location), and whether it has been ordered will be appended to the 'resourceLedger' on the Vue instance. At the end of this block, it will also add its allocated resource amount to a global variable. This will later be used to calculate the level of scarcity at each location to determine the local unit price.`,
           code: `...
     
     for (const RESOURCE of resources) {
+
+      // Randomly generates the amount of resources
       const STARTING_AMOUNT = Math.floor(Math.random() * (RESOURCE.range.high - RESOURCE.range.low)) + RESOURCE.range.low
+      
+      // Appends it to the global 'resourceLedger'
       this.ledger.push({
         id: id,
         resource: RESOURCE.name,
@@ -93,6 +118,8 @@ export default {
         position: this.position,
         ordered: false
       })
+
+      // Sums up the total unit of this particular resource
       RESOURCE.globalUnits += STARTING_AMOUNT
     }
   }
