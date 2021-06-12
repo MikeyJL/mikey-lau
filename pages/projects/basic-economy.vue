@@ -1,6 +1,6 @@
 <style scoped>
-.project_example {
-  margin: 4rem 0
+.project_introduction {
+  margin: 0 var(--side_padding)
 }
 .container--explanation {
   display: grid;
@@ -15,9 +15,8 @@
 
 @media (max-width: 425px) {
   .explanation {
-    background-color: var(--foreground);
     border: none;
-    padding: 2rem var(---side_padding)
+    padding: 0
   }
 }
 </style>
@@ -29,7 +28,7 @@
         Basic economy
       </h1>
       <p>
-        This is a web adaptation of my previous Pyhton project where I designed a simulation of a trading economy. You can my Github repo <a href="https://github.com/MikeyJL/artificial-economy" target="_blank">here.</a>
+        This is a web adaptation of my previous Pyhton project where I designed a simulation of a trading economy. You can my GitHub repo <a href="https://github.com/MikeyJL/artificial-economy" target="_blank">here.</a>
       </p>
     </div>
     <economy-project class="project_example" />
