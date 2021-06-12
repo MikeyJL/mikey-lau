@@ -46,7 +46,7 @@ export default {
       javascriptRegexList: [
         {
           name: 'class',
-          regex: /(class) (\w+)/g,
+          regex: /(class|struct) (\w+)/g,
           classes: ['', 'blue', 'green']
         },
         {
@@ -55,8 +55,8 @@ export default {
           classes: ['', 'green', 'yellow']
         },
         {
-          name: 'return',
-          regex: /(return) (\w+)/g,
+          name: 'declaration',
+          regex: /(return|import) (\w+)/g,
           classes: ['', 'purple', '']
         },
         {

@@ -227,6 +227,15 @@ export default {
           links: [
             { site: 'Find out more', url: '/projects/syntaxer' }
           ]
+        },
+        {
+          title: 'Foodie social media',
+          desc: 'Text',
+          skills: 'Swift, Firebase',
+          internalLink: true,
+          links: [
+            { site: 'IOS app', url: '/projects/foodie-mobile' }
+          ]
         }
       ]
     }

@@ -8,6 +8,21 @@
 }
 
 /* Animate on view */
+.fade_in {
+  opacity: 0;
+  animation: 1s fadeIn cubic-bezier(.165, .84, .44, 1) forwards
+}
+.delay {
+  animation-delay: .6s
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
 .fade_on_view {
   opacity: 0;
   transition: 1s all cubic-bezier(.165, .84, .44, 1)

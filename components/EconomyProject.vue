@@ -63,6 +63,7 @@ table {
 export default {
   data () {
     return {
+      timer: null,
       locationAmount: 15,
       resourceLedger: [],
       locations: [],
@@ -99,7 +100,7 @@ export default {
     await this.__init__(15)
   },
   beforeDestroy () {
-    window.clearInterval()
+    window.clearInterval(this.timer)
   },
   methods: {
     __init__ () {
@@ -141,7 +142,7 @@ export default {
       }
 
       this.calculatePrices()
-      setInterval(() => { this.step() }, 10)
+      this.timer = setInterval(() => { this.step() }, 10)
     },
 
 
