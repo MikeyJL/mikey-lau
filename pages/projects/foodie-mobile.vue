@@ -93,18 +93,6 @@
   justify-content: space-between
 }
 
-/* Explanation */
-.container--explanation {
-  display: grid;
-  grid-gap: 4rem
-}
-.explanation {
-  padding: 2rem;
-  border: 3px solid var(--accent);
-  margin: 0 var(--side_padding);
-  overflow-x: auto
-}
-
 @media (max-width: 768px) {
   .project_example {
     grid-template-columns: 1fr
@@ -112,12 +100,6 @@
   .project_example > *:first-child {
     margin: 2rem var(--side_padding);
     text-align: left
-  }
-}
-@media (max-width: 425px) {
-  .explanation {
-    border: none;
-    padding: 0
   }
 }
 </style>

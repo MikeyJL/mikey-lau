@@ -2,23 +2,6 @@
 .project_introduction {
   margin: 0 var(--side_padding)
 }
-.container--explanation {
-  display: grid;
-  grid-gap: 4rem
-}
-.explanation {
-  padding: 2rem;
-  border: 3px solid var(--accent);
-  margin: 0 var(--side_padding);
-  overflow-x: auto
-}
-
-@media (max-width: 425px) {
-  .explanation {
-    border: none;
-    padding: 0
-  }
-}
 </style>
 
 <template>
@@ -46,7 +29,7 @@
         :key="`section_${sectionIndex}`"
         class="explanation"
       >
-        <p class="no_margin">
+        <p class="text--small no_margin">
           <b>
             {{ section.title }}
           </b>

@@ -25,7 +25,8 @@ export default {
     '~/assets/main.css'
   ],
   plugins: [
-    '~/plugins/vue-inline-svg.js'
+    '~/plugins/vue-inline-svg.js',
+    '~/plugins/vue-highlight.js'
   ],
   components: true,
   buildModules: [

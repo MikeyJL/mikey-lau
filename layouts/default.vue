@@ -1,6 +1,10 @@
 <style>
 /* Code block */
 @import url('//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css');
+.hljs {
+  background-color: var(--background);
+  color: var(--accent)
+}
 pre code.hljs {
   font-size: .8rem
 }
@@ -152,8 +156,32 @@ nav {
 .repo_link > svg {
   margin-left: .6rem
 }
+.repo_link > svg > path {
+  fill: var(--accent)
+}
 
-@media (max-width: 576px) {
+/* Global Explanation */
+.container--explanation {
+  display: grid;
+  grid-gap: 4rem
+}
+.explanation {
+  padding: 2rem;
+  border: 3px solid var(--accent);
+  margin: 0 var(--side_padding);
+  overflow-x: auto
+}
+
+@media (max-width: 425px) {
+  .explanation {
+    border: none;
+    padding: 0
+  }
+  .explanation:not(:last-child) {
+    border-bottom: 3px solid var(--faded_element)
+  }
+
+  /* Footer */
   .location {
     text-align: right;
     display: grid;
