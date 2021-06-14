@@ -149,6 +149,7 @@
             :href="social.link"
             target="_blank"
             class="no_highlight"
+            rel="noopener"
           >
             <inline-svg :src="require(`~/assets/svg/social/${social.svg}.svg`)" />
           </a>
@@ -234,6 +235,7 @@
                 v-if="!project.internalLink"
                 :href="link.url"
                 target="_blank"
+                rel="noopener"
               >
                 {{ link.site }}
               </a>

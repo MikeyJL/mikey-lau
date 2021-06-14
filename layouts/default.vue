@@ -197,6 +197,7 @@ nav {
           :href="social.link"
           target="_blank"
           class="no_highlight"
+          rel="noopener"
         >
           <inline-svg :src="require(`~/assets/svg/social/${social.svg}.svg`)" />
         </a>
