@@ -86,7 +86,7 @@
 }
 .project__links {
   display: flex;
-  margin-top: 2rem
+  margin-top: auto
 }
 .project__links > div:not(:last-child) {
   margin-right: 1rem
@@ -272,7 +272,7 @@ export default {
         {
           developed: true,
           title: 'Basic Economy',
-          desc: 'I\'ve converted one of my old python projects (available from my GitHub) into a simpler web version using Javascript and SVGs. This is a basic simulation of an economy where locations will dispatch transporters to trade between them based on global scarcity and local prices.',
+          desc: 'I\'ve converted one of my old Python projects into a simpler web version using Javascript and SVGs. This is a basic simulation of an economy where locations will dispatch transporters to trade between them based on global scarcity and local prices.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js, Python',
           internalLink: true,
           links: [
@@ -282,7 +282,7 @@ export default {
         {
           developed: false,
           title: 'Foodie social media',
-          desc: `In this project, I've explored the Swift programming language to create a social media platform for foodies. I've integrated Firebase Auth and its Realtime Database using CocoaPod to serve as management system.`,
+          desc: `In this project, I've explored the Swift programming language to create a social media platform for foodies. I've integrated Firebase Auth and its Realtime Database using CocoaPod to serve as a user management system.`,
           skills: 'Swift, Firebase',
           internalLink: true,
           links: [

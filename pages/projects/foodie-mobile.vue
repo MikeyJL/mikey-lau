@@ -130,7 +130,7 @@
           Foodie IOS app
         </h1>
         <p>
-          When I bought my first MacBook and had access to Xcode, I started playing around with it to familiarise myself with it. Here, I've combined my love of food and my passion to share it. This is an application that utilises <b>Firebase</b> to manage users and their data.
+          When I bought my first MacBook and had access to Xcode, I started playing around to familiarise myself with it. Here, I've combined my love for food and my passion to share it. Using <b>Firebase</b>, the app authenticates the user and stores their details in a no-SQL realtime database.
         </p>
       </div>
       <div class="phone">
@@ -259,7 +259,8 @@ export default {
         {
           title: 'Securing the app',
           desc: 'Work in progress...',
-          code: `import SwiftUI
+          code: `
+import SwiftUI
 import Firebase
 import KeychainSwift
 

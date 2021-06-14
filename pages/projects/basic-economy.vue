@@ -28,7 +28,7 @@
         Basic economy
       </h1>
       <p>
-        This is a web adaptation of my previous Pyhton project where I designed a simulation of a trading economy.
+        This is a web adaptation of my previous Python project where I designed a simulation of a trading economy.
       </p>
     </div>
     <economy-project class="project_example" />
@@ -72,7 +72,7 @@ export default {
       explanation: [
         {
           title: 'Creating the location',
-          desc: 'Using a class, I passed in the index of each location in the root array, the ledger which contains all instances each location and resource, and the global resources to initiate the location.',
+          desc: 'Using a class, I passed in the index of each location in the root array. The ledger contains all the instances of each resource at their respective locations and the global resources variable was used to initiate the location.',
           code: `
 class Location {
   // 'id' is from the parent 'for' loop
@@ -86,7 +86,7 @@ class Location {
         },
         {
           title: 'Initialising the position',
-          desc: `The position of each location is random using 'Math.random()'. This is saved to the class instance as 'this.position' where it can be accessed later. An SVG circle element was also created to represent the location on the viewbox.`,
+          desc: `The position of each location is random determined through the use of 'Math.random()'. This was saved to the class instance as 'position' where it can be accessed later. An SVG circle element was also created to represent the location inside the viewbox.`,
           code: `
     ...
 
@@ -111,7 +111,7 @@ class Location {
         },
         {
           title: 'Generating resources at each location',
-          desc: `Each locatoin will have a random starting amount for all the resources using 'Math.random()'. Once created, a dictionary of id, resource (name), amount, position (location), and whether it has been ordered will be appended to the 'resourceLedger' on the Vue instance. At the end of this block, it will also add its allocated resource amount to a global variable. This will later be used to calculate the level of scarcity at each location to determine the local unit price.`,
+          desc: `Each location will have a random starting amount for all the resources using 'Math.random()'. Once created, a dictionary consisting of the id, resource (name), amount, position (location), and whether it has been ordered will be appended to the 'resourceLedger' on the Vue instance. At the end of this block, it will also add its allocated resource amount to a global variable. This will later be used to calculate the level of scarcity at each location to determine the local unit price.`,
           code: `
     ...
     
