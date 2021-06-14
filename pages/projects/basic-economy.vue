@@ -46,9 +46,11 @@
         :key="`section_${sectionIndex}`"
         class="explanation"
       >
-        <h3 class="no_margin">
-          {{ section.title }}
-        </h3>
+        <p class="no_margin">
+          <b>
+            {{ section.title }}
+          </b>
+        </p>
         <p>
           {{ section.desc }}
         </p>

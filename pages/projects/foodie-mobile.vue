@@ -137,9 +137,11 @@
         <div id="screen">
           <div class="top_speaker" />
           <div v-if="!loggedIn" id="login_view">
-            <h3>
-              Hello foodies
-            </h3>
+            <p class="text--small">
+              <b>
+                Hello foodies
+              </b>
+            </p>
             <div class="login_view__inputs">
               <input
                 v-model="loginEmail"
@@ -208,9 +210,11 @@
         :key="`section_${sectionIndex}`"
         class="explanation"
       >
-        <h3 class="no_margin">
-          {{ section.title }}
-        </h3>
+        <p class="text--small no_margin">
+          <b>
+            {{ section.title }}
+          </b>
+        </p>
         <p>
           {{ section.desc }}
         </p>

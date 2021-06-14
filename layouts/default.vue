@@ -59,9 +59,6 @@ footer {
 h1, h2 {
   font-size: 2.6rem
 }
-h3 {
-  font-size: 1.6rem
-}
 a {
   width: fit-content;
   text-decoration: none;
@@ -91,6 +88,9 @@ a.no_highlight:active {
 }
 
 /* Text */
+.text--small {
+  font-size: 1.6rem
+}
 .text--tiny {
   font-size: .8rem
 }
@@ -176,6 +176,7 @@ nav {
         <inline-svg
           id="logo"
           :src="require('~/assets/svg/logo.svg')"
+          aria-label="Mikey Lau logo"
         />
       </nuxt-link>
       <darkmode-toggle />

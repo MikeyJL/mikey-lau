@@ -48,6 +48,7 @@
 }
 .introduction > img {
   width: 250px;
+  height: 250px;
   margin-left: 4rem;
   filter: grayscale(100%) contrast(1.1)
 }
@@ -131,6 +132,19 @@
   .introduction > div:first-child > .social_links {
     justify-content: left
   }
+  .projects > h2 {
+    margin: 0
+  }
+  .container--projects {
+    grid-gap: 0
+  }
+  .project {
+    padding: 2rem 0;
+    border: none
+  }
+  .project:not(:last-child) {
+    border-bottom: 3px solid var(--faded_element)
+  }
 }
 </style>
 
@@ -163,9 +177,11 @@
     </div>
     <div class="spacer--xlarge" />
     <div class="techstack">
-      <h3 class="no_margin">
-        Tech stack
-      </h3>
+      <p class="text--small no_margin">
+        <b>
+          Tech stack
+        </b>
+      </p>
       <div class="container--techstack">
         <div
           v-for="(item, itemIndex) in techStack"
@@ -181,9 +197,11 @@
     </div>
     <div class="spacer--small" />
     <div class="frameworks">
-      <h3 class="no_margin">
-        Frameworks
-      </h3>
+      <p class="text--small no_margin">
+        <b>
+          Frameworks
+        </b>
+      </p>
       <div class="container--frameworks">
         <div
           v-for="(item, itemIndex) in frameworks"
@@ -210,9 +228,11 @@
         >
           <div>
             <div class="project__header">
-              <h3 class="no_margin">
-                {{ project.title }}
-              </h3>
+              <p class="text--small no_margin">
+                <b>
+                  {{ project.title }}
+                </b>
+              </p>
               <inline-svg
                 :src="require(`~/assets/svg/${project.developed ? 'tick' : 'cog'}.svg`)"
                 :class="{ animate_cog: !project.developed }"
