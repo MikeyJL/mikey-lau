@@ -145,12 +145,14 @@
                 v-model="loginEmail"
                 type="text"
                 placeholder="Email"
+                aria-label="Email"
                 disabled
               >
               <input
                 v-model="loginPassword"
                 type="password"
                 placeholder="Password"
+                aria-label="Password"
                 disabled
               >
               <button id="login_button" disabled>

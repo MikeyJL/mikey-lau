@@ -73,7 +73,11 @@ input:checked + .slider:before {
   <div class="toggle_wrapper">
     <inline-svg :src="require('../assets/svg/darkmode.svg')" :class="{ darkmode: darkmodeOn }" class="mode_icon" />
     <label class="switch">
-      <input type="checkbox" @change="darkmode()">
+      <input
+        type="checkbox"
+        @change="darkmode()"
+        aria-label="Darkmode"
+      >
       <span :class="{ darkmode: darkmodeOn }" class="slider" />
     </label>
   </div>

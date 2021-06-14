@@ -137,7 +137,7 @@
 <template>
   <div>
     <div class="spacer--small" />
-    <div class="introduction fade_on_view">
+    <div class="introduction">
       <div>
         <h1 class="no_margin">
           Meet Mikey
@@ -147,6 +147,7 @@
             v-for="(social, socialIndex) in $parent.$parent.socials"
             :key="`social${socialIndex}`"
             :href="social.link"
+            :aria-label="social.svg"
             target="_blank"
             class="no_highlight"
             rel="noopener"
@@ -162,14 +163,13 @@
     </div>
     <div class="spacer--xlarge" />
     <div class="techstack">
-      <h3 class="no_margin fade_on_view">
+      <h3 class="no_margin">
         Tech stack
       </h3>
       <div class="container--techstack">
         <div
           v-for="(item, itemIndex) in techStack"
           :key="`techstack_${itemIndex}`"
-          class="fade_on_view"
         >
           <p class="no_margin">
             <b>
@@ -181,14 +181,13 @@
     </div>
     <div class="spacer--small" />
     <div class="frameworks">
-      <h3 class="no_margin fade_on_view">
+      <h3 class="no_margin">
         Frameworks
       </h3>
       <div class="container--frameworks">
         <div
           v-for="(item, itemIndex) in frameworks"
           :key="`framework_${itemIndex}`"
-          class="fade_on_view"
         >
           <p class="no_margin">
             <b>
@@ -200,14 +199,14 @@
     </div>
     <div class="spacer--large" />
     <div class="projects">
-      <h2 class="fade_on_view">
+      <h2>
         Projects
       </h2>
       <div class="container--projects">
         <div
           v-for="(project, projectIndex) in projects"
           :key="`project_${projectIndex}`"
-          class="project fade_on_view"
+          class="project"
         >
           <div>
             <div class="project__header">

@@ -30,13 +30,6 @@ pre code.hljs {
     opacity: 1
   }
 }
-.fade_on_view {
-  opacity: 0;
-  transition: 1s all cubic-bezier(.165, .84, .44, 1)
-}
-.fade_on_view.active {
-  opacity: 1
-}
 
 /* HTML Elements */
 html {
@@ -182,19 +175,19 @@ nav {
       <nuxt-link to="/" class="no_highlight">
         <inline-svg
           id="logo"
-          class="fade_on_view"
           :src="require('~/assets/svg/logo.svg')"
         />
       </nuxt-link>
-      <darkmode-toggle class="fade_on_view" />
+      <darkmode-toggle />
     </nav>
     <Nuxt />
     <footer>
-      <div class="social_links fade_on_view">
+      <div class="social_links">
         <a
           v-for="(social, socialIndex) in socials"
           :key="`social${socialIndex}`"
           :href="social.link"
+          :aria-label="social.svg"
           target="_blank"
           class="no_highlight"
           rel="noopener"
@@ -202,7 +195,7 @@ nav {
           <inline-svg :src="require(`~/assets/svg/social/${social.svg}.svg`)" />
         </a>
       </div>
-      <div class="location fade_on_view">
+      <div class="location">
         <span class="city">
           Wallingford
         </span>
@@ -225,48 +218,11 @@ export default {
   },
   data () {
     return {
-      metaHelper: {
-        title: 'Mikey Lau',
-        description: '',
-        url: 'https://mikeylau.uk'
-      },
       socials: [
         { svg: 'github', link: 'https://github.com/MikeyJL' },
         { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' },
         { svg: 'indeed', link: 'https://my.indeed.com/p/xjp92s2' }
       ]
-    }
-  },
-  head () {
-    return {
-      title: this.metaHelper.title,
-      meta: [
-        { hid: 'description', name: 'description', content: this.metaHelper.description },
-        { hid: 'og:title', name: 'og:title', content: this.metaHelper.title },
-        { hid: 'og:description', name: 'og:description', content: this.metaHelper.description },
-      ],
-      link: [
-        { hid: 'canonical', rel: 'canonical', href: this.metaHelper.url }
-      ]
-    }
-  },
-  mounted () {
-    this.initAnimate()
-  },
-  methods: {
-    initAnimate () {
-      setTimeout(() => {
-        const OBSERVER = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active')
-            }
-          })
-        }, { threshold: .8 })
-        document.querySelectorAll('.fade_on_view').forEach((svgItem) => {
-          OBSERVER.observe(svgItem)
-        })
-      }, 1000)
     }
   }
 }
