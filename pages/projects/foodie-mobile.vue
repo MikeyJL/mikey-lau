@@ -272,7 +272,6 @@ import KeychainSwift
     }
   },
   mounted () {
-    this.$parent.$parent.initAnimate()
     this.animatePhone()
   },
   methods: {

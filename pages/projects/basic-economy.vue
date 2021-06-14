@@ -137,9 +137,6 @@ class Location {
         }
       ]
     }
-  },
-  mounted () {
-    this.$parent.$parent.initAnimate()
   }
 }
 </script>

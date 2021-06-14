@@ -302,10 +302,6 @@ export default {
         }
       ]
     }
-  },
-  mounted () {
-    window.clearInterval()
-    this.$parent.$parent.initAnimate()
   }
 }
 </script>
