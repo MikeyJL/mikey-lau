@@ -44,7 +44,9 @@
         <p>
           {{ section.desc }}
         </p>
-        <syntaxer :code="section.code" :language="'javascript'" />
+        <pre v-highlightjs="section.code">
+          <code class="javascript" />
+        </pre>
       </div>
     </div>
   </div>
@@ -52,12 +54,10 @@
 
 <script>
 import EconomyProject from '~/components/EconomyProject'
-import Syntaxer from '~/components/Syntaxer'
 
 export default {
   components: {
-    EconomyProject,
-    Syntaxer
+    EconomyProject
   },
   data () {
     return {
@@ -65,7 +65,8 @@ export default {
         {
           title: 'Creating the location',
           desc: 'Using a class, I passed in the index of each location in the root array, the ledger which contains all instances each location and resource, and the global resources to initiate the location.',
-          code: `class Location {
+          code: `
+class Location {
   // 'id' is from the parent 'for' loop
   // 'ledger' is from the parent Vue component
   // 'resources' is from the parent Vue component
@@ -78,7 +79,8 @@ export default {
         {
           title: 'Initialising the position',
           desc: `The position of each location is random using 'Math.random()'. This is saved to the class instance as 'this.position' where it can be accessed later. An SVG circle element was also created to represent the location on the viewbox.`,
-          code: `...
+          code: `
+    ...
 
     // Generates a random postion value
     // Re-usable for both x and y coords
@@ -102,7 +104,8 @@ export default {
         {
           title: 'Generating resources at each location',
           desc: `Each locatoin will have a random starting amount for all the resources using 'Math.random()'. Once created, a dictionary of id, resource (name), amount, position (location), and whether it has been ordered will be appended to the 'resourceLedger' on the Vue instance. At the end of this block, it will also add its allocated resource amount to a global variable. This will later be used to calculate the level of scarcity at each location to determine the local unit price.`,
-          code: `...
+          code: `
+    ...
     
     for (const RESOURCE of resources) {
 

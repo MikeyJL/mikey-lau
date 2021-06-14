@@ -11,8 +11,8 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'apple-mobile-web-app-title', content: 'Mikey Lau' },
       { name: 'application-name', content: 'Mikey Lau' },
-      { name: 'msapplication-TileColor', content: '#ffffff' },
-      { name: 'theme-color', content: '#ffffff' }
+      { name: 'msapplication-TileColor', content: '#F4F4F4' },
+      { name: 'theme-color', content: '#F4F4F4' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -22,7 +22,8 @@ export default {
     '~/assets/main.css'
   ],
   plugins: [
-    '~/plugins/vue-inline-svg.js'
+    '~/plugins/vue-inline-svg.js',
+    '~/plugins/vue-highlight.js'
   ],
   components: true,
   buildModules: [

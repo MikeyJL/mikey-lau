@@ -1,4 +1,11 @@
 <style>
+/* Code block */
+@import url('//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css');
+pre code.hljs {
+  font-size: .8rem
+}
+
+/* Root */
 :root {
   --faded_element: #05050510;
   --background: #F4F4F4;
@@ -128,8 +135,11 @@ nav {
 .social_links {
   display: flex
 }
-.social_links > a {
+.social_links:not(.not_global) > a {
   margin: auto
+}
+.social_links > a:not(:last-child) {
+  margin-right: 1rem
 }
 .social_links > a > svg > path {
   fill: var(--accent)
@@ -184,7 +194,7 @@ nav {
       </div>
       <div class="location fade_on_view">
         <span class="city">
-          Southampton
+          Wallingford
         </span>
         <span class="country">
           United Kingdom
@@ -211,7 +221,9 @@ export default {
         url: 'https://mikeylau.uk'
       },
       socials: [
-        { svg: 'github', link: 'https://github.com/MikeyJL' }
+        { svg: 'github', link: 'https://github.com/MikeyJL' },
+        { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' }
+        // { svg: 'indeed', link: 'https://github.com/MikeyJL' }
       ]
     }
   },

@@ -204,19 +204,16 @@
         <p>
           {{ section.desc }}
         </p>
-        <syntaxer :code="section.code" :language="'javascript'" />
+        <pre v-highlightjs="section.code">
+          <code class="swift" />
+        </pre>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Syntaxer from '~/components/Syntaxer'
-
 export default {
-  components: {
-    Syntaxer
-  },
   data () {
     return {
       // Login view

@@ -14,6 +14,12 @@
   transform: translate(3rem, 8rem);
   z-index: -1
 }
+.introduction > div:first-child > h1 {
+  margin-bottom: .6rem
+}
+.introduction > div:first-child > .social_links {
+  justify-content: flex-end
+}
 .introduction > img {
   width: 250px;
   margin-left: 4rem;
@@ -85,6 +91,20 @@
     grid-template-columns: 1fr;
     grid-gap: 2rem
   }
+  .introduction > div:first-child > .social_links {
+    margin: auto 0
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .introduction > div:first-child {
+    display: flex;
+    justify-content: space-between
+  }
+}
+@media (max-width: 425px) {
+  .introduction > div:first-child > .social_links {
+    justify-content: left
+  }
 }
 </style>
 
@@ -92,9 +112,22 @@
   <div>
     <div class="spacer--small" />
     <div class="introduction fade_on_view">
-      <h1>
-        Meet Mikey
-      </h1>
+      <div>
+        <h1 class="no_margin">
+          Meet Mikey
+        </h1>
+        <div class="social_links not_global">
+          <a
+            v-for="(social, socialIndex) in $parent.$parent.socials"
+            :key="`social${socialIndex}`"
+            :href="social.link"
+            target="_blank"
+            class="no_highlight"
+          >
+            <inline-svg :src="require(`~/assets/svg/social/${social.svg}.svg`)" />
+          </a>
+        </div>
+      </div>
       <img
         src="~/assets/me.jpg"
         alt="Mikey Lau"
@@ -188,7 +221,7 @@
 export default {
   data () {
     return {
-      techStack: ['HTML', 'CSS', 'Javascript', 'R', 'Python', 'C#', 'C++', 'C', 'Swift', 'Git'],
+      techStack: ['HTML', 'CSS', 'Javascript', 'R', 'Python', 'C#', 'C++', 'Swift', 'Git'],
       frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Tensorflow/Keras', 'Firebase'],
       projects: [
         {
@@ -202,15 +235,6 @@ export default {
           ]
         },
         {
-          title: 'JKPT',
-          desc: 'A client wanted a website for his personal training business. I was responsible for the entire branding, design, and the implementation of the website.',
-          skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
-          internalLink: false,
-          links: [
-            { site: 'Landing site', url: 'https://jkpt.netlify.app/' }
-          ]
-        },
-        {
           title: 'Basic Economy',
           desc: 'I\'ve converted one of my old python projects (available from my GitHub) into a simpler web version using Javascript and SVGs. This is a basic simulation of an economy where locations will dispatch transporters to trade between them based on global scarcity and local prices.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js, Python',
@@ -220,21 +244,21 @@ export default {
           ]
         },
         {
-          title: 'Code Syntaxer',
-          desc: 'I\'ve built a custom syntaxer for this website to help me explain the code behind my projects.',
-          skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
-          internalLink: true,
-          links: [
-            { site: 'Find out more', url: '/projects/syntaxer' }
-          ]
-        },
-        {
           title: 'Foodie social media',
           desc: 'Text',
           skills: 'Swift, Firebase',
           internalLink: true,
           links: [
             { site: 'IOS app', url: '/projects/foodie-mobile' }
+          ]
+        },
+        {
+          title: 'JKPT',
+          desc: 'A client wanted a website for his personal training business. I was responsible for the entire branding, design, and the implementation of the website.',
+          skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
+          internalLink: false,
+          links: [
+            { site: 'Landing site', url: 'https://jkpt.netlify.app/' }
           ]
         }
       ]
