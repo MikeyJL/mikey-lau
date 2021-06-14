@@ -192,6 +192,14 @@
         </div>
       </div>
     </div>
+    <a
+      href="https://github.com/MikeyJL/Foodie"
+      target="_blank"
+      class="repo_link no_highlight"
+    >
+      Repository
+      <inline-svg :src="require('~/assets/svg/social/github.svg')" />
+    </a>
     <div class="container--explanation">
       <div
         v-for="(section, sectionIndex) in explanation"
@@ -232,14 +240,14 @@ export default {
         },
         {
           title: 'Fajita-style pasta',
-          desc: 'Yum yum ❤️❤️',
+          desc: 'TASTES SO GOOD!!',
           user: 'esther.clark',
           timeUploaded: '6 hours',
           url: 'https://images.immediate.co.uk/production/volatile/sites/30/2021/05/Fajita-pasta-e6e5b93.jpg?quality=90&webp=true&resize=600,545'
         },
         {
           title: 'Meatball & garlic bread traybake',
-          desc: 'Yum yum ❤️❤️',
+          desc: 'You have to try this',
           user: 'cassie.best',
           timeUploaded: '7 hours',
           url: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/meatballsgarlic-bread-9245ad6.jpg?quality=90&webp=true&resize=440,400'
@@ -250,7 +258,7 @@ export default {
       explanation: [
         {
           title: 'Securing the app',
-          desc: 'Text',
+          desc: 'Work in progress...',
           code: `import SwiftUI
 import Firebase
 import KeychainSwift

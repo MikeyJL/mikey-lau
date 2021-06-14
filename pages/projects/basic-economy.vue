@@ -28,10 +28,18 @@
         Basic economy
       </h1>
       <p>
-        This is a web adaptation of my previous Pyhton project where I designed a simulation of a trading economy. You can my GitHub repo <a href="https://github.com/MikeyJL/artificial-economy" target="_blank">here.</a>
+        This is a web adaptation of my previous Pyhton project where I designed a simulation of a trading economy.
       </p>
     </div>
     <economy-project class="project_example" />
+    <a
+      href="https://github.com/MikeyJL/artificial-economy"
+      target="_blank"
+      class="repo_link no_highlight"
+    >
+      Repository
+      <inline-svg :src="require('~/assets/svg/social/github.svg')" />
+    </a>
     <div class="container--explanation">
       <div
         v-for="(section, sectionIndex) in explanation"

@@ -151,6 +151,15 @@ nav {
   margin-right: .2rem
 }
 
+/* Global repo */
+.repo_link {
+  display: flex;
+  margin: 4rem var(--side_padding) 1rem auto
+}
+.repo_link > svg {
+  margin-left: .6rem
+}
+
 @media (max-width: 576px) {
   .location {
     text-align: right;
@@ -222,8 +231,8 @@ export default {
       },
       socials: [
         { svg: 'github', link: 'https://github.com/MikeyJL' },
-        { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' }
-        // { svg: 'indeed', link: 'https://github.com/MikeyJL' }
+        { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' },
+        { svg: 'indeed', link: 'https://my.indeed.com/p/xjp92s2' }
       ]
     }
   },

@@ -1,3 +1,29 @@
+<style>
+.animate_cog {
+  -webkit-animation: 6s spin infinite linear;
+  -moz-animation: 6s spin infinite linear;
+  -ms-animation: 6s spin infinite linear;
+  -o-animation: 6s spin infinite linear;
+  animation: 6s spin infinite linear
+}
+@keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0)
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+</style>
+
 <style scoped>
 /* Introduction */
 .introduction {
@@ -47,16 +73,16 @@
   grid-gap: 2rem
 }
 .project {
+  display: grid;
   padding: 2rem;
   border: 3px solid var(--accent)
 }
-.project__logo {
-  padding: 1rem;
-  width: 100%;
-  max-height: 6rem
+.project__header {
+  display: flex;
+  justify-content: space-between
 }
-.project__logo :is(rect, path) {
-  fill: var(--accent)
+.project__header > svg {
+  margin: auto 0
 }
 .project__links {
   display: flex;
@@ -182,15 +208,23 @@
           :key="`project_${projectIndex}`"
           class="project fade_on_view"
         >
-          <h3 class="no_margin">
-            {{ project.title }}
-          </h3>
-          <p>
-            {{ project.desc }}
-          </p>
-          <p class="text--tiny">
-            {{ project.skills }}
-          </p>
+          <div>
+            <div class="project__header">
+              <h3 class="no_margin">
+                {{ project.title }}
+              </h3>
+              <inline-svg
+                :src="require(`~/assets/svg/${project.developed ? 'tick' : 'cog'}.svg`)"
+                :class="{ animate_cog: !project.developed }"
+              />
+            </div>
+            <p>
+              {{ project.desc }}
+            </p>
+            <p class="text--tiny">
+              {{ project.skills }}
+            </p>
+          </div>
           <div class="project__links">
             <div
               v-for="(link, linkIndex) in project.links"
@@ -222,43 +256,47 @@ export default {
   data () {
     return {
       techStack: ['HTML', 'CSS', 'Javascript', 'R', 'Python', 'C#', 'C++', 'Swift', 'Git'],
-      frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Tensorflow/Keras', 'Firebase'],
+      frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Tensorflow/Keras', 'Firebase', 'Unity'],
       projects: [
         {
+          developed: true,
           title: 'Train In Blocks',
           desc: 'Using my background in the health and fitness industry, I\'ve built a web application with my business partner to help personal trainers manage their clientele and programmes.',
           skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js',
           internalLink: false,
           links: [
-            { site: 'Landing site', url: 'https://traininblocks.com/' },
+            { site: 'Website', url: 'https://traininblocks.com/' },
             { site: 'App login', url: 'https://app.traininblocks.com/' }
           ]
         },
         {
+          developed: true,
           title: 'Basic Economy',
           desc: 'I\'ve converted one of my old python projects (available from my GitHub) into a simpler web version using Javascript and SVGs. This is a basic simulation of an economy where locations will dispatch transporters to trade between them based on global scarcity and local prices.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js, Python',
           internalLink: true,
           links: [
-            { site: 'Find out more', url: '/projects/basic-economy' }
+            { site: 'Example', url: '/projects/basic-economy' }
           ]
         },
         {
+          developed: false,
           title: 'Foodie social media',
-          desc: 'Text',
+          desc: `In this project, I've explored the Swift programming language to create a social media platform for foodies. I've integrated Firebase Auth and its Realtime Database using CocoaPod to serve as management system.`,
           skills: 'Swift, Firebase',
           internalLink: true,
           links: [
-            { site: 'IOS app', url: '/projects/foodie-mobile' }
+            { site: 'IOS example', url: '/projects/foodie-mobile' }
           ]
         },
         {
+          developed: true,
           title: 'JKPT',
           desc: 'A client wanted a website for his personal training business. I was responsible for the entire branding, design, and the implementation of the website.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
           internalLink: false,
           links: [
-            { site: 'Landing site', url: 'https://jkpt.netlify.app/' }
+            { site: 'Website', url: 'https://jkpt.netlify.app/' }
           ]
         }
       ]
