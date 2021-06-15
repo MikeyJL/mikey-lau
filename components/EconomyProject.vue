@@ -23,38 +23,47 @@ table {
     <g id="locations" />
     <g id="transporters" />
     </svg>
+    <p>
+      <b>
+        Resource ledger
+      </b>
+    </p>
     <table>
-      <tr>
-        <th>
-          Location
-        </th>
-        <th>
-          Resource
-        </th>
-        <th>
-          Amount
-        </th>
-        <th>
-          Price
-        </th>
-      </tr>
-      <tr
-        v-for="(item, itemIndex) in resourceLedger"
-        :key="`info_${itemIndex}`"
-      >
-        <td>
-          {{ item.id }}
-        </td>
-        <td>
-          {{ item.resource }}
-        </td>
-        <td>
-          {{ item.amount }}
-        </td>
-        <td>
-          {{ item.unitPrice }}
-        </td>
-      </tr>
+      <thead>
+        <tr>
+          <th>
+            Location
+          </th>
+          <th>
+            Resource
+          </th>
+          <th>
+            Amount
+          </th>
+          <th>
+            Price
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="(item, itemIndex) in resourceLedger"
+          :key="`info_${itemIndex}`"
+        >
+          <td>
+            {{ item.id }}
+          </td>
+          <td>
+            {{ item.resource }}
+          </td>
+          <td>
+            {{ item.amount }}
+          </td>
+          <td>
+            {{ item.unitPrice }}
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
