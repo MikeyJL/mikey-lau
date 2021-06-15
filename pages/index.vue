@@ -50,7 +50,7 @@
   width: 250px;
   height: 250px;
   margin-left: 4rem;
-  filter: grayscale(100%) contrast(1.1)
+  filter: grayscale(100%) contrast(1.2)
 }
 
 /* Skills */
