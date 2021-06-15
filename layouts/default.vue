@@ -138,7 +138,7 @@ nav {
 .social_links > a:not(:last-child) {
   margin-right: 1rem
 }
-.social_links > a > svg > path {
+.social_links > a > svg path {
   fill: var(--accent)
 }
 
