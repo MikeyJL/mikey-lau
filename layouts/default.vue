@@ -1,6 +1,6 @@
+<style src='highlight.js/styles/default.css'></style>
 <style>
 /* Code block */
-@import url('//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css');
 .hljs {
   background-color: var(--background);
   color: var(--accent)
