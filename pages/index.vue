@@ -276,14 +276,14 @@
 export default {
   data () {
     return {
-      techStack: ['HTML', 'CSS', 'Javascript', 'R', 'Python', 'C#', 'C++', 'Swift', 'Git'],
-      frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Tensorflow/Keras', 'Firebase', 'Unity'],
+      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Swift', 'Git', 'PHP'],
+      frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker'],
       projects: [
         {
           developed: true,
           title: 'Train In Blocks',
           desc: 'Using my background in the health and fitness industry, I\'ve built a web application with my business partner to help personal trainers manage their clientele and programmes.',
-          skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js',
+          skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js, PHP',
           internalLink: false,
           links: [
             { site: 'Website', url: 'https://traininblocks.com/' },

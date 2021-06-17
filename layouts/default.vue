@@ -198,7 +198,6 @@ nav {
 
 <template>
   <div>
-    <page-view-bar />
     <nav>
       <nuxt-link to="/" class="no_highlight">
         <inline-svg
@@ -238,12 +237,10 @@ nav {
 
 <script>
 import DarkmodeToggle from '~/components/DarkmodeToggle'
-import PageViewBar from '../components/PageViewBar.vue'
 
 export default {
   components: {
-    DarkmodeToggle,
-    PageViewBar
+    DarkmodeToggle
   },
   data () {
     return {
