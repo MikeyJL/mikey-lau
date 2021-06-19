@@ -302,6 +302,17 @@ export default {
         },
         {
           developed: false,
+          title: 'EasyBnB',
+          desc: `The focus of this project was to use PHP and Laravel whilst with tools like Docker, S3, and MySQL. Currently, the project has basic functions like creating, editing, and deleting as well as authentication. Future plans includes more styling and functions but keeping it simple.`,
+          skills: 'HTML, CSS, Javascript, PHP, Laravel, Docker, S3, MySQL',
+          internalLink: false,
+          links: [
+            { site: 'Website', url: 'https://easybnb.herokuapp.com/' },
+            { site: 'Repo', url: 'https://github.com/MikeyJL/EasyBnB' }
+          ]
+        },
+        {
+          developed: false,
           title: 'Foodie social media',
           desc: `In this project, I've explored the Swift programming language to create a social media platform for foodies. I've integrated Firebase Auth and its Realtime Database using CocoaPod to serve as a user management system.`,
           skills: 'Swift, Firebase',
