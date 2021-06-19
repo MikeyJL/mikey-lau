@@ -74,8 +74,8 @@ input:checked + .slider:before {
     <inline-svg :src="require('../assets/svg/darkmode.svg')" :class="{ darkmode: darkmodeOn }" class="mode_icon" />
     <label class="switch">
       <input
+        v-model="darkmodeOn"
         type="checkbox"
-        @change="darkmode()"
         aria-label="Darkmode"
       >
       <span :class="{ darkmode: darkmodeOn }" class="slider" />
@@ -90,14 +90,29 @@ export default {
   components: {
     InlineSvg
   },
+  watch: {
+    darkmodeOn (state) {
+      if (state) {
+        localStorage.setItem('darkmode', true)
+      } else {
+        localStorage.removeItem('darkmode')
+      }
+      this.darkmode()
+    }
+  },
   data () {
     return {
       darkmodeOn: false
     }
   },
+  mounted () {
+    if (localStorage.getItem('darkmode')) {
+      this.darkmodeOn = true
+    }
+  },
   methods: {
     darkmode () {
-      if (!this.darkmodeOn) {
+      if (this.darkmodeOn) {
         document.documentElement.style.setProperty('--accent', '#F4F4F4')
         document.documentElement.style.setProperty('--background', '#050505')
         document.documentElement.style.setProperty('--foreground', '#383838')
@@ -108,7 +123,6 @@ export default {
         document.documentElement.style.setProperty('--foreground', 'white')
         document.documentElement.style.setProperty('--faded_element', '#05050510')
       }
-      this.darkmodeOn = !this.darkmodeOn
     }
   }
 }
