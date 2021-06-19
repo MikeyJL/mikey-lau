@@ -303,7 +303,7 @@ export default {
         {
           developed: false,
           title: 'EasyBnB',
-          desc: `The focus of this project was to use PHP and Laravel whilst with tools like Docker, S3, and MySQL. Currently, the project has basic functions like creating, editing, and deleting as well as authentication. Future plans includes more styling and functions but keeping it simple.`,
+          desc: `The focus of this project was to use PHP and Laravel with tools like Docker, S3, and MySQL. Currently, the project has basic functions like creating, editing, and deleting listings — as well as authentication. Future plans includes more styling and functions whilst keeping it simple.`,
           skills: 'HTML, CSS, Javascript, PHP, Laravel, Docker, S3, MySQL',
           internalLink: false,
           links: [
