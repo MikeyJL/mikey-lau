@@ -1,5 +1,7 @@
 <style src='highlight.js/styles/default.css'></style>
 <style>
+@import '../assets/css/project.css';
+
 /* Code block */
 .hljs {
   background-color: var(--background);
@@ -15,12 +17,15 @@ pre code.hljs {
   --background: #F4F4F4;
   --foreground: white;
   --accent: #050505;
-  --side_padding: 8%;
   --left-content-padding: 25vw
 }
 
 /* Animate on view */
-.fade_in {
+.fade-on-view {
+  opacity: 0;
+  transition: .6s all cubic-bezier(.165, .84, .44, 1)
+}
+.fade-in {
   opacity: 0;
   animation: 1s fadeIn cubic-bezier(.165, .84, .44, 1) forwards
 }
@@ -33,6 +38,18 @@ pre code.hljs {
   }
   to {
     opacity: 1
+  }
+}
+
+/* Overlay */
+@media (min-width: 1025px) {
+  .overlay--v-line {
+    position: fixed;
+    top: 20vh;
+    left: 15vw;
+    height: 60vh;
+    width: 3px;
+    background: var(--accent)
   }
 }
 
@@ -93,12 +110,16 @@ a.no_highlight:active {
 
 /* Text */
 h1, h2, .text--large {
+  letter-spacing: 1px;
   font-size: 2.6rem
 }
 .text--small {
+  letter-spacing: 1px;
   font-size: 1.6rem
 }
 .text--tiny {
+  font-family: monospace;
+  letter-spacing: 1px;
   font-size: .8rem
 }
 
@@ -126,6 +147,7 @@ nav {
   height: 100vh;
   widows: 15vw;
   padding: 4rem 0;
+  z-index: 1;
   position: fixed
 }
 #logo {
@@ -139,9 +161,7 @@ nav {
   margin: 0 2rem
 }
 .current-view {
-  text-align: center;
-  font-size: .8rem;
-  letter-spacing: 2px
+  text-align: center
 }
 
 /* Social links */
@@ -164,39 +184,25 @@ nav {
   margin-right: .2rem
 }
 
-/* Global repo */
-.repo_link {
-  display: flex;
-  margin: 4rem var(--side_padding) 1rem auto
-}
-.repo_link > svg {
-  margin-left: .6rem
-}
-.repo_link > svg > path {
-  fill: var(--accent)
-}
-
-/* Global Explanation */
-.container--explanation {
-  display: grid;
-  grid-gap: 4rem
-}
-.explanation {
-  padding: 2rem;
-  border: 3px solid var(--accent);
-  margin: 0 var(--side_padding);
-  overflow-x: auto
+/* Responsive */
+@media (max-width: 1024px) {
+  :root {
+    --left-content-padding: 8vw
+  }
+  nav {
+    flex-direction: row;
+    height: fit-content;
+    padding: 2rem 0;
+    width: 100vw;
+    background-color: var(--background);
+    box-shadow: 0 0 20px 10px rgb(0, 0, 0, .03)
+  }
+  .current-view {
+    margin: auto
+  }
 }
 
 @media (max-width: 425px) {
-  .explanation {
-    border: none;
-    padding: 0
-  }
-  .explanation:not(:last-child) {
-    border-bottom: 3px solid var(--faded-element)
-  }
-
   /* Footer */
   .location {
     text-align: right;
@@ -214,7 +220,8 @@ nav {
 
 <template>
   <div>
-    <nav>
+    <span class="overlay--v-line" />
+    <nav class="fade-in">
       <nuxt-link to="/" class="no_highlight">
         <inline-svg
           id="logo"
@@ -222,12 +229,12 @@ nav {
           aria-label="Mikey Lau logo"
         />
       </nuxt-link>
-      <span class="current-view">
+      <span class="current-view text--tiny">
         {{ currentView }}
       </span>
       <darkmode-toggle />
     </nav>
-    <main>
+    <main class="fade-in delay">
       <Nuxt />
       <footer>
         <div class="location">

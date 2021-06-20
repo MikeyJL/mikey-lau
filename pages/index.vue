@@ -1,12 +1,15 @@
 <style scoped>
-/* Overlay */
-.overlay--v-line {
-  position: fixed;
-  top: 20vh;
-  left: 15vw;
-  height: 60vh;
-  width: 4px;
-  background: var(--accent)
+/* Cog */
+.cog {
+  animation: 6s cogSpin linear infinite
+}
+@keyframes cogSpin {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360deg)
+  }
 }
 
 /* Introduction */
@@ -18,7 +21,9 @@
 .introduction__header {
   width: fit-content;
   height: fit-content;
-  margin: auto 3rem auto auto
+  margin: auto 3rem auto auto;
+  display: grid;
+  grid-gap: .6rem
 }
 .introduction__header > .social-links {
   justify-content: flex-end
@@ -57,16 +62,52 @@
 .project__header > svg {
   margin: auto 0
 }
+.project__links {
+  display: flex
+}
 .project__links > div {
   width: fit-content
+}
+.project__links > div:not(:last-child) {
+  margin-right: 1rem
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #introduction {
+    display: flex;
+    flex-direction: column-reverse
+  }
+  #introduction img {
+    padding: 2rem
+  }
+  .introduction__header {
+    display: flex;
+    flex-direction: column;
+    margin: auto
+  }
+  .social-links {
+    margin: 1rem auto auto auto
+  }
+  .techstack__content {
+    grid-template-columns: repeat(2, 1fr)
+  }
+  .techstack__content p {
+    text-align: center;
+    font-size: 2rem
+  }
+}
+@media (max-width: 576px) {
+  .techstack__content p {
+    font-size: 1.8rem
+  }
 }
 </style>
 
 <template>
   <div id="home">
-    <span class="overlay--v-line" />
     <div class="spacer--xlarge" />
-    <div id="introduction">
+    <div id="introduction" class="fade-on-view">
       <div class="introduction__header">
         <h1 class="no-margin">
           Meet Mikey
@@ -91,11 +132,11 @@
       >
     </div>
     <div class="spacer--xlarge" />
-    <p class="text--large statement">
+    <p class="text--large statement fade-on-view">
       Who doesn't love minimalism? The internet can be full of clutter. I don't blame you if you get frustrated with slow websites and applications.
     </p>
     <div class="spacer--xlarge" />
-    <div id="techstack">
+    <div id="techstack" class="fade-on-view">
       <div class="techstack__content">
         <div
           v-for="(item, itemIndex) in techStack"
@@ -110,7 +151,7 @@
       </div>
     </div>
     <div class="spacer--large" />
-    <div id="projects">
+    <div id="projects" class="fade-on-view">
       <div
         v-for="(project, projectIndex) in projects"
         :key="`project_${projectIndex}`"
@@ -125,7 +166,7 @@
             </p>
             <inline-svg
               :src="require(`~/assets/svg/${project.developed ? 'tick' : 'cog'}.svg`)"
-              :class="{ animate_cog: !project.developed }"
+              :class="{ cog: !project.developed }"
             />
           </div>
           <p>
@@ -224,6 +265,7 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.resolveScroll)
+    this.resolveScroll()
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.resolveScroll)
@@ -233,6 +275,8 @@ export default {
       const TECHSTACK = document.getElementById('techstack').offsetTop - ((window.innerHeight - document.getElementById('techstack').offsetHeight))
       const PROJECTS = document.getElementById('projects').offsetTop
       const SCROLL = window.scrollY
+
+      // Current view
       if (SCROLL > PROJECTS) {
         this.$parent.$parent.currentView = 'Projects'
       } else if (SCROLL > TECHSTACK) {
@@ -240,6 +284,15 @@ export default {
       } else {
         this.$parent.$parent.currentView = 'Introduction'
       }
+
+      // Fade on view
+      const THRESHOLD = .6
+      const TO_SHOW = document.querySelectorAll('.fade-on-view')
+      TO_SHOW.forEach(element => {
+        if (element.offsetTop - window.innerHeight * THRESHOLD < SCROLL) {
+          element.style.opacity = 1
+        }
+      })
     }
   }
 }

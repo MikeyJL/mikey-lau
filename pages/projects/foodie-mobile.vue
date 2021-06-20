@@ -1,4 +1,7 @@
 <style scoped>
+#foodie {
+  padding: 1rem 8vw 1rem var(--left-content-padding)
+}
 .project_example {
   display: grid;
   grid-template-columns: repeat(2, 1fr)
@@ -98,14 +101,14 @@
     grid-template-columns: 1fr
   }
   .project_example > *:first-child {
-    margin: 2rem var(--side_padding);
     text-align: left
   }
 }
 </style>
 
 <template>
-  <div>
+  <div id="foodie">
+    <div class="spacer--xlarge" />
     <div class="project_example">
       <div class="project_introduction">
         <h1>
@@ -259,6 +262,7 @@ import KeychainSwift
   },
   mounted () {
     this.animatePhone()
+    this.$parent.$parent.currentView = 'Project'
   },
   methods: {
     animatePhone () {

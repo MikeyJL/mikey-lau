@@ -1,7 +1,4 @@
 <style scoped>
-.container--economy_project {
-  margin: 2rem var(--side_padding)
-}
 #economy {
   width: 100%
 }

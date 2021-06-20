@@ -1,11 +1,12 @@
 <style scoped>
-.project_introduction {
-  margin: 0 var(--side_padding)
+#economy {
+  padding: 1rem 8vw 1rem var(--left-content-padding)
 }
 </style>
 
 <template>
-  <div>
+  <div id="economy">
+    <div class="spacer--xlarge" />
     <div class="project_introduction">
       <h1>
         Basic economy
@@ -122,6 +123,9 @@ class Location {
         }
       ]
     }
+  },
+  mounted () {
+    this.$parent.$parent.currentView = 'Project'
   }
 }
 </script>
