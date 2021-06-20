@@ -116,12 +116,12 @@ export default {
         document.documentElement.style.setProperty('--accent', '#F4F4F4')
         document.documentElement.style.setProperty('--background', '#050505')
         document.documentElement.style.setProperty('--foreground', '#383838')
-        document.documentElement.style.setProperty('--faded_element', '#FFFFFF40')
+        document.documentElement.style.setProperty('--faded-element', '#FFFFFF40')
       } else {
         document.documentElement.style.setProperty('--accent', '#050505')
         document.documentElement.style.setProperty('--background', '#F4F4F4')
         document.documentElement.style.setProperty('--foreground', 'white')
-        document.documentElement.style.setProperty('--faded_element', '#05050510')
+        document.documentElement.style.setProperty('--faded-element', '#05050510')
       }
     }
   }

@@ -29,7 +29,7 @@
         :key="`section_${sectionIndex}`"
         class="explanation"
       >
-        <p class="text--small no_margin">
+        <p class="text--small no-margin">
           <b>
             {{ section.title }}
           </b>

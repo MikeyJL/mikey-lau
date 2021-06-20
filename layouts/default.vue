@@ -11,11 +11,12 @@ pre code.hljs {
 
 /* Root */
 :root {
-  --faded_element: #05050510;
+  --faded-element: #05050510;
   --background: #F4F4F4;
   --foreground: white;
   --accent: #050505;
-  --side_padding: 8%
+  --side_padding: 8%;
+  --left-content-padding: 25vw
 }
 
 /* Animate on view */
@@ -54,14 +55,13 @@ body {
   margin: 0
 }
 footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 8rem var(--side_padding) 0 var(--side_padding);
-  padding: 2rem 0;
+  text-align: right;
+  margin: 8rem 0 0 var(--left-content-padding);
+  padding: 2rem;
   border-top: 2px solid var(--accent)
 }
-h1, h2 {
-  font-size: 2.6rem
+img {
+  width: 100%
 }
 a {
   width: fit-content;
@@ -92,6 +92,9 @@ a.no_highlight:active {
 }
 
 /* Text */
+h1, h2, .text--large {
+  font-size: 2.6rem
+}
 .text--small {
   font-size: 1.6rem
 }
@@ -111,34 +114,47 @@ a.no_highlight:active {
 }
 
 /* Tailwind */
-.no_margin {
+.no-margin {
   margin: 0
 }
 
 /* Navigation */
 nav {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 4rem var(--side_padding)
+  height: 100vh;
+  widows: 15vw;
+  padding: 4rem 0;
+  position: fixed
 }
 #logo {
-  width: 100px
+  margin: 0 2rem;
+  width: 80px
 }
 #logo :is(rect, path) {
   fill: var(--accent)
 }
+.toggle_wrapper {
+  margin: 0 2rem
+}
+.current-view {
+  text-align: center;
+  font-size: .8rem;
+  letter-spacing: 2px
+}
 
 /* Social links */
-.social_links {
+.social-links {
   display: flex
 }
-.social_links:not(.not_global) > a {
+.social-links:not(.not-global) > a {
   margin: auto
 }
-.social_links > a:not(:last-child) {
+.social-links > a:not(:last-child) {
   margin-right: 1rem
 }
-.social_links > a > svg path {
+.social-links > a > svg path {
   fill: var(--accent)
 }
 
@@ -178,7 +194,7 @@ nav {
     padding: 0
   }
   .explanation:not(:last-child) {
-    border-bottom: 3px solid var(--faded_element)
+    border-bottom: 3px solid var(--faded-element)
   }
 
   /* Footer */
@@ -190,7 +206,7 @@ nav {
   .location > .city {
     margin-right: 0
   }
-  .social_links > a {
+  .social-links > a {
     margin: 0
   }
 }
@@ -206,32 +222,24 @@ nav {
           aria-label="Mikey Lau logo"
         />
       </nuxt-link>
+      <span class="current-view">
+        {{ currentView }}
+      </span>
       <darkmode-toggle />
     </nav>
-    <Nuxt />
-    <footer>
-      <div class="social_links">
-        <a
-          v-for="(social, socialIndex) in socials"
-          :key="`social${socialIndex}`"
-          :href="social.link"
-          :aria-label="social.svg"
-          target="_blank"
-          class="no_highlight"
-          rel="noopener"
-        >
-          <inline-svg :src="require(`~/assets/svg/social/${social.svg}.svg`)" />
-        </a>
-      </div>
-      <div class="location">
-        <span class="city">
-          Wallingford
-        </span>
-        <span class="country">
-          United Kingdom
-        </span>
-      </div>
-    </footer>
+    <main>
+      <Nuxt />
+      <footer>
+        <div class="location">
+          <span class="city">
+            Wallingford
+          </span>
+          <span class="country">
+            United Kingdom
+          </span>
+        </div>
+      </footer>
+    </main>
   </div>
 </template>
 
@@ -244,6 +252,7 @@ export default {
   },
   data () {
     return {
+      currentView: 'Introduction',
       socials: [
         { svg: 'github', link: 'https://github.com/MikeyJL' },
         { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' },

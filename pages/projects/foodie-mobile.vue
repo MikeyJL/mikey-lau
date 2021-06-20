@@ -152,23 +152,23 @@
                 class="post"
               >
                 <div class="meta">
-                  <p class="no_margin user">
+                  <p class="no-margin user">
                     <b>
                       @{{ post.user }}
                     </b>
                   </p>
-                  <p class="no_margin time">
+                  <p class="no-margin time">
                     {{ post.timeUploaded }} ago
                   </p>
                 </div>
                 <img :src="post.url" :alt="post.title">
                 <div class="desc">
-                  <p class="no_margin">
+                  <p class="no-margin">
                     <b>
                       {{ post.title }}
                     </b>
                   </p>
-                  <p class="no_margin">
+                  <p class="no-margin">
                     {{ post.desc }}
                   </p>
                 </div>
@@ -192,7 +192,7 @@
         :key="`section_${sectionIndex}`"
         class="explanation"
       >
-        <p class="text--small no_margin">
+        <p class="text--small no-margin">
           <b>
             {{ section.title }}
           </b>

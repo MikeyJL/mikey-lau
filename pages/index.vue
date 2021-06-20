@@ -1,82 +1,54 @@
-<style>
-.animate_cog {
-  -webkit-animation: 6s spin infinite linear;
-  -moz-animation: 6s spin infinite linear;
-  -ms-animation: 6s spin infinite linear;
-  -o-animation: 6s spin infinite linear;
-  animation: 6s spin infinite linear
-}
-@keyframes spin {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0)
-  }
-  to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg)
-  }
-}
-</style>
-
 <style scoped>
+/* Overlay */
+.overlay--v-line {
+  position: fixed;
+  top: 20vh;
+  left: 15vw;
+  height: 60vh;
+  width: 4px;
+  background: var(--accent)
+}
+
 /* Introduction */
-.introduction {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 var(--side_padding)
+#introduction {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  padding: 1rem 8vw 1rem var(--left-content-padding)
 }
-.introduction:after {
-  content: '';
-  height: 10rem;
-  width: 40%;
-  background-color: var(--faded_element);
-  position: absolute;
-  transform: translate(3rem, 8rem);
-  z-index: -1
+.introduction__header {
+  width: fit-content;
+  height: fit-content;
+  margin: auto 3rem auto auto
 }
-.introduction > div:first-child > h1 {
-  margin-bottom: .6rem
-}
-.introduction > div:first-child > .social_links {
+.introduction__header > .social-links {
   justify-content: flex-end
 }
-.introduction > img {
-  width: 250px;
-  height: 250px;
-  margin-left: 4rem;
-  filter: grayscale(100%) contrast(1.2)
+#introduction > img {
+  filter: contrast(1.1) grayscale(1);
+  border-radius: 50%
 }
 
-/* Skills */
-:is(.techstack, .frameworks, .projects) {
-  display: grid;
-  padding: 0 var(--side_padding)
+/* Statement */
+.statement {
+  padding: 1rem 8vw 1rem var(--left-content-padding)
 }
-:is(.techstack, .frameworks) {
-  grid-template-columns: repeat(2, 1fr)
+
+/* Techstack */
+#techstack {
+  background-color: var(--faded-element);
+  padding: 6rem 8vw 6rem var(--left-content-padding)
 }
-:is(.container--techstack, .container--frameworks) {
+.techstack__content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: .8rem 0
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem
 }
 
 /* Projects */
-.container--projects {
+#projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem
-}
-.project {
-  display: grid;
-  padding: 2rem;
-  border: 3px solid var(--accent)
+  grid-gap: 6rem;
+  padding: 1rem 8vw 1rem var(--left-content-padding)
 }
 .project__header {
   display: flex;
@@ -85,78 +57,21 @@
 .project__header > svg {
   margin: auto 0
 }
-.project__links {
-  display: flex;
-  margin-top: auto
-}
-.project__links > div:not(:last-child) {
-  margin-right: 1rem
-}
-
-@media (max-width: 1440px) {
-  .container--projects {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4rem
-  }
-}
-@media (max-width: 1024px) {
-  .container--projects {
-    grid-template-columns: 1fr
-  }
-}
-@media (max-width: 768px) {
-  .introduction {
-    display: grid
-  }
-  .introduction:after {
-    width: 80%;
-    transform: translate(2rem, 18rem)
-  }
-  .introduction,
-  .techstack,
-  .frameworks {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem
-  }
-  .introduction > div:first-child > .social_links {
-    margin: auto 0
-  }
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  .introduction > div:first-child {
-    display: flex;
-    justify-content: space-between
-  }
-}
-@media (max-width: 425px) {
-  .introduction > div:first-child > .social_links {
-    justify-content: left
-  }
-  .projects > h2 {
-    margin: 0
-  }
-  .container--projects {
-    grid-gap: 0
-  }
-  .project {
-    padding: 2rem 0;
-    border: none
-  }
-  .project:not(:last-child) {
-    border-bottom: 3px solid var(--faded_element)
-  }
+.project__links > div {
+  width: fit-content
 }
 </style>
 
 <template>
-  <div>
-    <div class="spacer--small" />
-    <div class="introduction">
-      <div>
-        <h1 class="no_margin">
+  <div id="home">
+    <span class="overlay--v-line" />
+    <div class="spacer--xlarge" />
+    <div id="introduction">
+      <div class="introduction__header">
+        <h1 class="no-margin">
           Meet Mikey
         </h1>
-        <div class="social_links not_global">
+        <div class="social-links not-global">
           <a
             v-for="(social, socialIndex) in $parent.$parent.socials"
             :key="`social${socialIndex}`"
@@ -176,38 +91,17 @@
       >
     </div>
     <div class="spacer--xlarge" />
-    <div class="techstack">
-      <p class="text--small no_margin">
-        <b>
-          Tech stack
-        </b>
-      </p>
-      <div class="container--techstack">
+    <p class="text--large statement">
+      Who doesn't love minimalism? The internet can be full of clutter. I don't blame you if you get frustrated with slow websites and applications.
+    </p>
+    <div class="spacer--xlarge" />
+    <div id="techstack">
+      <div class="techstack__content">
         <div
           v-for="(item, itemIndex) in techStack"
           :key="`techstack_${itemIndex}`"
         >
-          <p class="no_margin">
-            <b>
-              {{ item }}
-            </b>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="spacer--small" />
-    <div class="frameworks">
-      <p class="text--small no_margin">
-        <b>
-          Frameworks
-        </b>
-      </p>
-      <div class="container--frameworks">
-        <div
-          v-for="(item, itemIndex) in frameworks"
-          :key="`framework_${itemIndex}`"
-        >
-          <p class="no_margin">
+          <p class="text--large no-margin">
             <b>
               {{ item }}
             </b>
@@ -216,55 +110,50 @@
       </div>
     </div>
     <div class="spacer--large" />
-    <div class="projects">
-      <h2>
-        Projects
-      </h2>
-      <div class="container--projects">
-        <div
-          v-for="(project, projectIndex) in projects"
-          :key="`project_${projectIndex}`"
-          class="project"
-        >
-          <div>
-            <div class="project__header">
-              <p class="text--small no_margin">
-                <b>
-                  {{ project.title }}
-                </b>
-              </p>
-              <inline-svg
-                :src="require(`~/assets/svg/${project.developed ? 'tick' : 'cog'}.svg`)"
-                :class="{ animate_cog: !project.developed }"
-              />
-            </div>
-            <p>
-              {{ project.desc }}
+    <div id="projects">
+      <div
+        v-for="(project, projectIndex) in projects"
+        :key="`project_${projectIndex}`"
+        class="project"
+      >
+        <div>
+          <div class="project__header">
+            <p class="text--small no-margin">
+              <b>
+                {{ project.title }}
+              </b>
             </p>
-            <p class="text--tiny">
-              {{ project.skills }}
-            </p>
+            <inline-svg
+              :src="require(`~/assets/svg/${project.developed ? 'tick' : 'cog'}.svg`)"
+              :class="{ animate_cog: !project.developed }"
+            />
           </div>
-          <div class="project__links">
-            <div
-              v-for="(link, linkIndex) in project.links"
-              :key="`link_${projectIndex}_${linkIndex}`"
+          <p>
+            {{ project.desc }}
+          </p>
+          <p class="text--tiny">
+            {{ project.skills }}
+          </p>
+        </div>
+        <div class="project__links">
+          <div
+            v-for="(link, linkIndex) in project.links"
+            :key="`link_${projectIndex}_${linkIndex}`"
+          >
+            <a
+              v-if="!project.internalLink"
+              :href="link.url"
+              target="_blank"
+              rel="noopener"
             >
-              <a
-                v-if="!project.internalLink"
-                :href="link.url"
-                target="_blank"
-                rel="noopener"
-              >
-                {{ link.site }}
-              </a>
-              <nuxt-link
-                v-else
-                :to="link.url"
-              >
-                {{ link.site }}
-              </nuxt-link>
-            </div>
+              {{ link.site }}
+            </a>
+            <nuxt-link
+              v-else
+              :to="link.url"
+            >
+              {{ link.site }}
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -276,8 +165,7 @@
 export default {
   data () {
     return {
-      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Swift', 'Git', 'PHP'],
-      frameworks: [ 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker'],
+      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Swift', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker'],
       projects: [
         {
           developed: true,
@@ -332,6 +220,26 @@ export default {
           ]
         }
       ]
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.resolveScroll)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.resolveScroll)
+  },
+  methods: {
+    resolveScroll () {
+      const TECHSTACK = document.getElementById('techstack').offsetTop - ((window.innerHeight - document.getElementById('techstack').offsetHeight))
+      const PROJECTS = document.getElementById('projects').offsetTop
+      const SCROLL = window.scrollY
+      if (SCROLL > PROJECTS) {
+        this.$parent.$parent.currentView = 'Projects'
+      } else if (SCROLL > TECHSTACK) {
+        this.$parent.$parent.currentView = 'Techstack'
+      } else {
+        this.$parent.$parent.currentView = 'Introduction'
+      }
     }
   }
 }
