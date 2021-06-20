@@ -29,6 +29,8 @@
   justify-content: flex-end
 }
 #introduction > img {
+  height: 300px;
+  width: 300px;
   filter: contrast(1.1) grayscale(1);
   border-radius: 50%
 }
