@@ -135,7 +135,7 @@
     </div>
     <div class="spacer--xlarge" />
     <p class="text--large statement fade-on-view">
-      Who doesn't love minimalism? The internet can be full of clutter. I don't blame you if you get frustrated with slow websites and applications.
+      Who doesn't love minimalism? The internet can be cluttered with information. I don't blame you if you get frustrated with slow websites and applications. My philosopy is to focus on speed, functionality, and simplicity — creating value through one line of code at a time.
     </p>
     <div class="spacer--xlarge" />
     <div id="techstack" class="fade-on-view">
