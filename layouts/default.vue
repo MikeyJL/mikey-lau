@@ -145,10 +145,13 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  widows: 15vw;
+  width: 15vw;
   padding: 4rem 0;
   z-index: 1;
   position: fixed
+}
+nav > a:first-child {
+  margin: 0 auto
 }
 #logo {
   margin: 0 2rem;
@@ -158,9 +161,11 @@ nav {
   fill: var(--accent)
 }
 .toggle_wrapper {
-  margin: 0 2rem
+  margin: 0 auto
 }
 .current-view {
+  width: fit-content;
+  margin: 0 auto;
   text-align: center
 }
 
