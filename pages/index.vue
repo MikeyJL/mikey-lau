@@ -1,107 +1,132 @@
-<style scoped>
+<style lang="scss" scoped>
 /* Cog */
 .cog {
-  animation: 6s cogSpin linear infinite
+  animation: 6s cogSpin linear infinite;
 }
 @keyframes cogSpin {
   from {
-    transform: rotate(0)
+    transform: rotate(0);
   }
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
+}
+
+/* Horizontal */
+hr {
+  border: 1px solid var(--faded-element);
+  margin-left: var(--left-content-padding);
 }
 
 /* Introduction */
 #introduction {
   display: grid;
   grid-template-columns: 1fr .8fr;
-  padding: 1rem 8vw 1rem var(--left-content-padding)
-}
-.introduction__header {
-  width: fit-content;
-  height: fit-content;
-  margin: auto 3rem auto auto;
-  display: grid;
-  grid-gap: .6rem
-}
-.introduction__header > .social-links {
-  justify-content: flex-end
-}
-#introduction > img {
-  height: 300px;
-  width: 300px;
-  filter: contrast(1.1) grayscale(1);
-  border-radius: 50%
+  padding: 1rem 8vw 1rem var(--left-content-padding);
+
+  > .introduction__header {
+    width: fit-content;
+    height: fit-content;
+    margin: auto 3rem auto auto;
+    display: grid;
+    grid-gap: .6rem;
+
+    > .social-links {
+      justify-content: flex-end;
+    }
+  }
+
+  img {
+    height: 300px;
+    width: 300px;
+    filter: contrast(1.1) grayscale(1);
+    border-radius: 50%;
+  }
 }
 
 /* Statement */
 .statement {
-  padding: 1rem 8vw 1rem var(--left-content-padding)
+  padding: 1rem 8vw 1rem var(--left-content-padding);
 }
 
 /* Techstack */
 #techstack {
   background-color: var(--faded-element);
-  padding: 6rem 8vw 6rem var(--left-content-padding)
+  padding: 6rem 8vw 6rem var(--left-content-padding);
 }
 .techstack__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem
+  grid-gap: 1rem;
 }
 
 /* Projects */
 #projects {
   display: grid;
   grid-gap: 6rem;
-  padding: 1rem 8vw 1rem var(--left-content-padding)
+  padding: 1rem 8vw 1rem var(--left-content-padding);
+
+  .project__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  > svg {
+    margin: auto 0;
+  }
+
+  .project__links {
+    display: flex;
+    > div {
+      width: fit-content;
+    }
+    > div:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 }
-.project__header {
-  display: flex;
-  justify-content: space-between
+
+/* Education */
+#education {
+  display: grid;
+  grid-gap: 4rem;
+  padding: 1rem 8vw 1rem var(--left-content-padding);
 }
-.project__header > svg {
-  margin: auto 0
+#education > div > h3 {
+  margin: .8rem 0;
 }
-.project__links {
-  display: flex
-}
-.project__links > div {
-  width: fit-content
-}
-.project__links > div:not(:last-child) {
-  margin-right: 1rem
+#education > div > p {
+  margin: 0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   #introduction {
     display: flex;
-    flex-direction: column-reverse
+    flex-direction: column-reverse;
   }
   #introduction img {
-    padding: 2rem
+    padding: 2rem;
   }
   .introduction__header {
     display: flex;
     flex-direction: column;
-    margin: auto
+    margin: auto;
   }
   .social-links {
-    margin: 1rem auto auto auto
+    margin: 1rem auto auto auto;
   }
   .techstack__content {
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
   }
   .techstack__content p {
     text-align: center;
-    font-size: 2rem
+    font-size: 2rem;
   }
 }
 @media (max-width: 576px) {
   .techstack__content p {
-    font-size: 1.8rem
+    font-size: 1.8rem;
   }
 }
 </style>
@@ -128,10 +153,13 @@
           </a>
         </div>
       </div>
-      <img
-        src="~/assets/me.jpg"
-        alt="Mikey Lau"
-      >
+      <div>
+        <img
+          src="~/assets/me.jpg"
+          alt="Mikey Lau"
+        >
+        <cube-model />
+      </div>
     </div>
     <div class="spacer--xlarge" />
     <p class="text--large statement fade-on-view">
@@ -159,7 +187,7 @@
         :key="`project_${projectIndex}`"
         class="project"
       >
-        <div>
+        <div class="project__content">
           <div class="project__header">
             <p class="text--small no-margin">
               <b>
@@ -201,14 +229,38 @@
         </div>
       </div>
     </div>
+    <div class="spacer--small" />
+    <hr>
+    <div class="spacer--small" />
+    <div id="education">
+      <div
+        v-for="(item, itemIndex) in education"
+        :key="`education_${itemIndex}`"
+      >
+        <p class="text--tiny">
+          {{ item.time }}
+        </p>
+        <h3>
+          {{ item.degree }}
+        </h3>
+        <p>
+          {{ item.grade }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import CubeModel from '~/components/CubeModel.vue'
+
 export default {
+  components: {
+    CubeModel
+  },
   data () {
     return {
-      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Swift', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker'],
+      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Python', 'R', 'Swift', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker'],
       projects: [
         {
           developed: true,
@@ -261,6 +313,18 @@ export default {
           links: [
             { site: 'Website', url: 'https://jkpt.netlify.app/' }
           ]
+        }
+      ],
+      education: [
+        {
+          degree: 'MSc Applied AI and Data Science',
+          grade: 'Pending',
+          time: 'Sep 21 — Jun 22'
+        },
+        {
+          degree: 'BSc (Hons) Fitness and Personal Training',
+          grade: '1st class',
+          time: 'Sep 18 — Jun 21'
         }
       ]
     }

@@ -22,7 +22,7 @@ export default {
     ]
   },
   css: [
-    '~/assets/main.css'
+    '~/assets/main.scss'
   ],
   plugins: [
     '~/plugins/vue-inline-svg.js',

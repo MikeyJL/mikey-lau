@@ -1,7 +1,5 @@
 <style src='highlight.js/styles/default.css'></style>
 <style>
-@import '../assets/css/project.css';
-
 /* Code block */
 .hljs {
   background-color: var(--background);

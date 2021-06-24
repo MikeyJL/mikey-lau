@@ -1,11 +1,11 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-      "rule-empty-line-before": "never",
+      "rule-empty-line-before": null,
       "declaration-colon-newline-after": null,
       "declaration-bang-space-before": "never",
       "selector-list-comma-newline-after": null,
-      "declaration-block-trailing-semicolon": "never",
+      "declaration-block-trailing-semicolon": "always",
       "no-descending-specificity": null,
       "selector-pseudo-element-colon-notation": "single",
       "color-hex-case": "upper",
