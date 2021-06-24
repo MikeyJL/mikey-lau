@@ -114,7 +114,6 @@ h1, h2, .text--large {
   font-size: 2.6rem
 }
 .text--small {
-  letter-spacing: 1px;
   font-size: 1.6rem
 }
 .text--tiny {
