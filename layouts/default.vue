@@ -208,6 +208,18 @@ nav > a:first-child {
 }
 
 @media (max-width: 425px) {
+  /* Nav */
+  nav {
+    display: flex;
+    flex-direction: row
+  }
+  nav > a:first-child {
+    margin: 0
+  }
+  .current-view {
+    display: none
+  }
+
   /* Footer */
   .location {
     text-align: right;
