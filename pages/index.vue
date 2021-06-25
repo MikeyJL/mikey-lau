@@ -295,6 +295,16 @@ export default {
           ]
         },
         {
+          developed: true,
+          title: 'Space Satellites',
+          desc: '',
+          skills: '',
+          internalLink: true,
+          links: [
+            { site: 'Example', url: '/projects/space-satellites' }
+          ]
+        },
+        {
           developed: false,
           title: 'Foodie social media',
           desc: `In this project, I've explored the Swift programming language to create a social media platform for foodies. I've integrated Firebase Auth and its Realtime Database using CocoaPod to serve as a user management system.`,

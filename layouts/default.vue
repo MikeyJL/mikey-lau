@@ -1,12 +1,12 @@
 <style src='highlight.js/styles/default.css'></style>
-<style>
+<style lang="scss">
 /* Code block */
 .hljs {
   background-color: var(--background);
-  color: var(--accent)
+  color: var(--accent);
 }
 pre code.hljs {
-  font-size: .8rem
+  font-size: .8rem;
 }
 
 /* Root */
@@ -15,7 +15,7 @@ pre code.hljs {
   --background: #F4F4F4;
   --foreground: white;
   --accent: #050505;
-  --left-content-padding: 25vw
+  --left-content-padding: 25vw;
 }
 
 /* Animate on view */
