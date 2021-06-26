@@ -127,6 +127,7 @@
 
 <template>
   <div id="foodie">
+    <cylinder-model />
     <div class="project_example">
       <div class="project_introduction">
         <h1>
@@ -230,7 +231,12 @@
 </template>
 
 <script>
+import CylinderModel from '../../components/CylinderModel.vue'
+
 export default {
+  components: {
+    CylinderModel
+  },
   data () {
     return {
       // Login view

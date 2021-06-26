@@ -18,6 +18,7 @@
 
 <template>
   <div id="economy">
+    <cylinder-model />
     <div class="project_introduction">
       <h1>
         Basic economy
@@ -58,10 +59,12 @@
 </template>
 
 <script>
+import CylinderModel from '~/components/CylinderModel'
 import EconomyProject from '~/components/EconomyProject'
 
 export default {
   components: {
+    CylinderModel,
     EconomyProject
   },
   data () {

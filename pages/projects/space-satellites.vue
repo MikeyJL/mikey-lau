@@ -18,6 +18,7 @@
 
 <template>
   <div id="space-satellite">
+    <cylinder-model />
     <div class="project_introduction">
       <h1>
         Space Satellites
@@ -50,10 +51,12 @@
 </template>
 
 <script>
+import CylinderModel from '~/components/CylinderModel'
 import SpaceSat from '~/components/SpaceSat'
 
 export default {
   components: {
+    CylinderModel,
     SpaceSat
   },
   data () {

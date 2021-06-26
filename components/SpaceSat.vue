@@ -12,7 +12,7 @@
       transform-origin: center;
       fill: transparent;
       stroke: var(--accent);
-      opacity: .4;
+      opacity: .1;
       stroke-width: 5;
       transition: .6s all cubic-bezier(.165, .84, .44, 1);
 

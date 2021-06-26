@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-#cube-scene {
+#cylinder-scene {
   margin: auto;
   height: 200px;
   width: 200px;
@@ -10,7 +10,9 @@
   top: 38%;
   left: 0;
 
-  > #model-cube {
+  > #model-cylinder {
+    display: flex;
+    justify-content: space-around;
     width: 100%;
     height: 100%;
     position: relative;
@@ -19,29 +21,29 @@
 
     > div {
       height: 200px;
-      width: 200px;
+      width: 80px;
       position: absolute;
       border: 1px solid var(--accent);
       border-radius: 10px;
     }
 
-    > .front {
-      transform: rotate(0) translateZ(90px);
+    > .one {
+      transform: rotateY(0) translateZ(60px);
     }
-    > .back {
-      transform: rotateY(180deg) translateZ(90px);
+    > .two {
+      transform: rotateY(60deg) translateZ(60px);
     }
-    > .top {
-      transform: rotateX(90deg) translateZ(90px);
+    > .three {
+      transform: rotateY(120deg) translateZ(60px);
     }
-    > .bottom {
-      transform: rotateX(-90deg) translateZ(90px);
+    > .four {
+      transform: rotateY(180deg) translateZ(60px);
     }
-    > .left {
-      transform: rotateY(-90deg) translateZ(90px);
+    > .five {
+      transform: rotateY(-60deg) translateZ(60px);
     }
-    > .right {
-      transform: rotateY(90deg) translateZ(90px);
+    > .six {
+      transform: rotateY(-120deg) translateZ(60px);
     }
   }
 }
@@ -69,14 +71,14 @@
 </style>
 
 <template>
-  <div id="cube-scene">
-    <div id="model-cube">
-      <div class="front" />
-      <div class="back" />
-      <div class="top" />
-      <div class="bottom" />
-      <div class="left" />
-      <div class="right" />
+  <div id="cylinder-scene">
+    <div id="model-cylinder">
+      <div class="one" />
+      <div class="two" />
+      <div class="three" />
+      <div class="four" />
+      <div class="five" />
+      <div class="six" />
     </div>
   </div>
 </template>
