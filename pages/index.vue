@@ -104,24 +104,31 @@ hr {
   #introduction {
     display: flex;
     flex-direction: column-reverse;
+
+    > .introduction__header {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+
+      > .social-links {
+        margin: 1rem auto auto auto;
+      }
+    }
+
+    img {
+      display: flex;
+      margin: auto;
+      padding: 2rem;
+    }
   }
-  #introduction img {
-    padding: 2rem;
-  }
-  .introduction__header {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-  }
-  .social-links {
-    margin: 1rem auto auto auto;
-  }
+
   .techstack__content {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .techstack__content p {
-    text-align: center;
-    font-size: 2rem;
+
+    p {
+      text-align: center;
+      font-size: 2rem;
+    }
   }
 }
 @media (max-width: 576px) {
@@ -141,7 +148,7 @@ hr {
         </h1>
         <div class="social-links not-global">
           <a
-            v-for="(social, socialIndex) in $parent.$parent.socials"
+            v-for="(social, socialIndex) in socials"
             :key="`social${socialIndex}`"
             :href="social.link"
             :aria-label="social.svg"
@@ -163,7 +170,7 @@ hr {
     </div>
     <div class="spacer--xlarge" />
     <p class="text--large statement fade-on-view">
-      Who doesn't love minimalism? The internet can be cluttered with information. I don't blame you if you get frustrated with slow websites and applications. My philosopy is to focus on speed, functionality, and simplicity — creating value through one line of code at a time.
+      Who doesn't love minimalism? The internet can be cluttered with information. I'm a full-stack developer with a passion for websites, applications, and data. My philosopy is to focus on speed, functionality, and simplicity — creating value through one line of code at a time.
     </p>
     <div class="spacer--xlarge" />
     <div id="techstack" class="fade-on-view">
@@ -260,6 +267,11 @@ export default {
   },
   data () {
     return {
+      socials: [
+        { svg: 'github', link: 'https://github.com/MikeyJL' },
+        { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' },
+        { svg: 'indeed', link: 'https://my.indeed.com/p/xjp92s2' }
+      ],
       techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Python', 'R', 'Swift', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker'],
       projects: [
         {
@@ -297,8 +309,8 @@ export default {
         {
           developed: true,
           title: 'Space Satellites',
-          desc: '',
-          skills: '',
+          desc: `After discovering a cool dataset of satellites launched globally, I've decided to create a quick visualisation of each orbit adjusted with its degree of inclination from the near-equatorial orbit.`,
+          skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
           internalLink: true,
           links: [
             { site: 'Example', url: '/projects/space-satellites' }

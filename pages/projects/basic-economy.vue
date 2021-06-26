@@ -1,12 +1,23 @@
-<style scoped>
+<style lang="scss" scoped>
 #economy {
   padding: 1rem 8vw 1rem var(--left-content-padding);
+
+  > .project_introduction {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #economy {
+    > .project_introduction {
+      margin-top: 8rem;
+    }
+  }
 }
 </style>
 
 <template>
   <div id="economy">
-    <div class="spacer--xlarge" />
     <div class="project_introduction">
       <h1>
         Basic economy

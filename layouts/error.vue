@@ -1,9 +1,9 @@
 <style scoped>
 #error {
-  padding: 0 8%
+  padding: 0 8%;
 }
 .error_link, .link_wrapper {
-  width: fit-content
+  width: fit-content;
 }
 .error_link:after {
   content: '';
@@ -13,10 +13,10 @@
   width: 0%;
   background-color: #8B000040;
   transform: translateY(-.6rem);
-  transition: .4s all cubic-bezier(.165, .84, .44, 1)
+  transition: .4s all cubic-bezier(.165, .84, .44, 1);
 }
 .error_link:hover:after {
-  width: 100%
+  width: 100%;
 }
 </style>
 

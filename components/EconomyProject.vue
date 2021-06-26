@@ -1,11 +1,11 @@
 <style scoped>
 #economy {
-  width: 100%
+  width: 100%;
 }
 table {
   font-size: .8rem;
   width: 100%;
-  text-align: left
+  text-align: left;
 }
 </style>
 

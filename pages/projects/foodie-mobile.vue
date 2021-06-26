@@ -1,17 +1,19 @@
-<style scoped>
+<style lang="scss" scoped>
 #foodie {
-  padding: 1rem 8vw 1rem var(--left-content-padding)
+  padding: 1rem 8vw 1rem var(--left-content-padding);
 }
 .project_example {
   display: grid;
-  grid-template-columns: repeat(2, 1fr)
-}
-.project_example > *:first-child {
-  margin-left: 10%;
-  text-align: right
-}
-.project_introduction {
-  margin: auto 0
+  grid-template-columns: repeat(2, 1fr);
+
+  > *:first-child {
+    margin-left: 10%;
+    text-align: right;
+  }
+
+  .project_introduction {
+    margin: auto 0;
+  }
 }
 
 /* Phone */
@@ -21,94 +23,110 @@
   height: 600px;
   background-color: var(--accent);
   border-radius: 30px;
-  margin: 4rem auto
-}
-.phone > #screen > .top_speaker {
-  position: sticky;
-  top: 0;
-  height: 15px;
-  width: 60%;
-  background-color: var(--accent);
-  border-radius: 0 0 20px 20px;
-  margin: auto
-}
-.phone > #screen {
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  background-color: var(--foreground);
-  border-radius: 20px;
-  margin: auto;
-  overflow: hidden
+  margin: 4rem auto;
+
+  > #screen {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-color: var(--foreground);
+    border-radius: 20px;
+    margin: auto;
+    overflow: hidden;
+
+    > .top_speaker {
+      position: sticky;
+      top: 0;
+      height: 15px;
+      width: 60%;
+      background-color: var(--accent);
+      border-radius: 0 0 20px 20px;
+      margin: auto;
+    }
+  }
 }
 
 /* Login view */
 #login_view {
   margin: auto;
-  padding: 1rem
-}
-.login_view__inputs {
-  display: grid;
-  grid-gap: .4rem
-}
-.login_view__inputs input {
-  border: none;
-  border-radius: 5px;
-  padding: .6rem;
-  background-color: var(--background)
-}
-.login_view__inputs button {
-  font-weight: bold;
-  padding: .6rem;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  background-color: var(--accent);
-  color: var(--foreground);
-  margin-top: 1rem;
-  transition: .6s all cubic-bezier(.165, .84, .44, 1)
-}
-.login_view__inputs :is(input, button):disabled {
-  cursor: default
+  padding: 1rem;
+
+  .login_view__inputs {
+    display: grid;
+    grid-gap: .4rem;
+
+    input {
+      border: none;
+      border-radius: 5px;
+      padding: .6rem;
+      background-color: var(--background);
+    }
+    button {
+      font-weight: bold;
+      padding: .6rem;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      background-color: var(--accent);
+      color: var(--foreground);
+      margin-top: 1rem;
+      transition: .6s all cubic-bezier(.165, .84, .44, 1);
+    }
+    :is(input, button):disabled {
+      cursor: default;
+    }
+  }
 }
 
 /* Feed view */
 .post {
   margin-top: 1rem;
   border-top: 3px solid var(--background);
-  border-bottom: 3px solid var(--background)
-}
-.post > img {
-  width: 100%
-}
-.post > .desc > p,
-.post > .meta > .user {
-  font-size: .8rem
-}
-.post > .meta > .time {
-  font-size: .6rem;
-  margin: auto 0
-}
-.post > :is(.desc, .meta) {
-  padding: .4rem
-}
-.post > .meta {
-  display: flex;
-  justify-content: space-between
+  border-bottom: 3px solid var(--background);
+
+  > img {
+    width: 100%;
+  }
+
+  > .desc {
+    padding: .4rem;
+
+    > p {
+      font-size: .8rem;
+    }
+  }
+  > .meta {
+    display: flex;
+    justify-content: space-between;
+    padding: .4rem;
+
+    > .user {
+      font-size: .8rem;
+    }
+    > .time {
+      font-size: .6rem;
+      margin: auto 0;
+    }
+  }
 }
 
+@media (max-width: 1024px) {
+  .project_example {
+    margin-top: 8rem;
+  }
+}
 @media (max-width: 768px) {
   .project_example {
-    grid-template-columns: 1fr
-  }
-  .project_example > *:first-child {
-    text-align: left
+    grid-template-columns: 1fr;
+
+    > *:first-child {
+      text-align: left;
+    }
   }
 }
 </style>
 
 <template>
   <div id="foodie">
-    <div class="spacer--xlarge" />
     <div class="project_example">
       <div class="project_introduction">
         <h1>
@@ -294,7 +312,7 @@ import KeychainSwift
           document.getElementById('login_button').style.transform = "scale(1)"
           this.loggedIn = true
         }, 100)
-      }, 50 * EMAIL.length + 50 * PASSWORD.length);
+      }, 50 * EMAIL.length + 50 * PASSWORD.length)
 
       // Scroll feed
       setTimeout(() => {

@@ -1,6 +1,4 @@
 <style lang="scss" scoped>
-@import '../assets/styles/variables.scss';
-
 #space {
   display: flex;
   flex-direction: column;
@@ -13,7 +11,7 @@
       cursor: pointer;
       transform-origin: center;
       fill: transparent;
-      stroke: $accent;
+      stroke: var(--accent);
       opacity: .4;
       stroke-width: 5;
       transition: .6s all cubic-bezier(.165, .84, .44, 1);
@@ -31,57 +29,31 @@
     }
 
     > .planet {
-      fill: transparent;
-      stroke: $accent;
+      fill: var(--accent);
+      stroke: var(--accent);
       stroke-width: 3;
+    }
+  }
+
+  > .data-dates {
+    display: flex;
+    justify-content: space-between;
+
+    > p {
+      margin: 0;
     }
   }
 }
 
-@mixin track() {
-  width: 100%;
-  height: 100%;
-  background-color: grey;
-}
-
-@mixin thumb() {
-  border: none;
-  width: 20%;
-  height: 1rem;
-  border-radius: 0;
-  background-color: $accent;
-  pointer-events: auto;
-}
-
 input[type='range'] {
-  margin: 2rem 0;
-  pointer-events: none;
-
-  &::-webkit-slider-runnable-track,
-  &::-webkit-slider-thumb, & {
-    -webkit-appearance: none;
-  }
-
-  &::-webkit-slider-runnable-track {
-    @include track;
-  }
-  &::-moz-range-track {
-    @include track;
-  }
-
-  &::-webkit-slider-thumb {
-    @include thumb;
-  }
-  &::-moz-range-thumb {
-    @include thumb;
-  }
+  margin: 1rem 0;
 }
 
 .desc {
   padding: 1rem;
   position: absolute;
-  box-shadow: $low-shadow;
-  background-color: $foreground;
+  box-shadow: var(--low-shadow);
+  background-color: var(--foreground);
   border-radius: 10px;
 
   > p {
@@ -98,13 +70,13 @@ input[type='range'] {
         class="planet"
         cx="50%"
         cy="50%"
-        r="25%"
+        r="8%"
       />
       <g class="orbits">
         <circle
           v-for="(orbit, orbitIndex) in orbits"
           :key="`orbit_${orbitIndex}`"
-          :style="{ transform: `rotateX(80deg) rotateY(${orbit.incline}deg)` }"
+          :style="{ transform: `rotateX(80deg) rotateY(${orbit.incline}deg) rotateX(30deg)` }"
           :class="{ selected: selectedOrbit === orbitIndex }"
           cx="50%"
           cy="50%"
@@ -113,6 +85,21 @@ input[type='range'] {
         />
       </g>
     </svg>
+    <div
+      v-if="range.low"
+      class="data-dates"
+    >
+      <p>
+        <b>
+          {{ range.low }}
+        </b>
+      </p>
+      <p>
+        <b>
+          {{ range.high }}
+        </b>
+      </p>
+    </div>
     <input
       v-model="currentDataRange"
       id="data-range"
@@ -151,6 +138,10 @@ export default {
         contractor: null,
         use: null,
         launch: null
+      },
+      range: {
+        low: null,
+        high: null,
       }
     }
   },
@@ -177,6 +168,8 @@ export default {
         })
         }
       }
+      this.range.low = DATA[this.currentDataRange - 50].date_of_launch
+      this.range.high = DATA[this.currentDataRange - 1].date_of_launch
     },
   }
 }
