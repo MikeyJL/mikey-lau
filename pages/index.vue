@@ -302,8 +302,8 @@ export default {
           skills: 'HTML, CSS, Javascript, PHP, Laravel, Docker, S3, MySQL',
           internalLink: false,
           links: [
-            { site: 'Website', url: 'https://easybnb.herokuapp.com/' },
-            { site: 'Repo', url: 'https://github.com/MikeyJL/EasyBnB' }
+            // { site: 'Website', url: 'https://easybnb.herokuapp.com/' },
+            // { site: 'Repo', url: 'https://github.com/MikeyJL/EasyBnB' }
           ]
         },
         {
