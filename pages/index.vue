@@ -46,7 +46,8 @@ hr {
 
 /* Statement */
 .statement {
-  padding: 1rem 8vw 1rem var(--left-content-padding);
+  padding: 1rem 0 1rem 0;
+  margin: 0 8vw 0 var(--left-content-padding);
 }
 
 /* Techstack */
@@ -187,7 +188,13 @@ hr {
         </div>
       </div>
     </div>
-    <div class="spacer--large" />
+    <div class="spacer--xlarge" />
+    <div id="workflow">
+      <p class="text--large statement">
+        How do I like to work? Simple. It's using Linux, VScode, and VIM; but, I'm flexible and always learning.
+      </p>
+    </div>
+    <div class="spacer--xlarge" />
     <div id="projects" class="fade-on-view">
       <div
         v-for="(project, projectIndex) in projects"
@@ -272,13 +279,13 @@ export default {
         { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' },
         { svg: 'indeed', link: 'https://my.indeed.com/p/xjp92s2' }
       ],
-      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Python', 'R', 'Swift', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker'],
+      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Python', 'R', 'Swift', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker', 'Cypress'],
       projects: [
         {
           developed: true,
           title: 'Train In Blocks',
           desc: 'Using my background in the health and fitness industry, I\'ve built a web application with my business partner to help personal trainers manage their clientele and programmes.',
-          skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js, PHP',
+          skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js, PHP, Cypress',
           internalLink: false,
           links: [
             { site: 'Website', url: 'https://traininblocks.com/' },
@@ -304,6 +311,16 @@ export default {
           links: [
             // { site: 'Website', url: 'https://easybnb.herokuapp.com/' },
             // { site: 'Repo', url: 'https://github.com/MikeyJL/EasyBnB' }
+          ]
+        },
+        {
+          developed: false,
+          title: 'Environment First',
+          desc: `I've decided to build a website that focuses on bringing attention to recent environmental disasters. Currently, it features a blog of some recent events. I intend to add a community feature which will allow users to create their own accounts so that they can share their comments in each post.`, 
+          skills: 'HTML, CSS, Javascript, React, Next.js',
+          internalLink: false,
+          links: [
+            { site: 'Website', url: 'https://environment-blog.vercel.app/' }
           ]
         },
         {

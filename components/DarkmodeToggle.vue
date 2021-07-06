@@ -81,6 +81,11 @@
   }
 }
 
+@media (max-width: 768px) {
+  .toggle_wrapper {
+    margin: 0 8vw 0 auto;
+  }
+}
 @media (max-width: 425px) {
   .toggle_wrapper {
     margin: 0 2rem;

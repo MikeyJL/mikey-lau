@@ -4,7 +4,7 @@
   height: 200px;
   width: 200px;
   perspective: 600px;
-  opacity: .15;
+  opacity: .2;
   position: fixed;
   z-index: -1;
   top: 38%;

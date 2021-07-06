@@ -114,15 +114,18 @@ code.code-label {
 /* Text */
 h1, h2, .text--large {
   letter-spacing: 1px;
-  font-size: 2.6rem;
+  font-size: calc(30px + (36 - 30) * ((100vw - 300px) / (1600 - 300)));
 }
 .text--small {
-  font-size: 1.6rem;
+  font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+p {
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 .text--tiny {
   font-family: monospace;
   letter-spacing: 1px;
-  font-size: .8rem;
+  font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* Spacers */
@@ -148,6 +151,7 @@ nav {
   justify-content: space-between;
   height: 100vh;
   width: 15vw;
+  max-width: 200px;
   padding: 4rem 0;
   z-index: 1;
   position: fixed;
@@ -201,6 +205,7 @@ nav {
     height: fit-content;
     padding: 2rem 0;
     width: 100vw;
+    max-width: 100%;
     background-color: var(--background);
     box-shadow: 0 0 20px 10px rgb(0, 0, 0, .03);
 
@@ -209,21 +214,25 @@ nav {
     }
   }
 }
-
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   /* Nav */
   nav {
     display: flex;
     flex-direction: row;
 
+    #logo {
+      margin: 0 auto 0 8vw;
+    }
+
     > a:first-child {
       margin: 0;
     }
-    .current-view {
-      display: none;
-    }
   }
-
+  .current-view {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
   /* Footer */
   .location {
     text-align: right;
