@@ -297,7 +297,7 @@ export default {
           ]
         },
         {
-          developed: false,
+          developed: true,
           title: 'EasyBnB',
           desc: `The focus of this project was to use PHP and Laravel with tools like Docker, and S3. Currently, the project has basic functions like creating, editing, and deleting listings — as well as authentication. Future plans includes more styling and functions whilst keeping it simple.`,
           skills: 'HTML, CSS, Javascript, PHP, Laravel, Docker, S3',
