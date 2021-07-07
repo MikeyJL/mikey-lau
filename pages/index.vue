@@ -171,7 +171,7 @@ hr {
     </div>
     <div class="spacer--xlarge" />
     <p class="text--large statement fade-on-view">
-      Who doesn't love minimalism? The internet can be cluttered with information. I'm a full-stack developer with a passion for websites, applications, and data. My philosopy is to focus on speed, functionality, and simplicity — creating value through one line of code at a time.
+      Who doesn't love minimalism? The internet can be cluttered with information. I'm a full-stack developer with a passion for websites, applications, and data. My philosophy is to focus on speed, functionality, and simplicity — creating value through one line of code at a time.<br><br>How do I like to work? Simple. It's using Linux, VScode, and VIM; but, I'm flexible and always learning.
     </p>
     <div class="spacer--xlarge" />
     <div id="techstack" class="fade-on-view">
@@ -187,12 +187,6 @@ hr {
           </p>
         </div>
       </div>
-    </div>
-    <div class="spacer--xlarge" />
-    <div id="workflow">
-      <p class="text--large statement">
-        How do I like to work? Simple. It's using Linux, VScode, and VIM; but, I'm flexible and always learning.
-      </p>
     </div>
     <div class="spacer--xlarge" />
     <div id="projects" class="fade-on-view">
@@ -279,7 +273,7 @@ export default {
         { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' },
         { svg: 'indeed', link: 'https://my.indeed.com/p/xjp92s2' }
       ],
-      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'C++', 'Python', 'R', 'Swift', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker', 'Cypress'],
+      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'Python', 'R', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker', 'Cypress'],
       projects: [
         {
           developed: true,
@@ -305,12 +299,11 @@ export default {
         {
           developed: false,
           title: 'EasyBnB',
-          desc: `The focus of this project was to use PHP and Laravel with tools like Docker, S3, and MySQL. Currently, the project has basic functions like creating, editing, and deleting listings — as well as authentication. Future plans includes more styling and functions whilst keeping it simple.`,
-          skills: 'HTML, CSS, Javascript, PHP, Laravel, Docker, S3, MySQL',
+          desc: `The focus of this project was to use PHP and Laravel with tools like Docker, and S3. Currently, the project has basic functions like creating, editing, and deleting listings — as well as authentication. Future plans includes more styling and functions whilst keeping it simple.`,
+          skills: 'HTML, CSS, Javascript, PHP, Laravel, Docker, S3',
           internalLink: false,
           links: [
-            // { site: 'Website', url: 'https://easybnb.herokuapp.com/' },
-            // { site: 'Repo', url: 'https://github.com/MikeyJL/EasyBnB' }
+            { site: 'Repo', url: 'https://github.com/MikeyJL/EasyBnB' }
           ]
         },
         {
