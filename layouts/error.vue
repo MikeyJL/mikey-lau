@@ -1,22 +1,27 @@
-<style scoped>
+<style lang="scss" scoped>
 #error {
   padding: 0 8%;
-}
-.error_link, .link_wrapper {
-  width: fit-content;
-}
-.error_link:after {
-  content: '';
-  position: relative;
-  display: flex;
-  height: .6rem;
-  width: 0%;
-  background-color: #8B000040;
-  transform: translateY(-.6rem);
-  transition: .4s all cubic-bezier(.165, .84, .44, 1);
-}
-.error_link:hover:after {
-  width: 100%;
+
+  .error_link {
+    width: fit-content;
+
+    &:after {
+      content: '';
+      position: relative;
+      display: flex;
+      height: .6rem;
+      width: 0%;
+      background-color: #8B000040;
+      transform: translateY(-.6rem);
+      transition: .4s all cubic-bezier(.165, .84, .44, 1);
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  .link_wrapper {
+    width: fit-content;
+  }
 }
 </style>
 
