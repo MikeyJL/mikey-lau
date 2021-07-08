@@ -1,22 +1,21 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/34e9e4f8-e6a0-48e1-bceb-59f6c4b473c9/deploy-status)](https://app.netlify.com/sites/mikeylau/deploys)
 
-# mikey-lau
+## Introduction
 
-## Build Setup
+This is my personal website but I thought I share the code with you.
 
-```bash
-# install dependencies
-$ yarn install
+I'm a big fan of Vue and Nuxt with a touch of SCSS. The main objective is to of course show off my skillset but to also build a good website. I wanted to be fast, minimal, and responsive.
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## Responsiveness
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+As expected, I've used media querys to adjust the css profile of the site to make sure that it is suited for mobile users. Furthermore, I've added fluid typography as outlined by [CSS Tricks](https://css-tricks.com/snippets/css/fluid-typography/) which adapts the font size to screen size.
 
-# generate static project
-$ yarn generate
-```
+## Design
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+As you can probably tell, I'm a massive fan of simplistic design and colour schemes. However, if asked of me, I can still produce UI that are colourful. The decision to do this was not just a matter of personal preference, but rather to focus on making it accessible and to provide good contrast between elements.
+
+## More incoming...
+
+## Author
+
+Mikey Lau
