@@ -220,7 +220,7 @@ hr {
             :key="`link_${projectIndex}_${linkIndex}`"
           >
             <a
-              v-if="!project.internalLink"
+              v-if="!link.internalLink"
               :href="link.url"
               target="_blank"
               rel="noopener"
@@ -280,10 +280,9 @@ export default {
           title: 'Train In Blocks',
           desc: 'Using my background in the health and fitness industry, I\'ve built a web application with my business partner to help personal trainers manage their clientele and programmes.',
           skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js, PHP, Cypress',
-          internalLink: false,
           links: [
-            { site: 'Website', url: 'https://traininblocks.com/' },
-            { site: 'App login', url: 'https://app.traininblocks.com/' }
+            { site: 'Website', internalLink: false, url: 'https://traininblocks.com/' },
+            { site: 'App login', internalLink: false, url: 'https://app.traininblocks.com/' }
           ]
         },
         {
@@ -291,9 +290,8 @@ export default {
           title: 'Basic Economy',
           desc: 'I\'ve converted one of my old Python projects into a simpler web version using Javascript and SVGs. This is a basic simulation of an economy where locations will dispatch transporters to trade between them based on global scarcity and local prices.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js, Python',
-          internalLink: true,
           links: [
-            { site: 'Example', url: '/projects/basic-economy' }
+            { site: 'Example', internalLink: true, url: '/projects/basic-economy' }
           ]
         },
         {
@@ -301,9 +299,8 @@ export default {
           title: 'EasyBnB',
           desc: `The focus of this project was to use PHP and Laravel with tools like Docker, and S3. Currently, the project has basic functions like creating, editing, and deleting listings — as well as authentication. Future plans includes more styling and functions whilst keeping it simple.`,
           skills: 'HTML, CSS, Javascript, PHP, Laravel, Docker, S3',
-          internalLink: false,
           links: [
-            { site: 'Repo', url: 'https://github.com/MikeyJL/EasyBnB' }
+            { site: 'Repo', internalLink: false, url: 'https://github.com/MikeyJL/EasyBnB' }
           ]
         },
         {
@@ -311,9 +308,8 @@ export default {
           title: 'Environment First',
           desc: `I've decided to build a website that focuses on bringing attention to recent environmental disasters. Currently, it features a blog of some recent events. I intend to add a community feature which will allow users to create their own accounts so that they can share their comments in each post.`, 
           skills: 'HTML, CSS, Javascript, React, Next.js',
-          internalLink: false,
           links: [
-            { site: 'Website', url: 'https://environment-blog.vercel.app/' }
+            { site: 'Website', internalLink: false, url: 'https://environment-blog.vercel.app/' }
           ]
         },
         {
@@ -321,9 +317,8 @@ export default {
           title: 'Space Satellites',
           desc: `After discovering a cool dataset of satellites launched globally, I've decided to create a quick visualisation of each orbit adjusted with its degree of inclination from the near-equatorial orbit.`,
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
-          internalLink: true,
           links: [
-            { site: 'Example', url: '/projects/space-satellites' }
+            { site: 'Example', internalLink: true, url: '/projects/space-satellites' }
           ]
         },
         {
@@ -331,9 +326,8 @@ export default {
           title: 'Foodie social media',
           desc: `In this project, I've explored the Swift programming language to create a social media platform for foodies. I've integrated Firebase Auth and its Realtime Database using CocoaPod to serve as a user management system.`,
           skills: 'Swift, Firebase',
-          internalLink: true,
           links: [
-            { site: 'IOS example', url: '/projects/foodie-mobile' }
+            { site: 'IOS example', internalLink: true, url: '/projects/foodie-mobile' }
           ]
         },
         {
@@ -341,9 +335,8 @@ export default {
           title: 'JKPT',
           desc: 'A client wanted a website for his personal training business. I was responsible for the entire branding, design, and the implementation of the website.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
-          internalLink: false,
           links: [
-            { site: 'Website', url: 'https://jkpt.netlify.app/' }
+            { site: 'Website', internalLink: false, url: 'https://jkpt.netlify.app/' }
           ]
         }
       ],
