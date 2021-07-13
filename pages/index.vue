@@ -169,7 +169,26 @@ hr {
         <cube-model />
       </div>
     </div>
-    <div class="spacer--xlarge" />
+    <div class="spacer--small" />
+    <div id="education">
+      <div
+        v-for="(item, itemIndex) in education"
+        :key="`education_${itemIndex}`"
+      >
+        <p class="text--tiny">
+          {{ item.time }}
+        </p>
+        <h3>
+          {{ item.degree }}
+        </h3>
+        <p>
+          {{ item.grade }}
+        </p>
+      </div>
+    </div>
+    <div class="spacer--large" />
+    <hr>
+    <div class="spacer--large" />
     <p class="text--large statement fade-on-view">
       Who doesn't love minimalism? The internet can be cluttered with information. I'm a full-stack developer with a passion for websites, applications, and data. My philosophy is to focus on speed, functionality, and simplicity — creating value through one line of code at a time.<br><br>How do I like to work? Simple. It's using Linux, VScode, and VIM; but, I'm flexible and always learning.
     </p>
@@ -237,25 +256,6 @@ hr {
         </div>
       </div>
     </div>
-    <div class="spacer--small" />
-    <hr>
-    <div class="spacer--small" />
-    <div id="education">
-      <div
-        v-for="(item, itemIndex) in education"
-        :key="`education_${itemIndex}`"
-      >
-        <p class="text--tiny">
-          {{ item.time }}
-        </p>
-        <h3>
-          {{ item.degree }}
-        </h3>
-        <p>
-          {{ item.grade }}
-        </p>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -281,6 +281,7 @@ export default {
           desc: 'Using my background in the health and fitness industry, I\'ve built a web application with my business partner to help personal trainers manage their clientele and programmes.',
           skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js, PHP, Cypress',
           links: [
+            { site: 'Explanation', internalLink: true, url: '/projects/train-in-blocks' },
             { site: 'Website', internalLink: false, url: 'https://traininblocks.com/' },
             { site: 'App login', internalLink: false, url: 'https://app.traininblocks.com/' }
           ]
