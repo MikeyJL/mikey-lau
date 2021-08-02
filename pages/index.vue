@@ -274,13 +274,13 @@ export default Vue.extend({
         { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' },
         { svg: 'indeed', link: 'https://my.indeed.com/p/xjp92s2' }
       ],
-      techStack: ['HTML', 'CSS', 'Javascript', 'C#', 'Python', 'R', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker', 'Cypress'],
+      techStack: ['HTML', 'CSS', 'Javascript', 'Typescript', 'C#', 'Python', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker', 'Cypress', 'Jest'],
       projects: [
         {
           developed: true,
           title: 'Train In Blocks',
           desc: 'Using my background in the health and fitness industry, I\'ve built a web application with my business partner to help personal trainers manage their clientele and programmes.',
-          skills: 'HTML, CSS, Javascript, Vue.js, Vuex, Nuxt.js, PHP, Cypress',
+          skills: 'HTML, CSS, Javascript, Typescript, Vue.js, Vuex, Nuxt.js, PHP, Cypress, Jest',
           links: [
             { site: 'Explanation', internalLink: true, url: '/projects/train-in-blocks' },
             { site: 'Website', internalLink: false, url: 'https://traininblocks.com/' },
