@@ -1,31 +1,21 @@
 module.exports = {
-  root: true,
-  parserOptions: {
-    sourceType: 'module',
-    parser: 'babel-eslint'
-  },
   env: {
     browser: true,
-    node: true
+    es2021: true
   },
-  // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended'
+    'plugin:vue/essential',
+    'standard'
   ],
-  // add your custom rules here
+  parserOptions: {
+    ecmaVersion: 12,
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module'
+  },
+  plugins: [
+    'vue',
+    '@typescript-eslint'
+  ],
   rules: {
-    // allow async-await
-    'generator-star-spacing': 'off',
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'vue/comment-directive': 0,
-    'vue/no-v-html': 0,
-    'vue/component-tags-order': ['error', {
-      order: ['style', 'template', 'script']
-    }],
-    'no-console': 'off',
-    'vue/require-default-prop': 0,
-    'vue/require-prop-types': 0
   }
 }

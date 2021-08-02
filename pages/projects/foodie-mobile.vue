@@ -230,10 +230,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import CylinderModel from '../../components/CylinderModel.vue'
 
-export default {
+export default Vue.extend({
   components: {
     CylinderModel
   },
@@ -286,12 +287,13 @@ import KeychainSwift
   },
   mounted () {
     this.animatePhone()
+    // @ts-ignore
     this.$parent.$parent.currentView = 'Project'
   },
   methods: {
     animatePhone () {
-      const EMAIL = "mikey.lau@mail.com"
-      const PASSWORD = "aasdfagbbwnsdflngk"
+      const EMAIL = 'mikey.lau@mail.com'
+      const PASSWORD = 'aasdfagbbwnsdflngk'
 
       // Type Email
       for (let i = 0; i <= EMAIL.length; i++) {
@@ -311,23 +313,29 @@ import KeychainSwift
 
       // Button click
       setTimeout(() => {
-        document.getElementById('login_button').style.opacity = .8
-        document.getElementById('login_button').style.transform = "scale(.95)"
-        setTimeout(() => {
-          document.getElementById('login_button').style.opacity = 1
-          document.getElementById('login_button').style.transform = "scale(1)"
-          this.loggedIn = true
-        }, 100)
+        const LOGIN_BTN: HTMLElement | boolean = document.getElementById('login_button') || false
+        if (LOGIN_BTN) {
+          LOGIN_BTN.style.opacity = '0.8'
+          LOGIN_BTN.style.transform = 'scale(.95)'
+          setTimeout(() => {
+            LOGIN_BTN.style.opacity = '1'
+            LOGIN_BTN.style.transform = 'scale(1)'
+            this.loggedIn = true
+          }, 100)
+        }
       }, 50 * EMAIL.length + 50 * PASSWORD.length)
 
       // Scroll feed
       setTimeout(() => {
-        document.getElementById('screen').scroll({
-          top: 1000,
-          behavior: 'smooth'
-        })
+        const SCREEN: HTMLElement | boolean = document.getElementById('screen') || false
+        if (SCREEN) {
+          SCREEN.scroll({
+            top: 1000,
+            behavior: 'smooth'
+          })
+        }
       }, 50 * EMAIL.length + 50 * PASSWORD.length + 1000)
     }
   }
-}
+})
 </script>

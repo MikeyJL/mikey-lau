@@ -25,11 +25,12 @@ export default {
     '~/assets/main.scss'
   ],
   plugins: [
-    '~/plugins/vue-inline-svg.js',
-    '~/plugins/vue-highlight.js'
+    '~/plugins/vue-highlight.ts',
+    '~/plugins/vue-inline-svg.ts'
   ],
   components: true,
   buildModules: [
+    '@nuxt/typescript-build'
   ],
   modules: [
   ],

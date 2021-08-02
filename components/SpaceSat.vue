@@ -127,13 +127,21 @@ input[type='range'] {
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+interface Orbit {
+  incline: number,
+  contractor: string,
+  use: string,
+  launch: string
+}
+export default Vue.extend({
   data () {
     return {
       selectedOrbit: null,
       currentDataRange: 50,
-      orbits: [],
+      orbits: [] as Array<Orbit>,
       show: {
         contractor: null,
         use: null,
@@ -141,7 +149,7 @@ export default {
       },
       range: {
         low: null,
-        high: null,
+        high: null
       }
     }
   },
@@ -161,16 +169,16 @@ export default {
         const INCLINE = DATA[index].inclination_degrees || false
         if (INCLINE) {
           this.orbits.push({
-          'incline': INCLINE,
-          'contractor': DATA[index].country_of_contractor,
-          'use': `${DATA[index].users} | ${DATA[index].purpose}`,
-          'launch': `${DATA[index].date_of_launch} | ${DATA[index].launch_site}`
-        })
+            incline: INCLINE,
+            contractor: DATA[index].country_of_contractor,
+            use: `${DATA[index].users} | ${DATA[index].purpose}`,
+            launch: `${DATA[index].date_of_launch} | ${DATA[index].launch_site}`
+          })
         }
       }
       this.range.low = DATA[this.currentDataRange - 50].date_of_launch
       this.range.high = DATA[this.currentDataRange - 1].date_of_launch
-    },
+    }
   }
-}
+})
 </script>

@@ -58,11 +58,12 @@
   </div>
 </template>
 
-<script>
-import CylinderModel from '~/components/CylinderModel'
-import EconomyProject from '~/components/EconomyProject'
+<script lang="ts">
+import Vue from 'vue'
+import CylinderModel from '~/components/CylinderModel.vue'
+import EconomyProject from '~/components/EconomyProject.vue'
 
-export default {
+export default Vue.extend({
   components: {
     CylinderModel,
     EconomyProject
@@ -86,7 +87,7 @@ class Location {
         },
         {
           title: 'Initialising the position',
-          desc: `The position of each location is random determined through the use of 'Math.random()'. This was saved to the class instance as 'position' where it can be accessed later. An SVG circle element was also created to represent the location inside the viewbox.`,
+          desc: 'The position of each location is random determined through the use of \'Math.random()\'. This was saved to the class instance as \'position\' where it can be accessed later. An SVG circle element was also created to represent the location inside the viewbox.',
           code: `
     ...
 
@@ -111,7 +112,7 @@ class Location {
         },
         {
           title: 'Generating resources at each location',
-          desc: `Each location will have a random starting amount for all the resources using 'Math.random()'. Once created, a dictionary consisting of the id, resource (name), amount, position (location), and whether it has been ordered will be appended to the 'resourceLedger' on the Vue instance. At the end of this block, it will also add its allocated resource amount to a global variable. This will later be used to calculate the level of scarcity at each location to determine the local unit price.`,
+          desc: 'Each location will have a random starting amount for all the resources using \'Math.random()\'. Once created, a dictionary consisting of the id, resource (name), amount, position (location), and whether it has been ordered will be appended to the \'resourceLedger\' on the Vue instance. At the end of this block, it will also add its allocated resource amount to a global variable. This will later be used to calculate the level of scarcity at each location to determine the local unit price.',
           code: `
     ...
     
@@ -139,7 +140,8 @@ class Location {
     }
   },
   mounted () {
+    // @ts-ignore
     this.$parent.$parent.currentView = 'Project'
   }
-}
+})
 </script>

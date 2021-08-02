@@ -281,10 +281,11 @@ nav {
   </div>
 </template>
 
-<script>
-import DarkmodeToggle from '~/components/DarkmodeToggle'
+<script lang="ts">
+import Vue from 'vue'
+import DarkmodeToggle from '~/components/DarkmodeToggle.vue'
 
-export default {
+export default Vue.extend({
   components: {
     DarkmodeToggle
   },
@@ -293,5 +294,5 @@ export default {
       currentView: 'Introduction'
     }
   }
-}
+})
 </script>

@@ -76,15 +76,17 @@
   </div>
 </template>
 
-<script>
-import CylinderModel from '~/components/CylinderModel'
+<script lang="ts">
+import Vue from 'vue'
+import CylinderModel from '~/components/CylinderModel.vue'
 
-export default {
+export default Vue.extend({
   components: {
     CylinderModel
   },
   mounted () {
+    // @ts-ignore
     this.$parent.$parent.currentView = 'Project'
   }
-}
+})
 </script>

@@ -50,11 +50,12 @@
   </div>
 </template>
 
-<script>
-import CylinderModel from '~/components/CylinderModel'
-import SpaceSat from '~/components/SpaceSat'
+<script lang="ts">
+import Vue from 'vue'
+import CylinderModel from '~/components/CylinderModel.vue'
+import SpaceSat from '~/components/SpaceSat.vue'
 
-export default {
+export default Vue.extend({
   components: {
     CylinderModel,
     SpaceSat
@@ -64,7 +65,7 @@ export default {
       explanation: [
         {
           title: 'Creating the model',
-          desc: `Taking advantage of the <code class="code-label">v-for</code> directive, the orbit can be displayed easily with the correct degree of inclination using <code class="code-label">transform</code> with the <code class="code-label">:style</code> prop.`,
+          desc: 'Taking advantage of the <code class="code-label">v-for</code> directive, the orbit can be displayed easily with the correct degree of inclination using <code class="code-label">transform</code> with the <code class="code-label">:style</code> prop.',
           lang: 'html',
           code: `<svg viewport="0 0 500 500">
   <circle
@@ -121,7 +122,8 @@ export default {
     }
   },
   mounted () {
+    // @ts-ignore
     this.$parent.$parent.currentView = 'Project'
   }
-}
+})
 </script>

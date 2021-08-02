@@ -259,10 +259,11 @@ hr {
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import CubeModel from '~/components/CubeModel.vue'
 
-export default {
+export default Vue.extend({
   components: {
     CubeModel
   },
@@ -298,7 +299,7 @@ export default {
         {
           developed: true,
           title: 'EasyBnB',
-          desc: `The focus of this project was to use PHP and Laravel with tools like Docker, and S3. Currently, the project has basic functions like creating, editing, and deleting listings — as well as authentication. Future plans includes more styling and functions whilst keeping it simple.`,
+          desc: 'The focus of this project was to use PHP and Laravel with tools like Docker, and S3. Currently, the project has basic functions like creating, editing, and deleting listings — as well as authentication. Future plans includes more styling and functions whilst keeping it simple.',
           skills: 'HTML, CSS, Javascript, PHP, Laravel, Docker, S3',
           links: [
             { site: 'Repo', internalLink: false, url: 'https://github.com/MikeyJL/EasyBnB' }
@@ -307,7 +308,7 @@ export default {
         {
           developed: false,
           title: 'Environment First',
-          desc: `I've decided to build a website that focuses on bringing attention to recent environmental disasters. Currently, it features a blog of some recent events. I intend to add a community feature which will allow users to create their own accounts so that they can share their comments in each post.`, 
+          desc: 'I\'ve decided to build a website that focuses on bringing attention to recent environmental disasters. Currently, it features a blog of some recent events. I intend to add a community feature which will allow users to create their own accounts so that they can share their comments in each post.',
           skills: 'HTML, CSS, Javascript, React, Next.js',
           links: [
             { site: 'Website', internalLink: false, url: 'https://environment-blog.vercel.app/' }
@@ -316,7 +317,7 @@ export default {
         {
           developed: true,
           title: 'Space Satellites',
-          desc: `After discovering a cool dataset of satellites launched globally, I've decided to create a quick visualisation of each orbit adjusted with its degree of inclination from the near-equatorial orbit.`,
+          desc: 'After discovering a cool dataset of satellites launched globally, I\'ve decided to create a quick visualisation of each orbit adjusted with its degree of inclination from the near-equatorial orbit.',
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
           links: [
             { site: 'Example', internalLink: true, url: '/projects/space-satellites' }
@@ -325,7 +326,7 @@ export default {
         {
           developed: false,
           title: 'Foodie social media',
-          desc: `In this project, I've explored the Swift programming language to create a social media platform for foodies. I've integrated Firebase Auth and its Realtime Database using CocoaPod to serve as a user management system.`,
+          desc: 'In this project, I\'ve explored the Swift programming language to create a social media platform for foodies. I\'ve integrated Firebase Auth and its Realtime Database using CocoaPod to serve as a user management system.',
           skills: 'Swift, Firebase',
           links: [
             { site: 'IOS example', internalLink: true, url: '/projects/foodie-mobile' }
@@ -364,28 +365,35 @@ export default {
   },
   methods: {
     resolveScroll () {
-      const TECHSTACK = document.getElementById('techstack').offsetTop - ((window.innerHeight - document.getElementById('techstack').offsetHeight))
-      const PROJECTS = document.getElementById('projects').offsetTop
-      const SCROLL = window.scrollY
+      const TECHSTACK_EL: HTMLElement | boolean = document.getElementById('techstack') || false
+      const PROJECTS_EL: HTMLElement | boolean = document.getElementById('projects') || false
+      if (TECHSTACK_EL && PROJECTS_EL) {
+        const TECHSTACK = TECHSTACK_EL.offsetTop - ((window.innerHeight - TECHSTACK_EL.offsetHeight))
+        const PROJECTS = PROJECTS_EL.offsetTop
+        const SCROLL = window.scrollY
 
-      // Current view
-      if (SCROLL > PROJECTS) {
-        this.$parent.$parent.currentView = 'Projects'
-      } else if (SCROLL > TECHSTACK) {
-        this.$parent.$parent.currentView = 'Techstack'
-      } else {
-        this.$parent.$parent.currentView = 'Introduction'
-      }
-
-      // Fade on view
-      const THRESHOLD = .6
-      const TO_SHOW = document.querySelectorAll('.fade-on-view')
-      TO_SHOW.forEach(element => {
-        if (element.offsetTop - window.innerHeight * THRESHOLD < SCROLL) {
-          element.style.opacity = 1
+        // Current view
+        if (SCROLL > PROJECTS) {
+          // @ts-ignore
+          this.$parent.$parent.currentView = 'Projects'
+        } else if (SCROLL > TECHSTACK) {
+          // @ts-ignore
+          this.$parent.$parent.currentView = 'Techstack'
+        } else {
+          // @ts-ignore
+          this.$parent.$parent.currentView = 'Introduction'
         }
-      })
+
+        // Fade on view
+        const THRESHOLD = 0.6
+        const TO_SHOW = document.querySelectorAll<HTMLElement>('.fade-on-view')
+        TO_SHOW.forEach((element: HTMLElement) => {
+          if (element.offsetTop - window.innerHeight * THRESHOLD < SCROLL) {
+            element.style.opacity = '1'
+          }
+        })
+      }
     }
   }
-}
+})
 </script>

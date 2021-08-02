@@ -107,17 +107,14 @@
   </div>
 </template>
 
-<script>
-import InlineSvg from 'vue-inline-svg'
+<script lang="ts">
+import Vue from 'vue'
 
-export default {
-  components: {
-    InlineSvg
-  },
+export default Vue.extend({
   watch: {
     darkmodeOn (state) {
       if (state) {
-        localStorage.setItem('darkmode', true)
+        localStorage.setItem('darkmode', 'on')
       } else {
         localStorage.removeItem('darkmode')
       }
@@ -130,7 +127,7 @@ export default {
     }
   },
   mounted () {
-    if (localStorage.getItem('darkmode')) {
+    if (localStorage.getItem('darkmode') === 'on') {
       this.darkmodeOn = true
     }
   },
@@ -149,5 +146,5 @@ export default {
       }
     }
   }
-}
+})
 </script>
