@@ -1,4 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/34e9e4f8-e6a0-48e1-bceb-59f6c4b473c9/deploy-status)](https://app.netlify.com/sites/mikeylau/deploys)
+[![TS-Standard - Typescript Standard Style Guide](https://badgen.net/badge/code%20style/ts-standard/blue?icon=typescript)](https://github.com/standard/ts-standard)
+![Last commit](https://img.shields.io/github/last-commit/MikeyJL/mikey-lau)
 
 ## Introduction
 
