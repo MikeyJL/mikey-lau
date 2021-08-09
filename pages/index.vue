@@ -54,11 +54,21 @@ hr {
 #techstack {
   background-color: var(--faded-element);
   padding: 6rem 8vw 6rem var(--left-content-padding);
-}
-.techstack__content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+
+  .techstack__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    .wrapper--level {
+      background-color: var(--background);
+      width: 100%;
+      height: 3px;
+      .level {
+        background-color: var(--accent);
+        height: 100%;
+      }
+    }
+  }
 }
 
 /* Projects */
@@ -123,18 +133,17 @@ hr {
     }
   }
 
-  .techstack__content {
-    grid-template-columns: repeat(2, 1fr);
-
-    p {
-      text-align: center;
-      font-size: 2rem;
+  #techstack {
+    .techstack__content {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 @media (max-width: 576px) {
-  .techstack__content p {
-    font-size: 1.8rem;
+  #techstack {
+    .techstack__content {
+      grid-template-columns: 1fr;
+    }
   }
 }
 </style>
@@ -199,11 +208,14 @@ hr {
           v-for="(item, itemIndex) in techStack"
           :key="`techstack_${itemIndex}`"
         >
-          <p class="text--large no-margin">
+          <p>
             <b>
-              {{ item }}
+              {{ item.lang }}
             </b>
           </p>
+          <div class="wrapper--level">
+            <div :style="{width: `${item.level}%`}" class="level" />
+          </div>
         </div>
       </div>
     </div>
@@ -255,6 +267,14 @@ hr {
           </div>
         </div>
       </div>
+      <a
+        href="https://github.com/MikeyJL"
+        target="_blank"
+        rel="nonreferrer"
+        class="text--small"
+      >
+        More projects on GitHub
+      </a>
     </div>
   </div>
 </template>
@@ -274,7 +294,52 @@ export default Vue.extend({
         { svg: 'linkedin', link: 'https://www.linkedin.com/in/mikey-lau' },
         { svg: 'indeed', link: 'https://my.indeed.com/p/xjp92s2' }
       ],
-      techStack: ['HTML', 'CSS', 'Javascript', 'Typescript', 'C#', 'Python', 'Git', 'PHP', 'Vue.js', 'Vuex', 'Nuxt.js', 'Firebase', 'Laravel', 'Docker', 'Cypress', 'Jest'],
+      techStack: [
+        {
+          lang: 'HTML',
+          level: 95
+        },
+        {
+          lang: 'CSS/SCSS',
+          level: 95
+        },
+        {
+          lang: 'Javascript/Typescript',
+          level: 90
+        },
+        {
+          lang: 'Vue/Vuex/Nuxt',
+          level: 90
+        },
+        {
+          lang: 'React/Native/Next',
+          level: 80
+        },
+        {
+          lang: 'Python',
+          level: 80
+        },
+        {
+          lang: 'PHP/Laravel',
+          level: 75
+        },
+        {
+          lang: 'C#',
+          level: 70
+        },
+        {
+          lang: 'Firebase',
+          level: 70
+        },
+        {
+          lang: 'Cypress/Jest',
+          level: 80
+        },
+        {
+          lang: 'Git/Docker',
+          level: 80
+        }
+      ],
       projects: [
         {
           developed: true,
@@ -321,24 +386,6 @@ export default Vue.extend({
           skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
           links: [
             { site: 'Example', internalLink: true, url: '/projects/space-satellites' }
-          ]
-        },
-        {
-          developed: false,
-          title: 'Foodie social media',
-          desc: 'In this project, I\'ve explored the Swift programming language to create a social media platform for foodies. I\'ve integrated Firebase Auth and its Realtime Database using CocoaPod to serve as a user management system.',
-          skills: 'Swift, Firebase',
-          links: [
-            { site: 'IOS example', internalLink: true, url: '/projects/foodie-mobile' }
-          ]
-        },
-        {
-          developed: true,
-          title: 'JKPT',
-          desc: 'A client wanted a website for his personal training business. I was responsible for the entire branding, design, and the implementation of the website.',
-          skills: 'HTML, CSS, Javascript, Vue.js, Nuxt.js',
-          links: [
-            { site: 'Website', internalLink: false, url: 'https://jkpt.netlify.app/' }
           ]
         }
       ],
