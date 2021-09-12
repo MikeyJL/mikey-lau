@@ -16,6 +16,10 @@ As expected, I've used media querys to adjust the css profile of the site to mak
 
 As you can probably tell, I'm a massive fan of simplistic design and colour schemes. However, if asked of me, I can still produce UI that are colourful. The decision to do this was not just a matter of personal preference, but rather to focus on making it accessible and to provide good contrast between elements.
 
+## License
+
+[![Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 ## Author
 
 [![Mikey Lau](https://res.cloudinary.com/dqzwrwyzn/image/upload/v1631438979/team/mikey_phbixs.png)](https://github.com/MikeyJL)
