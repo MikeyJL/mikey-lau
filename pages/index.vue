@@ -199,7 +199,7 @@ hr {
     <hr>
     <div class="spacer--large" />
     <p class="text--large statement fade-on-view">
-      Who doesn't love minimalism? The internet can be cluttered with information. I'm a full-stack developer with a passion for websites, applications, and data. My philosophy is to focus on speed, functionality, and simplicity — creating value through one line of code at a time.<br><br>How do I like to work? Simple. It's using Linux, VScode, and VIM; but, I'm flexible and always learning.
+      Who doesn't love minimalism? The internet can be cluttered with information. I'm a full-stack developer with a passion for websites, applications, and data. My philosophy is to focus on speed, functionality, and simplicity — creating value through one line of code at a time.
     </p>
     <div class="spacer--xlarge" />
     <div id="techstack" class="fade-on-view">
